@@ -21,7 +21,6 @@ privileged aspect Vaeosa_Roo_ToString {
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
-        sb.append("Serialversionuid: ").append(getSerialversionuid()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("VaeosaAlluvused: ").append(getVaeosaAlluvused() == null ? "null" : getVaeosaAlluvused().size()).append(", ");

@@ -19,9 +19,6 @@ public class AdminAlluvus extends Piirivalve {
 	private AdminYksus alamAdminYksus;
 
 	
-	public AdminAlluvus() {
-		
-	}	
 	public AdminYksus getYlemAdminYksus() {
 	    return ylemAdminYksus;
 	}

@@ -4,74 +4,10 @@
 package itcollege.team09.entities;
 
 import itcollege.team09.entities.VoimalikAlluvus;
-import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Version;
-import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect VoimalikAlluvus_Roo_Entity {
-    
-    @PersistenceContext
-    transient EntityManager VoimalikAlluvus.entityManager;
-    
-    @Version
-    @Column(name = "version")
-    private Integer VoimalikAlluvus.version;
-    
-    public Integer VoimalikAlluvus.getVersion() {
-        return this.version;
-    }
-    
-    public void VoimalikAlluvus.setVersion(Integer version) {
-        this.version = version;
-    }
-    
-    @Transactional
-    public void VoimalikAlluvus.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void VoimalikAlluvus.remove() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        if (this.entityManager.contains(this)) {
-            this.entityManager.remove(this);
-        } else {
-            VoimalikAlluvus attached = VoimalikAlluvus.findVoimalikAlluvus(this.id);
-            this.entityManager.remove(attached);
-        }
-    }
-    
-    @Transactional
-    public void VoimalikAlluvus.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void VoimalikAlluvus.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
-    }
-    
-    @Transactional
-    public VoimalikAlluvus VoimalikAlluvus.merge() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        VoimalikAlluvus merged = this.entityManager.merge(this);
-        this.entityManager.flush();
-        return merged;
-    }
-    
-    public static final EntityManager VoimalikAlluvus.entityManager() {
-        EntityManager em = new VoimalikAlluvus().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
     
     public static long VoimalikAlluvus.countVoimalikAlluvuses() {
         return entityManager().createQuery("SELECT COUNT(o) FROM VoimalikAlluvus o", Long.class).getSingleResult();
