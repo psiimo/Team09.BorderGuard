@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_itcollege_team09_entities_AmetVaeosas" items="${ametvaeosases}" z="wGTQ9NepYrcrwj1RDLB9msBDXF0=">
+        <table:table data="${ametvaeosases}" id="l_itcollege_team09_entities_AmetVaeosas" path="/ametvaeosases" z="EzguHo3bF0fjduwK7/vZgWEooss=">
+            <table:column id="c_itcollege_team09_entities_AmetVaeosas_kommentaar" property="kommentaar" z="KYZgboc0uqKB+ynY7Zj2fwkfDmg="/>
+            <table:column id="c_itcollege_team09_entities_AmetVaeosas_avaja" property="avaja" z="bv/bfXxHLxRh89Sx0W9tXKUg7P4="/>
+            <table:column date="true" dateTimePattern="${ametVaeosas_avatud_date_format}" id="c_itcollege_team09_entities_AmetVaeosas_avatud" property="avatud" z="Z2/sDpoNDB5mi2Ynx9cQI5jwwUo="/>
+            <table:column id="c_itcollege_team09_entities_AmetVaeosas_muutja" property="muutja" z="dvotsFW6p2SudtDdgrGrZZct5rg="/>
+            <table:column date="true" dateTimePattern="${ametVaeosas_muudetud_date_format}" id="c_itcollege_team09_entities_AmetVaeosas_muudetud" property="muudetud" z="qguQTH9XDgd8rQR9UuH/5WdnEnY="/>
+            <table:column id="c_itcollege_team09_entities_AmetVaeosas_sulgeja" property="sulgeja" z="3BlvZkS9R/C2QTraHMlFbQ109j4="/>
+        </table:table>
+    </page:list>
+</div>

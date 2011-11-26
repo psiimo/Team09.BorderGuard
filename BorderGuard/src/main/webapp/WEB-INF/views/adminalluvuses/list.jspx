@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_itcollege_team09_entities_AdminAlluvus" items="${adminalluvuses}" z="YIcF/hTpUKnijkJLX/JZAUR2uSw=">
+        <table:table data="${adminalluvuses}" id="l_itcollege_team09_entities_AdminAlluvus" path="/adminalluvuses" z="wDDuvAe54jKYSivSnzpKlmJxJIk=">
+            <table:column id="c_itcollege_team09_entities_AdminAlluvus_kommentaar" property="kommentaar" z="0WDpbAA8AryBOBq70WL3/PYF31M="/>
+            <table:column id="c_itcollege_team09_entities_AdminAlluvus_avaja" property="avaja" z="ezZbgWvk8shEDYK0sqFAFX6gTdg="/>
+            <table:column date="true" dateTimePattern="${adminAlluvus_avatud_date_format}" id="c_itcollege_team09_entities_AdminAlluvus_avatud" property="avatud" z="M5k9BItYFrxFmh6g5ZlZucFw8V8="/>
+            <table:column id="c_itcollege_team09_entities_AdminAlluvus_muutja" property="muutja" z="1JATdFjInNGz1DMIeHNwNJJRyi0="/>
+            <table:column date="true" dateTimePattern="${adminAlluvus_muudetud_date_format}" id="c_itcollege_team09_entities_AdminAlluvus_muudetud" property="muudetud" z="cYv84xnTrLBQzbnN2CQHHWkP//g="/>
+            <table:column id="c_itcollege_team09_entities_AdminAlluvus_sulgeja" property="sulgeja" z="DaVZ6wBnlj3hJ1fcLI3+D/cq/iQ="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_itcollege_team09_entities_VoimalikAlluvus" modelAttribute="voimalikAlluvus" path="/voimalikalluvuses" versionField="Version" z="N3Oq8ZGGkLeYn40i+eBuJTvy4w8=">
+        <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/>
+        <field:input field="kommentaar" id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar" required="true" z="W/3zzSmHvLaZREX0aoy8AdLox9s="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_VoimalikAlluvus_avaja" required="true" z="93WzTe2TxBgR/X7xqmbB96MlN5c="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_VoimalikAlluvus_avatud" required="true" z="/of0AJER9AY4OFFiTRS6i2pkD3U="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_VoimalikAlluvus_muutja" required="true" z="GYAjX+S2Ozn3DQyUPT3XrJtPBDo="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_VoimalikAlluvus_muudetud" required="true" z="gzbD38OG9ALqTsrxQSBUypDl7zU="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_VoimalikAlluvus_sulgeja" required="true" z="pQNw5o8LUEPDfKrYzSVEv7jzdi0="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VoimalikAlluvus_suletud" required="true" z="uoq4b28YgBUUw7AQlzAPojyT46I="/>
+        <field:select field="ylemYksus" id="c_itcollege_team09_entities_VoimalikAlluvus_ylemYksus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="P7twPd9ZcehO1nuZtsbeJF1dx2U="/>
+        <field:select field="alamYksus" id="c_itcollege_team09_entities_VoimalikAlluvus_alamYksus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="TUNlhseuAtFLrod7G6ptuB+4CIQ="/>
+    </form:update>
+</div>
