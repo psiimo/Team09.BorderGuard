@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -13,6 +14,9 @@ import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import itcollege.team09.entities.VaeosaAlluvus;
+import java.util.Collection;
+import javax.persistence.OneToMany;
 
 @Entity
 @RooToString
@@ -67,8 +71,16 @@ public class Vaeosa {
     private Date suletud;
     
     private static final long serialVersionUID = 1L;
-    
-    
+
+	@ManyToOne
+	private AdminYksus adminYksus;
+
+	@OneToMany(mappedBy = "alamVaeosa")
+	private Collection<VaeosaAlluvus> vaeosaAlluvused;
+	
+	
+	
+
 	public Long getId() {
 		return id;
 	}
@@ -143,5 +155,17 @@ public class Vaeosa {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public AdminYksus getAdminYksus() {
+	    return adminYksus;
+	}
+	public void setAdminYksus(AdminYksus param) {
+	    this.adminYksus = param;
+	}
+	public Collection<VaeosaAlluvus> getVaeosaAlluvused() {
+	    return vaeosaAlluvused;
+	}
+	public void setVaeosaAlluvused(Collection<VaeosaAlluvus> param) {
+	    this.vaeosaAlluvused = param;
 	}
 }

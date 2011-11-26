@@ -9,6 +9,7 @@ privileged aspect VoimalikAlluvus_Roo_ToString {
     
     public String VoimalikAlluvus.toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("AlamYksus: ").append(getAlamYksus()).append(", ");
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
@@ -20,7 +21,8 @@ privileged aspect VoimalikAlluvus_Roo_ToString {
         sb.append("Serialversionuid: ").append(getSerialversionuid()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Version: ").append(getVersion()).append(", ");
+        sb.append("YlemYksus: ").append(getYlemYksus());
         return sb.toString();
     }
     

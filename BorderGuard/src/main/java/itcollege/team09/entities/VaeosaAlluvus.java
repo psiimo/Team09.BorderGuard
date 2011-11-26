@@ -13,6 +13,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import itcollege.team09.entities.Vaeosa;
+import javax.persistence.ManyToOne;
 
 @Entity
 @RooToString
@@ -59,8 +61,16 @@ public class VaeosaAlluvus {
     private Date suletud;
     
     private static final long serialVersionUID = 1L;
-    
-    
+
+	@ManyToOne
+	private Vaeosa ylemVaeosa;
+
+	@ManyToOne
+	private Vaeosa alamVaeosa;
+	
+	
+	
+
 	public Long getId() {
 		return id;
 	}
@@ -123,5 +133,17 @@ public class VaeosaAlluvus {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public Vaeosa getYlemVaeosa() {
+	    return ylemVaeosa;
+	}
+	public void setYlemVaeosa(Vaeosa param) {
+	    this.ylemVaeosa = param;
+	}
+	public Vaeosa getAlamVaeosa() {
+	    return alamVaeosa;
+	}
+	public void setAlamVaeosa(Vaeosa param) {
+	    this.alamVaeosa = param;
 	}
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
 		<entity-name>itcollege.team09.entities.VoimalikAlluvus</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>268</entity-height>
-		<entity-X-Coordinate>50</entity-X-Coordinate>
-		<entity-Y-Coordinate>50</entity-Y-Coordinate>
+		<entity-width>201</entity-width>
+		<entity-height>326</entity-height>
+		<entity-X-Coordinate>460</entity-X-Coordinate>
+		<entity-Y-Coordinate>10</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -12,10 +12,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.AdminYksus</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>308</entity-height>
-		<entity-X-Coordinate>490</entity-X-Coordinate>
-		<entity-Y-Coordinate>50</entity-Y-Coordinate>
+		<entity-width>201</entity-width>
+		<entity-height>366</entity-height>
+		<entity-X-Coordinate>50</entity-X-Coordinate>
+		<entity-Y-Coordinate>459</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -23,10 +23,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.AdminYksuseLiik</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>308</entity-height>
-		<entity-X-Coordinate>270</entity-X-Coordinate>
-		<entity-Y-Coordinate>100</entity-Y-Coordinate>
+		<entity-width>201</entity-width>
+		<entity-height>346</entity-height>
+		<entity-X-Coordinate>50</entity-X-Coordinate>
+		<entity-Y-Coordinate>10</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -34,10 +34,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.VaeosaAlluvus</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>268</entity-height>
-		<entity-X-Coordinate>710</entity-X-Coordinate>
-		<entity-Y-Coordinate>100</entity-Y-Coordinate>
+		<entity-width>201</entity-width>
+		<entity-height>326</entity-height>
+		<entity-X-Coordinate>760</entity-X-Coordinate>
+		<entity-Y-Coordinate>10</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -45,10 +45,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.AdminAlluvus</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>228</entity-height>
-		<entity-X-Coordinate>50</entity-X-Coordinate>
-		<entity-Y-Coordinate>418</entity-Y-Coordinate>
+		<entity-width>201</entity-width>
+		<entity-height>286</entity-height>
+		<entity-X-Coordinate>457</entity-X-Coordinate>
+		<entity-Y-Coordinate>371</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -56,10 +56,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.Vaeosa</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>308</entity-height>
-		<entity-X-Coordinate>490</entity-X-Coordinate>
-		<entity-Y-Coordinate>458</entity-Y-Coordinate>
+		<entity-width>201</entity-width>
+		<entity-height>366</entity-height>
+		<entity-X-Coordinate>740</entity-X-Coordinate>
+		<entity-Y-Coordinate>445</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

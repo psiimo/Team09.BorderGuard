@@ -1,11 +1,14 @@
 package itcollege.team09.entities;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -67,8 +70,13 @@ public class AdminYksus {
     private Date suletud;
     
     private static final long serialVersionUID = 1L;
-    
-    
+
+	@ManyToOne
+	private AdminYksuseLiik adminYksuseLiik;
+
+	@OneToMany(mappedBy = "adminYksus")
+	private Collection<Vaeosa> vaeosa;
+
 	public Long getId() {
 		return id;
 	}
@@ -143,5 +151,17 @@ public class AdminYksus {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public AdminYksuseLiik getAdminYksuseLiik() {
+	    return adminYksuseLiik;
+	}
+	public void setAdminYksuseLiik(AdminYksuseLiik param) {
+	    this.adminYksuseLiik = param;
+	}
+	public Collection<Vaeosa> getVaeosa() {
+	    return vaeosa;
+	}
+	public void setVaeosa(Collection<Vaeosa> param) {
+	    this.vaeosa = param;
 	}
 }

@@ -13,6 +13,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import itcollege.team09.entities.AdminYksuseLiik;
+import javax.persistence.ManyToOne;
 
 @Entity
 @RooToString
@@ -59,8 +61,16 @@ public class VoimalikAlluvus {
     private Date suletud;
     
     private static final long serialVersionUID = 1L;
-    
-    
+
+	@ManyToOne
+	private AdminYksuseLiik ylemYksus;
+
+	@ManyToOne
+	private AdminYksuseLiik alamYksus;
+	
+	
+	
+
 	public Long getId() {
 		return id;
 	}
@@ -123,5 +133,17 @@ public class VoimalikAlluvus {
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public AdminYksuseLiik getYlemYksus() {
+	    return ylemYksus;
+	}
+	public void setYlemYksus(AdminYksuseLiik param) {
+	    this.ylemYksus = param;
+	}
+	public AdminYksuseLiik getAlamYksus() {
+	    return alamYksus;
+	}
+	public void setAlamYksus(AdminYksuseLiik param) {
+	    this.alamYksus = param;
 	}
 }
