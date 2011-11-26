@@ -6,11 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.PrePersist;
+import javax.persistence.PreRemove;
+import javax.persistence.PreUpdate;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import itcollege.team09.entities.AdminYksuseLiik;
@@ -25,12 +27,12 @@ public class VoimalikAlluvus {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    @NotNull
-    @Temporal(TemporalType.DATE)
+    @NotNull 
+    @DateTimeFormat(style="M-")
     private Date alates;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date kuni;
     
     @NotNull
@@ -41,7 +43,7 @@ public class VoimalikAlluvus {
     private String avaja;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date avatud;
     
     @NotNull
@@ -49,7 +51,7 @@ public class VoimalikAlluvus {
     private String muutja;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date muudetud;
     
     @NotNull
@@ -57,7 +59,7 @@ public class VoimalikAlluvus {
     private String sulgeja;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date suletud;
     
     private static final long serialVersionUID = 1L;
@@ -68,6 +70,24 @@ public class VoimalikAlluvus {
 	@ManyToOne
 	private AdminYksuseLiik alamYksus;
 	
+	
+	
+	@PrePersist	
+	public void recordCreated() {
+		setAvaja("Mr X");
+		setAvatud(new Date());	
+	}
+	
+	@PreUpdate	
+	public void recordModified() {		
+		setMuutja("Mr X");		
+		setMuudetud(new Date());	
+	}	
+	
+	@PreRemove	
+	public void preventRemove() {		
+		throw new SecurityException("Eemaldamine keelatud!");	
+	}
 	
 	
 

@@ -8,11 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
@@ -37,11 +36,11 @@ public class AdminYksuseLiik {
     private String kommentaar;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date alates;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date kuni;
     
     @NotNull
@@ -49,7 +48,7 @@ public class AdminYksuseLiik {
     private String avaja;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date avatud;
     
     @NotNull
@@ -57,7 +56,7 @@ public class AdminYksuseLiik {
     private String muutja;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date muudetud;
     
     @NotNull
@@ -65,7 +64,7 @@ public class AdminYksuseLiik {
     private String sulgeja;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date suletud;
     
     private static final long serialVersionUID = 1L;

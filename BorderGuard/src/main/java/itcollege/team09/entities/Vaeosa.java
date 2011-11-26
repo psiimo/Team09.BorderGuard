@@ -7,11 +7,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.PrePersist;
+import javax.persistence.PreRemove;
+import javax.persistence.PreUpdate;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import itcollege.team09.entities.VaeosaAlluvus;
@@ -36,30 +38,31 @@ public class Vaeosa {
     private String nimetus;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date alates;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date kuni;
     
     @NotNull
+    @Size(max=500)
     private String kommentaar;
     
-    @NotNull
+
     @Size(max=32)
     private String avaja;
     
-    @NotNull
-    @Temporal(TemporalType.DATE)
+
+    @DateTimeFormat(style="M-")
     private Date avatud;
     
-    @NotNull
+
     @Size(max=32)
     private String muutja;
     
-    @NotNull
-    @Temporal(TemporalType.DATE)
+
+    @DateTimeFormat(style="M-")
     private Date muudetud;
     
     @NotNull
@@ -67,7 +70,7 @@ public class Vaeosa {
     private String sulgeja;
     
     @NotNull
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(style="M-")
     private Date suletud;
     
     private static final long serialVersionUID = 1L;
@@ -80,7 +83,25 @@ public class Vaeosa {
 	
 	
 	
+	@PrePersist	
+	public void recordCreated() {
+		setAvaja("Mr X");
+		setAvatud(new Date());	
+	}
+	
+	@PreUpdate	
+	public void recordModified() {		
+		setMuutja("Mr X");		
+		setMuudetud(new Date());	
+	}	
+	
+	@PreRemove	
+	public void preventRemove() {		
+		throw new SecurityException("Eemaldamine keelatud!");	
+	}
+	
 
+	
 	public Long getId() {
 		return id;
 	}
