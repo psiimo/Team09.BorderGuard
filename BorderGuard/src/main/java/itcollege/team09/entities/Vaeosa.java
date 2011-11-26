@@ -19,6 +19,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 import itcollege.team09.entities.VaeosaAlluvus;
 import java.util.Collection;
 import javax.persistence.OneToMany;
+import itcollege.team09.entities.AmetVaeosas;
 
 @Entity
 @RooToString
@@ -49,11 +50,11 @@ public class Vaeosa {
     @Size(max=500)
     private String kommentaar;
     
-
+    @NotNull
     @Size(max=32)
     private String avaja;
     
-
+    @NotNull
     @DateTimeFormat(style="M-")
     private Date avatud;
     
@@ -80,6 +81,9 @@ public class Vaeosa {
 
 	@OneToMany(mappedBy = "alamVaeosa")
 	private Collection<VaeosaAlluvus> vaeosaAlluvused;
+
+	@OneToMany(mappedBy = "vaeosa")
+	private Collection<AmetVaeosas> ametidVaeosas;
 	
 	
 	
@@ -188,5 +192,13 @@ public class Vaeosa {
 	}
 	public void setVaeosaAlluvused(Collection<VaeosaAlluvus> param) {
 	    this.vaeosaAlluvused = param;
+	}
+
+	public Collection<AmetVaeosas> getAmetidVaeosas() {
+	    return ametidVaeosas;
+	}
+
+	public void setAmetidVaeosas(Collection<AmetVaeosas> param) {
+	    this.ametidVaeosas = param;
 	}
 }

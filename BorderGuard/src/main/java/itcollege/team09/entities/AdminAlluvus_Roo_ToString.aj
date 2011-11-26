@@ -16,7 +16,6 @@ privileged aspect AdminAlluvus_Roo_ToString {
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
-        sb.append("Serialversionuid: ").append(getSerialversionuid()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
