@@ -6,6 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -18,15 +22,42 @@ public class VoimalikAlluvus {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    @NotNull
+    @Temporal(TemporalType.DATE)
     private Date alates;
+    
+    @NotNull
+    @Temporal(TemporalType.DATE)
     private Date kuni;
+    
+    @NotNull
     private String kommentaar;
+    
+    @NotNull
+    @Size(max=32)
     private String avaja;
+    
+    @NotNull
+    @Temporal(TemporalType.DATE)
     private Date avatud;
+    
+    @NotNull
+    @Size(max=32)
     private String muutja;
+    
+    @NotNull
+    @Temporal(TemporalType.DATE)
     private Date muudetud;
+    
+    @NotNull
+    @Size(max=32)
     private String sulgeja;
+    
+    @NotNull
+    @Temporal(TemporalType.DATE)
     private Date suletud;
+    
     private static final long serialVersionUID = 1L;
     
     
