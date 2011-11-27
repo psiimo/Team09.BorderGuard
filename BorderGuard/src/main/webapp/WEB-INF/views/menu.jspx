@@ -31,5 +31,8 @@
             <menu:item id="i_ametvaeosas_new" messageCode="global_menu_new" url="/ametvaeosases?form" z="pKucHiInhVd06yDo/164tLmexgc="/>
             <menu:item id="i_ametvaeosas_list" messageCode="global_menu_list" url="/ametvaeosases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="UAFhPFCQpa/vMnv6t+4Ip83OHik="/>
         </menu:category>
+        <menu:category id="c_view" z="HjmI4Chx/kBYfS/6HjBLbCA+XpU=">
+            <menu:item id="i_view__adminyksusesredactor_id" messageCode="global_generic" url="/adminyksuses/redactor" z="4AzL7dzEGmSM1VBVVJwcgTW/BbU="/>
+        </menu:category>
     </menu:menu>
 </div>

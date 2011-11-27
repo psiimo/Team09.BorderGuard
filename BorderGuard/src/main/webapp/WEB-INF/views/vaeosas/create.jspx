@@ -7,7 +7,7 @@
         <field:textarea field="nimetus" id="c_itcollege_team09_entities_Vaeosa_nimetus" required="true" z="d0GDAKW0urE1BRrqEQ9J3DK1oCE="/>
         <field:datetime dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="c_itcollege_team09_entities_Vaeosa_alates" required="true" z="4010QuEDny8XJkaFJorP41UHpY4="/>
         <field:datetime dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_Vaeosa_kuni" required="true" z="hNt2QgPDc5m/D0NHxhqlp2LO2io="/>
-        <field:input field="kommentaar" id="c_itcollege_team09_entities_Vaeosa_kommentaar" required="true" z="NCHsTjxaR2iIn6xEiKDYXaM8jhU="/>
+        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_Vaeosa_kommentaar" required="true" z="RJKc0tcMJvmNkbG+fV7gz1t6YfM="/>
         <field:textarea field="avaja" id="c_itcollege_team09_entities_Vaeosa_avaja" required="true" z="cwnUug3lwzOjYx0OoglUBkgZKvs="/>
         <field:datetime dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_Vaeosa_avatud" required="true" z="ienPRwB4aeWh/A/gz66BIYRVyCA="/>
         <field:textarea field="muutja" id="c_itcollege_team09_entities_Vaeosa_muutja" required="true" z="I5RZWqeuFEWkyf6aGvgbvS+60u8="/>

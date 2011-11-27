@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_itcollege_team09_entities_AmetVaeosas" modelAttribute="ametVaeosas" path="/ametvaeosases" versionField="Version" z="kn0WaFMyjJRKdPXakeLFROxb6f8=">
-        <field:input field="kommentaar" id="c_itcollege_team09_entities_AmetVaeosas_kommentaar" required="true" z="3rkjfv3LP8ZJlb/UsWAJPMaj3qs="/>
+        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_AmetVaeosas_kommentaar" required="true" z="dhx2/Br8QDdlhA8w/1NnPmtOA8s="/>
         <field:textarea field="avaja" id="c_itcollege_team09_entities_AmetVaeosas_avaja" required="true" z="XTC5Qf6UxJ7+VVNtYE9/CIQQikQ="/>
         <field:datetime dateTimePattern="${ametVaeosas_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AmetVaeosas_avatud" required="true" z="ZGhnWrV8HIGNPGZN63tRgZJd4jc="/>
         <field:textarea field="muutja" id="c_itcollege_team09_entities_AmetVaeosas_muutja" required="true" z="ZL/kiBAtgtTsie4h2A+TbRspwBg="/>

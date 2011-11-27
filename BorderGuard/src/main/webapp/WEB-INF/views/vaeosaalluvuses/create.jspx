@@ -5,7 +5,7 @@
     <form:create id="fc_itcollege_team09_entities_VaeosaAlluvus" modelAttribute="vaeosaAlluvus" path="/vaeosaalluvuses" render="${empty dependencies}" z="BWr4ZaKuTN8Ogalcg9oPk8c8YYQ=">
         <field:datetime dateTimePattern="${vaeosaAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VaeosaAlluvus_alates" required="true" z="A/RLUzCamUjEP+0jQiOHRPgFf60="/>
         <field:datetime dateTimePattern="${vaeosaAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VaeosaAlluvus_kuni" required="true" z="OzGQi5wNEYgPTiyFt0lnEdvekSQ="/>
-        <field:input field="kommentaar" id="c_itcollege_team09_entities_VaeosaAlluvus_kommentaar" required="true" z="I62ZQybrfM6ChaVliJSg84N28+4="/>
+        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VaeosaAlluvus_kommentaar" required="true" z="QijZ/iLXePbkxrAF3mff2x0awY0="/>
         <field:textarea field="avaja" id="c_itcollege_team09_entities_VaeosaAlluvus_avaja" required="true" z="0euwqFe5vzN9sjz+210UfbBosxU="/>
         <field:datetime dateTimePattern="${vaeosaAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_VaeosaAlluvus_avatud" required="true" z="DWbrTyuZ+3HuptfOIgX7PNUCo1g="/>
         <field:textarea field="muutja" id="c_itcollege_team09_entities_VaeosaAlluvus_muutja" required="true" z="pLAhrNzAHA8tkLL1+FHiDZoXzBU="/>

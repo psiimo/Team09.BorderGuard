@@ -5,7 +5,7 @@
     <form:create id="fc_itcollege_team09_entities_AdminYksuseLiik" modelAttribute="adminYksuseLiik" path="/adminyksuseliiks" render="${empty dependencies}" z="D+W8anT89lpLZmyNMTBWSKkT1jA=">
         <field:input field="kood" id="c_itcollege_team09_entities_AdminYksuseLiik_kood" max="10" required="true" z="Melal9tkmwCHycmiKO9a2ru6rlg="/>
         <field:textarea field="nimetus" id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus" required="true" z="C+qShFpyKu0/MIVoyGiyWaR+GAA="/>
-        <field:input field="kommentaar" id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar" required="true" z="P5w8tE/U9+dHNFJQ0Abmm3ZR6ss="/>
+        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar" required="true" z="Hm3vMVK2D69YMWGAUUF4JInPPbk="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY="/>
         <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminYksuseLiik_avaja" required="true" z="MHDip0fVlmHn4TjkGp5xAQQOwkg="/>

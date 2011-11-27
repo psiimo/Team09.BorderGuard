@@ -25,27 +25,29 @@ public abstract class Piirivalve {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    	
+	@Size(max=500)
 	@NotNull
     private String kommentaar;
     
-    @NotNull
     @Size(max=32)
+    @NotNull
     private String avaja;
     
     @NotNull
     @DateTimeFormat(style="M-")
     private Date avatud;
-    
-    @NotNull
+        
     @Size(max=32)
+    @NotNull
     private String muutja;
     
     @NotNull
     @DateTimeFormat(style="M-")
     private Date muudetud;
-    
-    @NotNull
+        
     @Size(max=32)
+    @NotNull
     private String sulgeja;
     
     @NotNull
@@ -116,7 +118,7 @@ public abstract class Piirivalve {
 	}	
 	
 	@PreRemove	
-	public void preventRemove() {		
-		throw new SecurityException("Eemaldamine keelatud!");	
+	public void preventRemove() {	
+		throw new SecurityException("Removing of bears is prohibited!");	
 	}
 }
