@@ -14,5 +14,7 @@
         <field:textarea field="nimetus" id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus" required="true" z="C+qShFpyKu0/MIVoyGiyWaR+GAA="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY="/>
+        <field:simple field="voimalikAlluvus" id="c_itcollege_team09_entities_AdminYksuseLiik_voimalikAlluvus" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="uYQfECT9plDZNlAguZ4XrD5Clrw="/>
+        <field:simple field="voimalikAlluvus_1" id="c_itcollege_team09_entities_AdminYksuseLiik_voimalikAlluvus_1" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="E9dFAcOX9Wge9SJHyGeTpZ5anMM="/>
     </form:update>
 </div>

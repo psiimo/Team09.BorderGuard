@@ -16,5 +16,7 @@
         <field:datetime dateTimePattern="${adminYksus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksus_kuni" required="true" z="tLydFlvpddq5+iw9TIVmCXtHWCs="/>
         <field:select field="adminYksuseLiik" id="c_itcollege_team09_entities_AdminYksus_adminYksuseLiik" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="Z4t3ZtqljOdPovP1HMBoIDVgBkw="/>
         <field:simple field="vaeosa" id="c_itcollege_team09_entities_AdminYksus_vaeosa" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa" z="8ikPrJmtV0lPhOGmsniycPKd6DU="/>
+        <field:simple field="adminAlluvus" id="c_itcollege_team09_entities_AdminYksus_adminAlluvus" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="Jm1WW1NkFEbEHtN93eJ9iJduNJM="/>
+        <field:simple field="adminAlluvus_1" id="c_itcollege_team09_entities_AdminYksus_adminAlluvus_1" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="Ut8be5AvLt6y6W6AQgomk4zUxHM="/>
     </form:update>
 </div>

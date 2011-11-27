@@ -12,7 +12,7 @@
         <field:display date="true" dateTimePattern="${vaeosaAlluvus_muudetud_date_format}" field="muudetud" id="s_itcollege_team09_entities_VaeosaAlluvus_muudetud" object="${vaeosaalluvus}" z="gUxENf+BCy7dXIqvc92rgCKh9uM="/>
         <field:display field="sulgeja" id="s_itcollege_team09_entities_VaeosaAlluvus_sulgeja" object="${vaeosaalluvus}" z="FsrQ0S7fkl5o9Rnw9iJG2/CoyeQ="/>
         <field:display date="true" dateTimePattern="${vaeosaAlluvus_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_VaeosaAlluvus_suletud" object="${vaeosaalluvus}" z="axYE+xgi51Pq9Lh0/ih4IgeNk80="/>
-        <field:display field="vaeosa1" id="s_itcollege_team09_entities_VaeosaAlluvus_vaeosa1" object="${vaeosaalluvus}" z="8OtSfJpW02fNVmqoMUeyWBe4Co4="/>
-        <field:display field="vaeosa2" id="s_itcollege_team09_entities_VaeosaAlluvus_vaeosa2" object="${vaeosaalluvus}" z="LJmTd7miF4G1XszmsUn9LilF+F8="/>
+        <field:display field="vaeosa" id="s_itcollege_team09_entities_VaeosaAlluvus_vaeosa" object="${vaeosaalluvus}" z="G1FwlREgz4N5nUA34tp0SLoF0kw="/>
+        <field:display field="vaeosa_1" id="s_itcollege_team09_entities_VaeosaAlluvus_vaeosa_1" object="${vaeosaalluvus}" z="Qg7kmNIwLM8fmc6eF6+jiUKF+Tc="/>
     </page:show>
 </div>

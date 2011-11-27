@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
+
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -22,18 +23,16 @@ public class VaeosaAlluvus extends Piirivalve {
     @NotNull
     @DateTimeFormat(style="M-")
     private Date kuni;
+
+	@ManyToOne
+	private Vaeosa vaeosa;
+
+	@ManyToOne
+	private Vaeosa vaeosa_1;
     
     
         
-    @ManyToOne		
-    private Vaeosa vaeosa1;	  
-    
-    @ManyToOne		
-    private Vaeosa vaeosa2;
-	
-		
-
-	public Date getAlates() {
+    public Date getAlates() {
 		return alates;
 	}
 	public void setAlates(Date alates) {
@@ -45,16 +44,16 @@ public class VaeosaAlluvus extends Piirivalve {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
-	public Vaeosa getVaeosa1() {
-		return vaeosa1;
+	public Vaeosa getVaeosa() {
+	    return vaeosa;
 	}
-	public void setVaeosa1(Vaeosa vaeosa1) {
-		this.vaeosa1 = vaeosa1;
+	public void setVaeosa(Vaeosa param) {
+	    this.vaeosa = param;
 	}
-	public Vaeosa getVaeosa2() {
-		return vaeosa2;
+	public Vaeosa getVaeosa_1() {
+	    return vaeosa_1;
 	}
-	public void setVaeosa2(Vaeosa vaeosa2) {
-		this.vaeosa2 = vaeosa2;
+	public void setVaeosa_1(Vaeosa param) {
+	    this.vaeosa_1 = param;
 	}
 }

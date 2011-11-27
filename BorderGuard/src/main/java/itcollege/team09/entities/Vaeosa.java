@@ -1,10 +1,8 @@
 package itcollege.team09.entities;
 
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -13,6 +11,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import itcollege.team09.entities.VaeosaAlluvus;
+import java.util.Collection;
+import javax.persistence.OneToMany;
 
 @Entity
 @RooToString
@@ -40,16 +40,14 @@ public class Vaeosa extends Piirivalve {
 	@ManyToOne
 	private AdminYksus adminYksus;
 
-	@OneToMany(mappedBy="vaeosa1")	
-	private Set<VaeosaAlluvus> vaeosaAlluvuses1;	
-		
-	@OneToMany(mappedBy="vaeosa2")	
-	private Set<VaeosaAlluvus> vaeosaAlluvuses2;
+	@OneToMany(mappedBy = "vaeosa")
+	private Collection<VaeosaAlluvus> vaeosaAlluvus;
+
+	@OneToMany(mappedBy = "vaeosa_1")
+	private Collection<VaeosaAlluvus> vaeosaAlluvus_1;
 	
 	
-	
-	
-	
+
 	public String getKood() {
 		return kood;
 	}
@@ -80,16 +78,16 @@ public class Vaeosa extends Piirivalve {
 	public void setAdminYksus(AdminYksus param) {
 	    this.adminYksus = param;
 	}
-	public Set<VaeosaAlluvus> getVaeosaAlluvuses1() {
-		return vaeosaAlluvuses1;
+	public Collection<VaeosaAlluvus> getVaeosaAlluvus() {
+	    return vaeosaAlluvus;
 	}
-	public void setVaeosaAlluvuses1(Set<VaeosaAlluvus> vaeosaAlluvuses1) {
-		this.vaeosaAlluvuses1 = vaeosaAlluvuses1;
+	public void setVaeosaAlluvus(Collection<VaeosaAlluvus> param) {
+	    this.vaeosaAlluvus = param;
 	}
-	public Set<VaeosaAlluvus> getVaeosaAlluvuses2() {
-		return vaeosaAlluvuses2;
+	public Collection<VaeosaAlluvus> getVaeosaAlluvus_1() {
+	    return vaeosaAlluvus_1;
 	}
-	public void setVaeosaAlluvuses2(Set<VaeosaAlluvus> vaeosaAlluvuses2) {
-		this.vaeosaAlluvuses2 = vaeosaAlluvuses2;
+	public void setVaeosaAlluvus_1(Collection<VaeosaAlluvus> param) {
+	    this.vaeosaAlluvus_1 = param;
 	}
 }

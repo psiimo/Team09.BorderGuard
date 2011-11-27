@@ -15,7 +15,7 @@
         <field:datetime dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="c_itcollege_team09_entities_Vaeosa_alates" required="true" z="4010QuEDny8XJkaFJorP41UHpY4="/>
         <field:datetime dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_Vaeosa_kuni" required="true" z="hNt2QgPDc5m/D0NHxhqlp2LO2io="/>
         <field:select field="adminYksus" id="c_itcollege_team09_entities_Vaeosa_adminYksus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="K1DObUV3nyT5h6K57usXidIpB9k="/>
-        <field:simple field="vaeosaAlluvuses1" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvuses1" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="DKdQp5SdoRkzF16N62znzRxnaEI="/>
-        <field:simple field="vaeosaAlluvuses2" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvuses2" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="NCtQUpuf8qhHG+XnTiPyaVz45fA="/>
+        <field:simple field="vaeosaAlluvus" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvus" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="B5F3Op6/voMwCKmFVKKJScOCs5I="/>
+        <field:simple field="vaeosaAlluvus_1" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvus_1" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="Wjnsf9PDE72g/VL2PyN0FMKCaHQ="/>
     </form:update>
 </div>

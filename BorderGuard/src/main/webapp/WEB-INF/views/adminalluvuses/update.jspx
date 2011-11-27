@@ -10,7 +10,7 @@
         <field:datetime dateTimePattern="${adminAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminAlluvus_muudetud" required="true" z="V7C2KeeWY9JvlvNp7oGJpG5yqio="/>
         <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminAlluvus_sulgeja" required="true" z="v18o5UWPTlsyReF8N5PC3HlmuLg="/>
         <field:datetime dateTimePattern="${adminAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminAlluvus_suletud" required="true" z="DwKFhclDzJrP/GCSvPm+bfdgCJI="/>
-        <field:select field="ylemAdminYksus" id="c_itcollege_team09_entities_AdminAlluvus_ylemAdminYksus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="eswFCoiXM9vUsNGeIUxt7gLfAMg="/>
-        <field:select field="alamAdminYksus" id="c_itcollege_team09_entities_AdminAlluvus_alamAdminYksus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="ev+JSMcSYG0Ay57euV7WYPJbpnk="/>
+        <field:select field="adminYksus" id="c_itcollege_team09_entities_AdminAlluvus_adminYksus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="2bK0pylv6CNt3LqfrCl0tA9Ifq4="/>
+        <field:select field="adminYksus_1" id="c_itcollege_team09_entities_AdminAlluvus_adminYksus_1" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="5zj5ZcEl+YegZAowcCgIwPqMNvk="/>
     </form:update>
 </div>

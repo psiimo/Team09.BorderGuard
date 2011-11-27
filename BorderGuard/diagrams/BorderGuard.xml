@@ -1,3 +1,89 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<entities>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
+	<entity>
+		<entity-name>itcollege.team09.entities.AdminYksus</entity-name>
+		<entity-width>171</entity-width>
+		<entity-height>228</entity-height>
+		<entity-X-Coordinate>24</entity-X-Coordinate>
+		<entity-Y-Coordinate>10</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.Vaeosa</entity-name>
+		<entity-width>179</entity-width>
+		<entity-height>208</entity-height>
+		<entity-X-Coordinate>20</entity-X-Coordinate>
+		<entity-Y-Coordinate>373</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.AdminAlluvus</entity-name>
+		<entity-width>166</entity-width>
+		<entity-height>90</entity-height>
+		<entity-X-Coordinate>375</entity-X-Coordinate>
+		<entity-Y-Coordinate>79</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.VoimalikAlluvus</entity-name>
+		<entity-width>183</entity-width>
+		<entity-height>148</entity-height>
+		<entity-X-Coordinate>534</entity-X-Coordinate>
+		<entity-Y-Coordinate>540</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.AdminYksuseLiik</entity-name>
+		<entity-width>160</entity-width>
+		<entity-height>188</entity-height>
+		<entity-X-Coordinate>546</entity-X-Coordinate>
+		<entity-Y-Coordinate>230</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.AmetVaeosas</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>110</entity-height>
+		<entity-X-Coordinate>950</entity-X-Coordinate>
+		<entity-Y-Coordinate>46</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.Piirivalve</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>228</entity-height>
+		<entity-X-Coordinate>780</entity-X-Coordinate>
+		<entity-Y-Coordinate>46</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.VaeosaAlluvus</entity-name>
+		<entity-width>146</entity-width>
+		<entity-height>148</entity-height>
+		<entity-X-Coordinate>350</entity-X-Coordinate>
+		<entity-Y-Coordinate>403</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
 </entities>

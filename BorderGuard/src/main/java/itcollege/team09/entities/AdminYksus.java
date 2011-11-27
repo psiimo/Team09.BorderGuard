@@ -12,6 +12,7 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import itcollege.team09.entities.AdminAlluvus;
 
 @Entity
 @RooToString
@@ -40,6 +41,12 @@ public class AdminYksus extends Piirivalve {
 
 	@OneToMany(mappedBy = "adminYksus")
 	private Collection<Vaeosa> vaeosa;
+
+	@OneToMany(mappedBy = "adminYksus")
+	private Collection<AdminAlluvus> adminAlluvus;
+
+	@OneToMany(mappedBy = "adminYksus_1")
+	private Collection<AdminAlluvus> adminAlluvus_1;
 
 	
 	
@@ -78,5 +85,17 @@ public class AdminYksus extends Piirivalve {
 	}
 	public void setVaeosa(Collection<Vaeosa> param) {
 	    this.vaeosa = param;
+	}
+	public Collection<AdminAlluvus> getAdminAlluvus() {
+	    return adminAlluvus;
+	}
+	public void setAdminAlluvus(Collection<AdminAlluvus> param) {
+	    this.adminAlluvus = param;
+	}
+	public Collection<AdminAlluvus> getAdminAlluvus_1() {
+	    return adminAlluvus_1;
+	}
+	public void setAdminAlluvus_1(Collection<AdminAlluvus> param) {
+	    this.adminAlluvus_1 = param;
 	}
 }

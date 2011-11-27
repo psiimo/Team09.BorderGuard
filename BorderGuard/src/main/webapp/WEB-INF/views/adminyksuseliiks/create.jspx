@@ -14,6 +14,8 @@
         <field:datetime dateTimePattern="${adminYksuseLiik_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminYksuseLiik_muudetud" required="true" z="+dUYnwDydkhHEj0wN/OZ/j6ViHM="/>
         <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminYksuseLiik_sulgeja" required="true" z="bGv1SzGc10v/OLTajrVskARPVPc="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" required="true" z="N6BDX/MI00sRwelHX6zi9b2sNbE="/>
+        <field:simple field="voimalikAlluvus" id="c_itcollege_team09_entities_AdminYksuseLiik_voimalikAlluvus" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="uYQfECT9plDZNlAguZ4XrD5Clrw="/>
+        <field:simple field="voimalikAlluvus_1" id="c_itcollege_team09_entities_AdminYksuseLiik_voimalikAlluvus_1" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="E9dFAcOX9Wge9SJHyGeTpZ5anMM="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_AdminYksuseLiik" render="${not empty dependencies}" z="TQN/B9XFUk+U31MD7wR8IzpiHuU="/>
 </div>

@@ -13,22 +13,22 @@ import javax.persistence.ManyToOne;
 public class AdminAlluvus extends Piirivalve  {
 
 	@ManyToOne
-	private AdminYksus ylemAdminYksus;
-
+	private AdminYksus adminYksus;
 	@ManyToOne
-	private AdminYksus alamAdminYksus;
-
+	private AdminYksus adminYksus_1;
 	
-	public AdminYksus getYlemAdminYksus() {
-	    return ylemAdminYksus;
+	
+
+	public AdminYksus getAdminYksus() {
+	    return adminYksus;
 	}
-	public void setYlemAdminYksus(AdminYksus param) {
-	    this.ylemAdminYksus = param;
+	public void setAdminYksus(AdminYksus param) {
+	    this.adminYksus = param;
 	}
-	public AdminYksus getAlamAdminYksus() {
-	    return alamAdminYksus;
+	public AdminYksus getAdminYksus_1() {
+	    return adminYksus_1;
 	}
-	public void setAlamAdminYksus(AdminYksus param) {
-	    this.alamAdminYksus = param;
+	public void setAdminYksus_1(AdminYksus param) {
+	    this.adminYksus_1 = param;
 	}
 }

@@ -8,8 +8,6 @@ import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
-import itcollege.team09.entities.Vaeosa;
-import javax.persistence.ManyToOne;
 
 @Entity
 @RooToString

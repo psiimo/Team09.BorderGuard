@@ -19,8 +19,8 @@ privileged aspect VaeosaAlluvus_Roo_ToString {
         sb.append("Muutja: ").append(getMuutja()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vaeosa1: ").append(getVaeosa1()).append(", ");
-        sb.append("Vaeosa2: ").append(getVaeosa2()).append(", ");
+        sb.append("Vaeosa: ").append(getVaeosa()).append(", ");
+        sb.append("Vaeosa_1: ").append(getVaeosa_1()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

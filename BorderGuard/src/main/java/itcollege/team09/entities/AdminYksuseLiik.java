@@ -1,7 +1,6 @@
 package itcollege.team09.entities;
 
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -11,6 +10,8 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import itcollege.team09.entities.VoimalikAlluvus;
+import java.util.Collection;
 
 @Entity
 @RooToString
@@ -32,17 +33,13 @@ public class AdminYksuseLiik extends Piirivalve {
     @NotNull
     @DateTimeFormat(style="M-")
     private Date kuni;
+
+	@OneToMany(mappedBy = "adminYksuseLiik")
+	private Collection<VoimalikAlluvus> voimalikAlluvus;
+
+	@OneToMany(mappedBy = "adminYksuseLiik_1")
+	private Collection<VoimalikAlluvus> voimalikAlluvus_1;
     
-
-/*
-
-	@OneToMany(mappedBy="adminYksuseLiik1")	
-	private Set<VaeosaAlluvus> adminYksuseAlluvuses1;	
-
-	@OneToMany(mappedBy="adminYksuseLiik2")	
-	private Set<VaeosaAlluvus> adminYksuseAlluvuses2;
-
-	*/
 
 	
 	public String getKood() {
@@ -69,18 +66,16 @@ public class AdminYksuseLiik extends Piirivalve {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
-	/*
-	public Set<VaeosaAlluvus> getAdminYksuseAlluvuses1() {
-		return adminYksuseAlluvuses1;
+	public Collection<VoimalikAlluvus> getVoimalikAlluvus() {
+	    return voimalikAlluvus;
 	}
-	public void setAdminYksuseAlluvuses1(Set<VaeosaAlluvus> adminYksuseAlluvuses1) {
-		this.adminYksuseAlluvuses1 = adminYksuseAlluvuses1;
+	public void setVoimalikAlluvus(Collection<VoimalikAlluvus> param) {
+	    this.voimalikAlluvus = param;
 	}
-	public Set<VaeosaAlluvus> getAdminYksuseAlluvuses2() {
-		return adminYksuseAlluvuses2;
+	public Collection<VoimalikAlluvus> getVoimalikAlluvus_1() {
+	    return voimalikAlluvus_1;
 	}
-	public void setAdminYksuseAlluvuses2(Set<VaeosaAlluvus> adminYksuseAlluvuses2) {
-		this.adminYksuseAlluvuses2 = adminYksuseAlluvuses2;
+	public void setVoimalikAlluvus_1(Collection<VoimalikAlluvus> param) {
+	    this.voimalikAlluvus_1 = param;
 	}
-	*/
 }

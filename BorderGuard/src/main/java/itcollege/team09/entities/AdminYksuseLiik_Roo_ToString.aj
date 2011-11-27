@@ -21,7 +21,9 @@ privileged aspect AdminYksuseLiik_Roo_ToString {
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Version: ").append(getVersion()).append(", ");
+        sb.append("VoimalikAlluvus: ").append(getVoimalikAlluvus() == null ? "null" : getVoimalikAlluvus().size()).append(", ");
+        sb.append("VoimalikAlluvus_1: ").append(getVoimalikAlluvus_1() == null ? "null" : getVoimalikAlluvus_1().size());
         return sb.toString();
     }
     

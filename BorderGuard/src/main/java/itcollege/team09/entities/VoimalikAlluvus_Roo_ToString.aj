@@ -9,8 +9,8 @@ privileged aspect VoimalikAlluvus_Roo_ToString {
     
     public String VoimalikAlluvus.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("AdminYksuseLiik1: ").append(getAdminYksuseLiik1()).append(", ");
-        sb.append("AdminYksuseLiik2: ").append(getAdminYksuseLiik2()).append(", ");
+        sb.append("AdminYksuseLiik: ").append(getAdminYksuseLiik()).append(", ");
+        sb.append("AdminYksuseLiik_1: ").append(getAdminYksuseLiik_1()).append(", ");
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
