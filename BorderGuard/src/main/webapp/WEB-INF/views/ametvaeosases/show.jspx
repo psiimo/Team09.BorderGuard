@@ -13,6 +13,5 @@
         <field:display field="amet" id="s_itcollege_team09_entities_AmetVaeosas_amet" object="${ametvaeosas}" z="eSVbXSRWSQEC78OMBcdGjaM0gro="/>
         <field:display date="true" dateTimePattern="${ametVaeosas_alates_date_format}" field="alates" id="s_itcollege_team09_entities_AmetVaeosas_alates" object="${ametvaeosas}" z="Mo06lODkU1BCsch7qLO2px87i0M="/>
         <field:display date="true" dateTimePattern="${ametVaeosas_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_AmetVaeosas_kuni" object="${ametvaeosas}" z="LRGu/z2d2h/ocCf1kHBvPz2qoWM="/>
-        <field:display field="vaeosa" id="s_itcollege_team09_entities_AmetVaeosas_vaeosa" object="${ametvaeosas}" z="Gi5Dqb1XS2G3z1ZfgyFLdrg9A7w="/>
     </page:show>
 </div>

@@ -34,6 +34,7 @@ public class AdminYksus extends Piirivalve {
     @DateTimeFormat(style="M-")
     private Date kuni;
     
+    
 	@ManyToOne
 	private AdminYksuseLiik adminYksuseLiik;
 

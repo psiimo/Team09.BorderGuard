@@ -12,7 +12,7 @@
         <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VoimalikAlluvus_suletud" required="true" z="uoq4b28YgBUUw7AQlzAPojyT46I="/>
         <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/>
         <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/>
-        <field:select field="ylemYksus" id="c_itcollege_team09_entities_VoimalikAlluvus_ylemYksus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="P7twPd9ZcehO1nuZtsbeJF1dx2U="/>
-        <field:select field="alamYksus" id="c_itcollege_team09_entities_VoimalikAlluvus_alamYksus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="TUNlhseuAtFLrod7G6ptuB+4CIQ="/>
+        <field:select field="adminYksuseLiik1" id="c_itcollege_team09_entities_VoimalikAlluvus_adminYksuseLiik1" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="YrnLfKCQmbNR3rN3bo8yIlB8Ckk="/>
+        <field:select field="adminYksuseLiik2" id="c_itcollege_team09_entities_VoimalikAlluvus_adminYksuseLiik2" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="lgwNqAIZCFzkeD7U802RdtAJ+Gg="/>
     </form:update>
 </div>

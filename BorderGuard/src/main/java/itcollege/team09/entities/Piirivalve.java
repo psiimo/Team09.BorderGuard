@@ -15,14 +15,16 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 
 @Entity
 @RooToString
 @RooEntity
 public abstract class Piirivalve {
-	
-    @Id
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     	
@@ -107,13 +109,20 @@ public abstract class Piirivalve {
 	
 	@PrePersist	
 	public void recordCreated() {
-		setAvaja("Mr X");
-		setAvatud(new Date());	
+		Date now = new Date();
+		long nowLong = now.getTime();
+	      
+		setAvaja(GetUser());
+		setMuutja(GetUser());
+		setSulgeja(GetUser());
+		
+		setAvatud(new Date(nowLong));	
+		setSuletud(new Date(9999999999999L));
 	}
 	
 	@PreUpdate	
-	public void recordModified() {		
-		setMuutja("Mr X");		
+	public void recordModified() {	
+		setMuutja(GetUser());		
 		setMuudetud(new Date());	
 	}	
 	
@@ -121,4 +130,9 @@ public abstract class Piirivalve {
 	public void preventRemove() {	
 		throw new SecurityException("Removing of bears is prohibited!");	
 	}
+	
+	private String GetUser(){
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		return auth.getName();
+	}	
 }

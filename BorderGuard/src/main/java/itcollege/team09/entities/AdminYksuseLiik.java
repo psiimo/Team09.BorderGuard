@@ -1,7 +1,7 @@
 package itcollege.team09.entities;
 
-import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -33,10 +33,17 @@ public class AdminYksuseLiik extends Piirivalve {
     @DateTimeFormat(style="M-")
     private Date kuni;
     
-	@OneToMany(mappedBy = "adminYksuseLiik")
-	private Collection<AdminYksus> adminYksused;
-	
-	
+
+/*
+
+	@OneToMany(mappedBy="adminYksuseLiik1")	
+	private Set<VaeosaAlluvus> adminYksuseAlluvuses1;	
+
+	@OneToMany(mappedBy="adminYksuseLiik2")	
+	private Set<VaeosaAlluvus> adminYksuseAlluvuses2;
+
+	*/
+
 	
 	public String getKood() {
 		return kood;
@@ -62,10 +69,18 @@ public class AdminYksuseLiik extends Piirivalve {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
-	public Collection<AdminYksus> getAdminYksused() {
-	    return adminYksused;
+	/*
+	public Set<VaeosaAlluvus> getAdminYksuseAlluvuses1() {
+		return adminYksuseAlluvuses1;
 	}
-	public void setAdminYksused(Collection<AdminYksus> param) {
-	    this.adminYksused = param;
+	public void setAdminYksuseAlluvuses1(Set<VaeosaAlluvus> adminYksuseAlluvuses1) {
+		this.adminYksuseAlluvuses1 = adminYksuseAlluvuses1;
 	}
+	public Set<VaeosaAlluvus> getAdminYksuseAlluvuses2() {
+		return adminYksuseAlluvuses2;
+	}
+	public void setAdminYksuseAlluvuses2(Set<VaeosaAlluvus> adminYksuseAlluvuses2) {
+		this.adminYksuseAlluvuses2 = adminYksuseAlluvuses2;
+	}
+	*/
 }

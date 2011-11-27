@@ -4,7 +4,6 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
-
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -24,13 +23,16 @@ public class VoimalikAlluvus extends Piirivalve {
     @DateTimeFormat(style="M-")
     private Date kuni;
     
+    
+    
 	@ManyToOne
-	private AdminYksuseLiik ylemYksus;
+	private AdminYksuseLiik adminYksuseLiik1;
 
 	@ManyToOne
-	private AdminYksuseLiik alamYksus;
+	private AdminYksuseLiik adminYksuseLiik2;
+
 	
-		
+	
 	
 	public Date getAlates() {
 		return alates;
@@ -44,16 +46,16 @@ public class VoimalikAlluvus extends Piirivalve {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
-	public AdminYksuseLiik getYlemYksus() {
-	    return ylemYksus;
+	public AdminYksuseLiik getAdminYksuseLiik1() {
+		return adminYksuseLiik1;
 	}
-	public void setYlemYksus(AdminYksuseLiik param) {
-	    this.ylemYksus = param;
+	public void setAdminYksuseLiik1(AdminYksuseLiik adminYksuseLiik1) {
+		this.adminYksuseLiik1 = adminYksuseLiik1;
 	}
-	public AdminYksuseLiik getAlamYksus() {
-	    return alamYksus;
+	public AdminYksuseLiik getAdminYksuseLiik2() {
+		return adminYksuseLiik2;
 	}
-	public void setAlamYksus(AdminYksuseLiik param) {
-	    this.alamYksus = param;
+	public void setAdminYksuseLiik2(AdminYksuseLiik adminYksuseLiik2) {
+		this.adminYksuseLiik2 = adminYksuseLiik2;
 	}
 }

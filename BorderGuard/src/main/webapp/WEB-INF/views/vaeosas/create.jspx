@@ -15,8 +15,8 @@
         <field:textarea field="sulgeja" id="c_itcollege_team09_entities_Vaeosa_sulgeja" required="true" z="5V7kft/psn5aUDGcbfYmT5glCtE="/>
         <field:datetime dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_Vaeosa_suletud" required="true" z="Uox1ewFH2233h/6QRpc4o8nHiHg="/>
         <field:select field="adminYksus" id="c_itcollege_team09_entities_Vaeosa_adminYksus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="K1DObUV3nyT5h6K57usXidIpB9k="/>
-        <field:simple field="vaeosaAlluvused" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvused" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="rQzgbUzTdBiusq2lb2V211ZQF8g="/>
-        <field:simple field="ametidVaeosas" id="c_itcollege_team09_entities_Vaeosa_ametidVaeosas" messageCode="entity_reference_not_managed" messageCodeAttribute="Amet Vaeosas" z="Yj/0X472ySr2zyAWH+yRoM2WEV0="/>
+        <field:simple field="vaeosaAlluvuses1" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvuses1" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="DKdQp5SdoRkzF16N62znzRxnaEI="/>
+        <field:simple field="vaeosaAlluvuses2" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvuses2" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="NCtQUpuf8qhHG+XnTiPyaVz45fA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_Vaeosa" render="${not empty dependencies}" z="zBNZG8kbl2JDKiWrJZtEBuo3olg="/>
 </div>

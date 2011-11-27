@@ -1,7 +1,7 @@
 package itcollege.team09.entities;
 
-import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -13,7 +13,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import itcollege.team09.entities.VaeosaAlluvus;
-import itcollege.team09.entities.AmetVaeosas;
 
 @Entity
 @RooToString
@@ -36,14 +35,18 @@ public class Vaeosa extends Piirivalve {
     @DateTimeFormat(style="M-")
     private Date kuni;
     
+    
+    
 	@ManyToOne
 	private AdminYksus adminYksus;
 
-	@OneToMany(mappedBy = "alamVaeosa")
-	private Collection<VaeosaAlluvus> vaeosaAlluvused;
-
-	@OneToMany(mappedBy = "vaeosa")
-	private Collection<AmetVaeosas> ametidVaeosas;
+	@OneToMany(mappedBy="vaeosa1")	
+	private Set<VaeosaAlluvus> vaeosaAlluvuses1;	
+		
+	@OneToMany(mappedBy="vaeosa2")	
+	private Set<VaeosaAlluvus> vaeosaAlluvuses2;
+	
+	
 	
 	
 	
@@ -77,16 +80,16 @@ public class Vaeosa extends Piirivalve {
 	public void setAdminYksus(AdminYksus param) {
 	    this.adminYksus = param;
 	}
-	public Collection<VaeosaAlluvus> getVaeosaAlluvused() {
-	    return vaeosaAlluvused;
+	public Set<VaeosaAlluvus> getVaeosaAlluvuses1() {
+		return vaeosaAlluvuses1;
 	}
-	public void setVaeosaAlluvused(Collection<VaeosaAlluvus> param) {
-	    this.vaeosaAlluvused = param;
+	public void setVaeosaAlluvuses1(Set<VaeosaAlluvus> vaeosaAlluvuses1) {
+		this.vaeosaAlluvuses1 = vaeosaAlluvuses1;
 	}
-	public Collection<AmetVaeosas> getAmetidVaeosas() {
-	    return ametidVaeosas;
+	public Set<VaeosaAlluvus> getVaeosaAlluvuses2() {
+		return vaeosaAlluvuses2;
 	}
-	public void setAmetidVaeosas(Collection<AmetVaeosas> param) {
-	    this.ametidVaeosas = param;
+	public void setVaeosaAlluvuses2(Set<VaeosaAlluvus> vaeosaAlluvuses2) {
+		this.vaeosaAlluvuses2 = vaeosaAlluvuses2;
 	}
 }

@@ -26,9 +26,6 @@ public class AmetVaeosas extends Piirivalve {
 	 @DateTimeFormat(style="M-")
 	 private Date kuni;
 
-	@ManyToOne
-	private Vaeosa vaeosa;
-
 	
 	 
 	public String getAmet() {
@@ -48,11 +45,5 @@ public class AmetVaeosas extends Piirivalve {
 	}
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
-	}
-	public Vaeosa getVaeosa() {
-	    return vaeosa;
-	}
-	public void setVaeosa(Vaeosa param) {
-	    this.vaeosa = param;
 	}
 }

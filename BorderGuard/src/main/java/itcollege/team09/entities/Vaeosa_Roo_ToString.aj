@@ -11,7 +11,6 @@ privileged aspect Vaeosa_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("AdminYksus: ").append(getAdminYksus()).append(", ");
         sb.append("Alates: ").append(getAlates()).append(", ");
-        sb.append("AmetidVaeosas: ").append(getAmetidVaeosas() == null ? "null" : getAmetidVaeosas().size()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
@@ -23,7 +22,8 @@ privileged aspect Vaeosa_Roo_ToString {
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("VaeosaAlluvused: ").append(getVaeosaAlluvused() == null ? "null" : getVaeosaAlluvused().size()).append(", ");
+        sb.append("VaeosaAlluvuses1: ").append(getVaeosaAlluvuses1() == null ? "null" : getVaeosaAlluvuses1().size()).append(", ");
+        sb.append("VaeosaAlluvuses2: ").append(getVaeosaAlluvuses2() == null ? "null" : getVaeosaAlluvuses2().size()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

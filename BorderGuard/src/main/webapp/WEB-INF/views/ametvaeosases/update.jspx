@@ -13,6 +13,5 @@
         <field:input field="amet" id="c_itcollege_team09_entities_AmetVaeosas_amet" z="jnZ6GAmmS9kBeJTjMAw1ypdngTg="/>
         <field:datetime dateTimePattern="${ametVaeosas_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AmetVaeosas_alates" required="true" z="lD4OMBi0eutxWBzrUk9FDVg7Kxc="/>
         <field:datetime dateTimePattern="${ametVaeosas_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AmetVaeosas_kuni" required="true" z="G9+RK8xem0ivIrVWA6s3zxo6WeI="/>
-        <field:select field="vaeosa" id="c_itcollege_team09_entities_AmetVaeosas_vaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" z="wdccq5j5wsxLPGATBnFylCNJibc="/>
     </form:update>
 </div>

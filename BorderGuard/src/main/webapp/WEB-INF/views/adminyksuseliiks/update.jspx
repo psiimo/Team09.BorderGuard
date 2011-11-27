@@ -14,6 +14,5 @@
         <field:textarea field="nimetus" id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus" required="true" z="C+qShFpyKu0/MIVoyGiyWaR+GAA="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY="/>
-        <field:simple field="adminYksused" id="c_itcollege_team09_entities_AdminYksuseLiik_adminYksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Yksus" z="JBYPA+59ByLjTxq0Mcp8cEuGwLk="/>
     </form:update>
 </div>

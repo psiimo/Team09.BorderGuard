@@ -20,7 +20,6 @@ privileged aspect AmetVaeosas_Roo_ToString {
         sb.append("Muutja: ").append(getMuutja()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("Vaeosa: ").append(getVaeosa()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
     }

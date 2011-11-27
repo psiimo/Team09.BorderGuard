@@ -23,11 +23,13 @@ public class VaeosaAlluvus extends Piirivalve {
     @DateTimeFormat(style="M-")
     private Date kuni;
     
-	@ManyToOne
-	private Vaeosa ylemVaeosa;
-
-	@ManyToOne
-	private Vaeosa alamVaeosa;
+    
+        
+    @ManyToOne		
+    private Vaeosa vaeosa1;	  
+    
+    @ManyToOne		
+    private Vaeosa vaeosa2;
 	
 		
 
@@ -43,16 +45,16 @@ public class VaeosaAlluvus extends Piirivalve {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
-	public Vaeosa getYlemVaeosa() {
-	    return ylemVaeosa;
+	public Vaeosa getVaeosa1() {
+		return vaeosa1;
 	}
-	public void setYlemVaeosa(Vaeosa param) {
-	    this.ylemVaeosa = param;
+	public void setVaeosa1(Vaeosa vaeosa1) {
+		this.vaeosa1 = vaeosa1;
 	}
-	public Vaeosa getAlamVaeosa() {
-	    return alamVaeosa;
+	public Vaeosa getVaeosa2() {
+		return vaeosa2;
 	}
-	public void setAlamVaeosa(Vaeosa param) {
-	    this.alamVaeosa = param;
+	public void setVaeosa2(Vaeosa vaeosa2) {
+		this.vaeosa2 = vaeosa2;
 	}
 }

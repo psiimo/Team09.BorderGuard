@@ -10,9 +10,9 @@ import javax.persistence.ManyToOne;
 @Entity
 @RooToString
 @RooEntity
-public class AdminAlluvus extends Piirivalve {
-	
-    @ManyToOne
+public class AdminAlluvus extends Piirivalve  {
+
+	@ManyToOne
 	private AdminYksus ylemAdminYksus;
 
 	@ManyToOne
