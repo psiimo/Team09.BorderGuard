@@ -4,16 +4,16 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_itcollege_team09_entities_VoimalikAlluvus" modelAttribute="voimalikAlluvus" path="/voimalikalluvuses" render="${empty dependencies}" z="Xhi2M5lquJNZUwWUF5wA2EcwH3E=">
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar" required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4="/>
-        <field:textarea field="avaja" id="c_itcollege_team09_entities_VoimalikAlluvus_avaja" required="true" z="93WzTe2TxBgR/X7xqmbB96MlN5c="/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_VoimalikAlluvus_avatud" required="true" z="/of0AJER9AY4OFFiTRS6i2pkD3U="/>
-        <field:textarea field="muutja" id="c_itcollege_team09_entities_VoimalikAlluvus_muutja" required="true" z="GYAjX+S2Ozn3DQyUPT3XrJtPBDo="/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_VoimalikAlluvus_muudetud" required="true" z="gzbD38OG9ALqTsrxQSBUypDl7zU="/>
-        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_VoimalikAlluvus_sulgeja" required="true" z="pQNw5o8LUEPDfKrYzSVEv7jzdi0="/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VoimalikAlluvus_suletud" required="true" z="uoq4b28YgBUUw7AQlzAPojyT46I="/>
         <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/>
         <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/>
         <field:select field="adminYksuseLiik" id="c_itcollege_team09_entities_VoimalikAlluvus_adminYksuseLiik" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="nNbVfyUonDMDarxnrMAJasGoDCA="/>
         <field:select field="adminYksuseLiik_1" id="c_itcollege_team09_entities_VoimalikAlluvus_adminYksuseLiik_1" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="cTjJnvdNbZ/ssfDWqqKnQkDgj40="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_VoimalikAlluvus_avaja" z="RwRCCNHlXWiXxTKsl5nOnS8p1d4="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_VoimalikAlluvus_avatud" z="H/FrHgY0G8ksvVfiUggBcEyqclA="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_VoimalikAlluvus_muutja" z="Jj8RzsCSl7xUJl0+YmxB48e5H/Y="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_VoimalikAlluvus_muudetud" z="mHiKAo/tMJ0SZ8NHY7DBPm5xaWc="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_VoimalikAlluvus_sulgeja" z="i8Raardfa8MZD5VWBTV2KG1KjiY="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VoimalikAlluvus_suletud" z="0aeemK04XVu+Vmw2fHpR52VKzEc="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_VoimalikAlluvus" render="${not empty dependencies}" z="/JW5nZXAwZunfoHgmuNVaMFv51Y="/>
 </div>

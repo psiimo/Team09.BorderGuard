@@ -8,15 +8,15 @@
         <field:datetime dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="c_itcollege_team09_entities_Vaeosa_alates" required="true" z="4010QuEDny8XJkaFJorP41UHpY4="/>
         <field:datetime dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_Vaeosa_kuni" required="true" z="hNt2QgPDc5m/D0NHxhqlp2LO2io="/>
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_Vaeosa_kommentaar" required="true" z="RJKc0tcMJvmNkbG+fV7gz1t6YfM="/>
-        <field:textarea field="avaja" id="c_itcollege_team09_entities_Vaeosa_avaja" required="true" z="cwnUug3lwzOjYx0OoglUBkgZKvs="/>
-        <field:datetime dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_Vaeosa_avatud" required="true" z="ienPRwB4aeWh/A/gz66BIYRVyCA="/>
-        <field:textarea field="muutja" id="c_itcollege_team09_entities_Vaeosa_muutja" required="true" z="I5RZWqeuFEWkyf6aGvgbvS+60u8="/>
-        <field:datetime dateTimePattern="${vaeosa_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_Vaeosa_muudetud" required="true" z="osAPRkcfPik5wwwlLnAXPg8Ih+Y="/>
-        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_Vaeosa_sulgeja" required="true" z="5V7kft/psn5aUDGcbfYmT5glCtE="/>
-        <field:datetime dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_Vaeosa_suletud" required="true" z="Uox1ewFH2233h/6QRpc4o8nHiHg="/>
         <field:select field="adminYksus" id="c_itcollege_team09_entities_Vaeosa_adminYksus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="K1DObUV3nyT5h6K57usXidIpB9k="/>
         <field:simple field="vaeosaAlluvus" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvus" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="B5F3Op6/voMwCKmFVKKJScOCs5I="/>
         <field:simple field="vaeosaAlluvus_1" id="c_itcollege_team09_entities_Vaeosa_vaeosaAlluvus_1" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" z="Wjnsf9PDE72g/VL2PyN0FMKCaHQ="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_Vaeosa_avaja" z="K5+yRDu8w/JhwPNRLAKmvc16H98="/>
+        <field:datetime dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_Vaeosa_avatud" z="ZaIdN86o/MMo66igjbjM190ig0o="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_Vaeosa_muutja" z="r3hK72DSweV2wryIPwoYOxQ5vxc="/>
+        <field:datetime dateTimePattern="${vaeosa_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_Vaeosa_muudetud" z="WPmhbLT/JX5r3f+DPTQ51AZDA8U="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_Vaeosa_sulgeja" z="qsek7qJwOfAgmR5+FbvbUp1/Siw="/>
+        <field:datetime dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_Vaeosa_suletud" z="P/w+lPO7QhaCshN1/LzJ5K5hgeA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_Vaeosa" render="${not empty dependencies}" z="zBNZG8kbl2JDKiWrJZtEBuo3olg="/>
 </div>

@@ -1,5 +1,6 @@
 package itcollege.team09.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -17,9 +18,14 @@ import javax.persistence.OneToMany;
 @Entity
 @RooToString
 @RooEntity
-public class Vaeosa extends Piirivalve {
+public class Vaeosa extends Piirivalve implements Serializable  {
 	
-    @NotNull
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@NotNull
     @Size(max=10)
     private String kood;
     

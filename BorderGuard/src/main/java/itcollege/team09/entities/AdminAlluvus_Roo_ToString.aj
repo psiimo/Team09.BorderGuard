@@ -11,10 +11,12 @@ privileged aspect AdminAlluvus_Roo_ToString {
         StringBuilder sb = new StringBuilder();
         sb.append("AdminYksus: ").append(getAdminYksus()).append(", ");
         sb.append("AdminYksus_1: ").append(getAdminYksus_1()).append(", ");
+        sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
+        sb.append("Kuni: ").append(getKuni()).append(", ");
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");

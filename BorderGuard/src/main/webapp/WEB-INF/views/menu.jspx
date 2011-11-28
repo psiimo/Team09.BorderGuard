@@ -34,5 +34,8 @@
         <menu:category id="c_view" z="HjmI4Chx/kBYfS/6HjBLbCA+XpU=">
             <menu:item id="i_view__adminyksusesredactor_id" messageCode="global_generic" url="/adminyksuses/redactor" z="4AzL7dzEGmSM1VBVVJwcgTW/BbU="/>
         </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__testindex_id" messageCode="global_generic" url="/test/index" z="l+4l2vbnSWueeOzerzLyahYON08="/>
+        </menu:category>
     </menu:menu>
 </div>

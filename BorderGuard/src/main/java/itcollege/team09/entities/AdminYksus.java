@@ -1,5 +1,6 @@
 package itcollege.team09.entities;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -17,9 +18,14 @@ import itcollege.team09.entities.AdminAlluvus;
 @Entity
 @RooToString
 @RooEntity
-public class AdminYksus extends Piirivalve {
+public class AdminYksus extends Piirivalve implements Serializable {
 	
-    @NotNull
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@NotNull
     @Size(max=10)
     private String kood;
     

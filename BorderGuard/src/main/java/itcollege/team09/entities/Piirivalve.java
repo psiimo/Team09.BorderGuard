@@ -33,28 +33,22 @@ public abstract class Piirivalve {
     private String kommentaar;
     
     @Size(max=32)
-    @NotNull
-    private String avaja;
+    protected String avaja;
     
-    @NotNull
     @DateTimeFormat(style="M-")
-    private Date avatud;
+    protected Date avatud;
         
     @Size(max=32)
-    @NotNull
-    private String muutja;
+    protected String muutja;
     
-    @NotNull
     @DateTimeFormat(style="M-")
-    private Date muudetud;
+    protected Date muudetud;
         
     @Size(max=32)
-    @NotNull
-    private String sulgeja;
+    protected String sulgeja;
     
-    @NotNull
     @DateTimeFormat(style="M-")
-    private Date suletud;
+    protected Date suletud;
 
         
 	public Long getId() {
@@ -68,7 +62,7 @@ public abstract class Piirivalve {
 	}
 	public void setKommentaar(String kommentaar) {
 		this.kommentaar = kommentaar;
-	}
+	}	
 	public String getAvaja() {
 		return avaja;
 	}
@@ -105,25 +99,22 @@ public abstract class Piirivalve {
 	public void setSuletud(Date suletud) {
 		this.suletud = suletud;
 	}
-
+	
 	
 	@PrePersist	
-	public void recordCreated() {
-		Date now = new Date();
-		long nowLong = now.getTime();
-	      
+	public void recordCreated() {	      
 		setAvaja(GetUser());
 		setMuutja(GetUser());
 		setSulgeja(GetUser());
-		
-		setAvatud(new Date(nowLong));	
+		setMuudetud(new Date(GetDate()));
+		setAvatud(new Date(GetDate()));	
 		setSuletud(new Date(9999999999999L));
 	}
 	
 	@PreUpdate	
 	public void recordModified() {	
 		setMuutja(GetUser());		
-		setMuudetud(new Date());	
+		setMuudetud(new Date(GetDate()));	
 	}	
 	
 	@PreRemove	
@@ -131,8 +122,13 @@ public abstract class Piirivalve {
 		throw new SecurityException("Removing of bears is prohibited!");	
 	}
 	
-	private String GetUser(){
+	private String GetUser() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		return auth.getName();
 	}	
+	
+	private Long GetDate() {
+		Date now = new Date();
+		return now.getTime();
+	}
 }

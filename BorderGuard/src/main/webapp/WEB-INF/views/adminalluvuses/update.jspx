@@ -4,13 +4,15 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_itcollege_team09_entities_AdminAlluvus" modelAttribute="adminAlluvus" path="/adminalluvuses" versionField="Version" z="DB7AUBWGcKGMK/3wRjT9U5c4eiA=">
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_AdminAlluvus_kommentaar" required="true" z="nBNDWDsmV0bOgbR14wcfWDQEWDc="/>
-        <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminAlluvus_avaja" required="true" z="ocyCVp2QMO+H8Vu3NlIrx/qK9Qg="/>
-        <field:datetime dateTimePattern="${adminAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AdminAlluvus_avatud" required="true" z="0YEFSGkIWqEg+oXHnrfuxar2fl0="/>
-        <field:textarea field="muutja" id="c_itcollege_team09_entities_AdminAlluvus_muutja" required="true" z="VfKc60k5F+PSLLmYma+p5umMsuQ="/>
-        <field:datetime dateTimePattern="${adminAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminAlluvus_muudetud" required="true" z="V7C2KeeWY9JvlvNp7oGJpG5yqio="/>
-        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminAlluvus_sulgeja" required="true" z="v18o5UWPTlsyReF8N5PC3HlmuLg="/>
-        <field:datetime dateTimePattern="${adminAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminAlluvus_suletud" required="true" z="DwKFhclDzJrP/GCSvPm+bfdgCJI="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminAlluvus_avaja" z="Pv29r+x2xGEZfNV2V6OJocK9JdM="/>
+        <field:datetime dateTimePattern="${adminAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AdminAlluvus_avatud" z="JwcliQ0lhUWn1GTzN5QkTYnFglc="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_AdminAlluvus_muutja" z="tMOWhgtyVD5+ksoboOO5FNvZWc8="/>
+        <field:datetime dateTimePattern="${adminAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminAlluvus_muudetud" z="kDzoK+HoCWji7dxoNX73rueuv88="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminAlluvus_sulgeja" z="j41VO5HTf2+RBG/27VLGivCdzzI="/>
+        <field:datetime dateTimePattern="${adminAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminAlluvus_suletud" z="FXcTG1gC/WId2zzO5kTqT64zHbA="/>
         <field:select field="adminYksus" id="c_itcollege_team09_entities_AdminAlluvus_adminYksus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="2bK0pylv6CNt3LqfrCl0tA9Ifq4="/>
         <field:select field="adminYksus_1" id="c_itcollege_team09_entities_AdminAlluvus_adminYksus_1" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="5zj5ZcEl+YegZAowcCgIwPqMNvk="/>
+        <field:datetime dateTimePattern="${adminAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminAlluvus_alates" required="true" z="JF3vAR2vgJd0DfE7ZNRpgh40ono="/>
+        <field:datetime dateTimePattern="${adminAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminAlluvus_kuni" required="true" z="3/tlFymX2NIkokmvylkCX928uoI="/>
     </form:update>
 </div>

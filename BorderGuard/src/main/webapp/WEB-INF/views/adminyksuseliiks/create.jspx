@@ -8,14 +8,14 @@
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar" required="true" z="Hm3vMVK2D69YMWGAUUF4JInPPbk="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY="/>
-        <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminYksuseLiik_avaja" required="true" z="MHDip0fVlmHn4TjkGp5xAQQOwkg="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AdminYksuseLiik_avatud" required="true" z="HI4JEWr3AIgxo00k6ce8gIlH3G0="/>
-        <field:textarea field="muutja" id="c_itcollege_team09_entities_AdminYksuseLiik_muutja" required="true" z="KPl9/DqAab/SAxb63RfDXwHBJ5k="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminYksuseLiik_muudetud" required="true" z="+dUYnwDydkhHEj0wN/OZ/j6ViHM="/>
-        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminYksuseLiik_sulgeja" required="true" z="bGv1SzGc10v/OLTajrVskARPVPc="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" required="true" z="N6BDX/MI00sRwelHX6zi9b2sNbE="/>
         <field:simple field="voimalikAlluvus" id="c_itcollege_team09_entities_AdminYksuseLiik_voimalikAlluvus" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="uYQfECT9plDZNlAguZ4XrD5Clrw="/>
         <field:simple field="voimalikAlluvus_1" id="c_itcollege_team09_entities_AdminYksuseLiik_voimalikAlluvus_1" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="E9dFAcOX9Wge9SJHyGeTpZ5anMM="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminYksuseLiik_avaja" z="jN0Hg+aQYnUC66nXLmzpdqRsNK4="/>
+        <field:datetime dateTimePattern="${adminYksuseLiik_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AdminYksuseLiik_avatud" z="FStif47rqBvKrBWqc1jg0GfclMU="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_AdminYksuseLiik_muutja" z="GJYb5c6xK5iqtDa274kdl+cqodk="/>
+        <field:datetime dateTimePattern="${adminYksuseLiik_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminYksuseLiik_muudetud" z="+ZZ+BV/SQGG1Tsko9xYeGVLENMI="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminYksuseLiik_sulgeja" z="+LlqqykTPBWRdmWSHayf83glNmw="/>
+        <field:datetime dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" z="MFT9RhS3Hp4o5UQGXyWde3EGZjQ="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_AdminYksuseLiik" render="${not empty dependencies}" z="TQN/B9XFUk+U31MD7wR8IzpiHuU="/>
 </div>
