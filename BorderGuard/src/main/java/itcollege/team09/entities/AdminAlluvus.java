@@ -31,23 +31,23 @@ public class AdminAlluvus extends Piirivalve implements Serializable {
     private Date kuni;
     
 	@ManyToOne
-	private AdminYksus adminYksus;
+	private AdminYksus adminyksus;
 	@ManyToOne
-	private AdminYksus adminYksus_1;
+	private AdminYksus alamadminyksus;
 	
 	
 
-	public AdminYksus getAdminYksus() {
-	    return adminYksus;
+	public AdminYksus getAdminyksus() {
+	    return adminyksus;
 	}
-	public void setAdminYksus(AdminYksus param) {
-	    this.adminYksus = param;
+	public void setAdminyksus(AdminYksus param) {
+	    this.adminyksus = param;
 	}
-	public AdminYksus getAdminYksus_1() {
-	    return adminYksus_1;
+	public AdminYksus getAlamadminyksus() {
+	    return alamadminyksus;
 	}
-	public void setAdminYksus_1(AdminYksus param) {
-	    this.adminYksus_1 = param;
+	public void setAlamadminyksus(AdminYksus param) {
+	    this.alamadminyksus = param;
 	}
 	public Date getAlates() {
 		return alates;

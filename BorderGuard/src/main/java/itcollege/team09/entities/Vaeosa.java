@@ -47,10 +47,10 @@ public class Vaeosa extends Piirivalve implements Serializable  {
 	private AdminYksus adminYksus;
 
 	@OneToMany(mappedBy = "vaeosa")
-	private Collection<VaeosaAlluvus> vaeosaAlluvus;
+	private Collection<VaeosaAlluvus> ylemvaeosad;
 
-	@OneToMany(mappedBy = "vaeosa_1")
-	private Collection<VaeosaAlluvus> vaeosaAlluvus_1;
+	@OneToMany(mappedBy = "alamvaeosa")
+	private Collection<VaeosaAlluvus> alamvaeosad;
 	
 	
 
@@ -84,16 +84,16 @@ public class Vaeosa extends Piirivalve implements Serializable  {
 	public void setAdminYksus(AdminYksus param) {
 	    this.adminYksus = param;
 	}
-	public Collection<VaeosaAlluvus> getVaeosaAlluvus() {
-	    return vaeosaAlluvus;
+	public Collection<VaeosaAlluvus> getYlemvaeosad() {
+	    return ylemvaeosad;
 	}
-	public void setVaeosaAlluvus(Collection<VaeosaAlluvus> param) {
-	    this.vaeosaAlluvus = param;
+	public void setYlemvaeosad(Collection<VaeosaAlluvus> param) {
+	    this.ylemvaeosad = param;
 	}
-	public Collection<VaeosaAlluvus> getVaeosaAlluvus_1() {
-	    return vaeosaAlluvus_1;
+	public Collection<VaeosaAlluvus> getAlamvaeosad() {
+	    return alamvaeosad;
 	}
-	public void setVaeosaAlluvus_1(Collection<VaeosaAlluvus> param) {
-	    this.vaeosaAlluvus_1 = param;
+	public void setVaeosaAlluvus_2(Collection<VaeosaAlluvus> param) {
+	    this.alamvaeosad = param;
 	}
 }

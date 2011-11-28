@@ -13,6 +13,6 @@
         <field:datetime dateTimePattern="${vaeosaAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VaeosaAlluvus_alates" required="true" z="A/RLUzCamUjEP+0jQiOHRPgFf60="/>
         <field:datetime dateTimePattern="${vaeosaAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VaeosaAlluvus_kuni" required="true" z="OzGQi5wNEYgPTiyFt0lnEdvekSQ="/>
         <field:select field="vaeosa" id="c_itcollege_team09_entities_VaeosaAlluvus_vaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" z="63CXBa66qmQVg/RCCBzcPi1MKCw="/>
-        <field:select field="vaeosa_1" id="c_itcollege_team09_entities_VaeosaAlluvus_vaeosa_1" itemValue="id" items="${vaeosas}" path="/vaeosas" z="1sz5OSZEhc1vn9ltuSzIjgtE9oc="/>
+        <field:select field="alamvaeosa" id="c_itcollege_team09_entities_VaeosaAlluvus_alamvaeosa" itemValue="id" items="${vaeosas}" path="/vaeosas" z="KbgbdwxW44baM9EcGKzctcHTdxA="/>
     </form:update>
 </div>

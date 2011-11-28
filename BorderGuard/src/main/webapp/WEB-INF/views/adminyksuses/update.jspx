@@ -14,9 +14,9 @@
         <field:textarea field="nimetus" id="c_itcollege_team09_entities_AdminYksus_nimetus" required="true" z="wgr2EJ1p3zRvqOc9GqGpOPpg5pI="/>
         <field:datetime dateTimePattern="${adminYksus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksus_alates" required="true" z="FuFaHvKt2Zf/r8qcg0Lq5SJ+ZWU="/>
         <field:datetime dateTimePattern="${adminYksus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksus_kuni" required="true" z="tLydFlvpddq5+iw9TIVmCXtHWCs="/>
+        <field:simple field="vaeosad" id="c_itcollege_team09_entities_AdminYksus_vaeosad" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa" z="+Y3sDQeoNa+IzkIxdGK7OQLf3O8="/>
         <field:select field="adminYksuseLiik" id="c_itcollege_team09_entities_AdminYksus_adminYksuseLiik" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="Z4t3ZtqljOdPovP1HMBoIDVgBkw="/>
-        <field:simple field="vaeosa" id="c_itcollege_team09_entities_AdminYksus_vaeosa" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa" z="8ikPrJmtV0lPhOGmsniycPKd6DU="/>
-        <field:simple field="adminAlluvus" id="c_itcollege_team09_entities_AdminYksus_adminAlluvus" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="Jm1WW1NkFEbEHtN93eJ9iJduNJM="/>
-        <field:simple field="adminAlluvus_1" id="c_itcollege_team09_entities_AdminYksus_adminAlluvus_1" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="Ut8be5AvLt6y6W6AQgomk4zUxHM="/>
+        <field:simple field="alamadminyksused" id="c_itcollege_team09_entities_AdminYksus_alamadminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="kstueF32QCqDdEo/XEs/es4Lt8k="/>
+        <field:simple field="ylemadminyksused" id="c_itcollege_team09_entities_AdminYksus_ylemadminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="4FHXXTk1YOqYh/VmHCF/ovs04dI="/>
     </form:update>
 </div>

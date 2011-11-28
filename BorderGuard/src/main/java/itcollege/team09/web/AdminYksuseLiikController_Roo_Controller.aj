@@ -3,6 +3,7 @@
 
 package itcollege.team09.web;
 
+import itcollege.team09.entities.AdminYksus;
 import itcollege.team09.entities.AdminYksuseLiik;
 import itcollege.team09.entities.VoimalikAlluvus;
 import java.io.UnsupportedEncodingException;
@@ -93,6 +94,11 @@ privileged aspect AdminYksuseLiikController_Roo_Controller {
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/adminyksuseliiks";
+    }
+    
+    @ModelAttribute("adminyksuses")
+    public Collection<AdminYksus> AdminYksuseLiikController.populateAdminYksuses() {
+        return AdminYksus.findAllAdminYksuses();
     }
     
     @ModelAttribute("adminyksuseliiks")

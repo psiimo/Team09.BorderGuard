@@ -34,7 +34,7 @@ public class VaeosaAlluvus extends Piirivalve implements Serializable  {
 	private Vaeosa vaeosa;
 
 	@ManyToOne
-	private Vaeosa vaeosa_1;
+	private Vaeosa alamvaeosa;
     
     
         
@@ -56,10 +56,10 @@ public class VaeosaAlluvus extends Piirivalve implements Serializable  {
 	public void setVaeosa(Vaeosa param) {
 	    this.vaeosa = param;
 	}
-	public Vaeosa getVaeosa_1() {
-	    return vaeosa_1;
+	public Vaeosa getAlamvaeosa() {
+	    return alamvaeosa;
 	}
-	public void setVaeosa_1(Vaeosa param) {
-	    this.vaeosa_1 = param;
+	public void setAlamvaeosa(Vaeosa param) {
+	    this.alamvaeosa = param;
 	}
 }

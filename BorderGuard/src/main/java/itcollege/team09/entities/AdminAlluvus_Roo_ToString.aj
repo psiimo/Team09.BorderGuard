@@ -9,8 +9,8 @@ privileged aspect AdminAlluvus_Roo_ToString {
     
     public String AdminAlluvus.toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("AdminYksus: ").append(getAdminYksus()).append(", ");
-        sb.append("AdminYksus_1: ").append(getAdminYksus_1()).append(", ");
+        sb.append("Adminyksus: ").append(getAdminyksus()).append(", ");
+        sb.append("Alamadminyksus: ").append(getAlamadminyksus()).append(", ");
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");

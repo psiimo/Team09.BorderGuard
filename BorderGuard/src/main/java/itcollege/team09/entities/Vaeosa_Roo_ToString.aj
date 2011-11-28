@@ -10,6 +10,7 @@ privileged aspect Vaeosa_Roo_ToString {
     public String Vaeosa.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("AdminYksus: ").append(getAdminYksus()).append(", ");
+        sb.append("Alamvaeosad: ").append(getAlamvaeosad() == null ? "null" : getAlamvaeosad().size()).append(", ");
         sb.append("Alates: ").append(getAlates()).append(", ");
         sb.append("Avaja: ").append(getAvaja()).append(", ");
         sb.append("Avatud: ").append(getAvatud()).append(", ");
@@ -22,9 +23,8 @@ privileged aspect Vaeosa_Roo_ToString {
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
-        sb.append("VaeosaAlluvus: ").append(getVaeosaAlluvus() == null ? "null" : getVaeosaAlluvus().size()).append(", ");
-        sb.append("VaeosaAlluvus_1: ").append(getVaeosaAlluvus_1() == null ? "null" : getVaeosaAlluvus_1().size()).append(", ");
-        sb.append("Version: ").append(getVersion());
+        sb.append("Version: ").append(getVersion()).append(", ");
+        sb.append("Ylemvaeosad: ").append(getYlemvaeosad() == null ? "null" : getYlemvaeosad().size());
         return sb.toString();
     }
     

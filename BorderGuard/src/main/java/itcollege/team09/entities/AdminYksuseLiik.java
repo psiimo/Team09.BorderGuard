@@ -13,6 +13,7 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import itcollege.team09.entities.VoimalikAlluvus;
 import java.util.Collection;
+import itcollege.team09.entities.AdminYksus;
 
 @Entity
 @RooToString
@@ -40,11 +41,14 @@ public class AdminYksuseLiik extends Piirivalve implements Serializable  {
     @DateTimeFormat(style="M-")
     private Date kuni;
 
-	@OneToMany(mappedBy = "adminYksuseLiik")
-	private Collection<VoimalikAlluvus> voimalikAlluvus;
+	@OneToMany(mappedBy = "yksuseliik")
+	private Collection<VoimalikAlluvus> ylemyksused;
 
-	@OneToMany(mappedBy = "adminYksuseLiik_1")
-	private Collection<VoimalikAlluvus> voimalikAlluvus_1;
+	@OneToMany(mappedBy = "alamyksus")
+	private Collection<VoimalikAlluvus> alamyksused;
+
+	@OneToMany(mappedBy = "adminYksuseLiik")
+	private Collection<AdminYksus> adminyksused;
     
 
 	
@@ -72,16 +76,22 @@ public class AdminYksuseLiik extends Piirivalve implements Serializable  {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
-	public Collection<VoimalikAlluvus> getVoimalikAlluvus() {
-	    return voimalikAlluvus;
+	public Collection<VoimalikAlluvus> getYlemyksused() {
+	    return ylemyksused;
 	}
-	public void setVoimalikAlluvus(Collection<VoimalikAlluvus> param) {
-	    this.voimalikAlluvus = param;
+	public void setYlemyksused(Collection<VoimalikAlluvus> param) {
+	    this.ylemyksused = param;
 	}
-	public Collection<VoimalikAlluvus> getVoimalikAlluvus_1() {
-	    return voimalikAlluvus_1;
+	public Collection<VoimalikAlluvus> getAlamyksused() {
+	    return alamyksused;
 	}
-	public void setVoimalikAlluvus_1(Collection<VoimalikAlluvus> param) {
-	    this.voimalikAlluvus_1 = param;
+	public void setAlamyksused(Collection<VoimalikAlluvus> param) {
+	    this.alamyksused = param;
+	}
+	public Collection<AdminYksus> getAdminyksused() {
+	    return adminyksused;
+	}
+	public void setAdminyksused(Collection<AdminYksus> param) {
+	    this.adminyksused = param;
 	}
 }

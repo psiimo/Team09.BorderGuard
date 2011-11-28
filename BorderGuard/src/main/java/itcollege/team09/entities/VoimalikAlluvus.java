@@ -31,10 +31,10 @@ public class VoimalikAlluvus extends Piirivalve implements Serializable {
     private Date kuni;
 
 	@ManyToOne
-	private AdminYksuseLiik adminYksuseLiik;
+	private AdminYksuseLiik yksuseliik;
 
 	@ManyToOne
-	private AdminYksuseLiik adminYksuseLiik_1;
+	private AdminYksuseLiik alamyksus;
     
     
     
@@ -50,16 +50,16 @@ public class VoimalikAlluvus extends Piirivalve implements Serializable {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
-	public AdminYksuseLiik getAdminYksuseLiik() {
-	    return adminYksuseLiik;
+	public AdminYksuseLiik getYksuseliik() {
+	    return yksuseliik;
 	}
-	public void setAdminYksuseLiik(AdminYksuseLiik param) {
-	    this.adminYksuseLiik = param;
+	public void setYksuseliik(AdminYksuseLiik param) {
+	    this.yksuseliik = param;
 	}
-	public AdminYksuseLiik getAdminYksuseLiik_1() {
-	    return adminYksuseLiik_1;
+	public AdminYksuseLiik getAlamyksus() {
+	    return alamyksus;
 	}
-	public void setAdminYksuseLiik_1(AdminYksuseLiik param) {
-	    this.adminYksuseLiik_1 = param;
+	public void setAlamyksus(AdminYksuseLiik param) {
+	    this.alamyksus = param;
 	}
 }
