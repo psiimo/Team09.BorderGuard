@@ -4,12 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_itcollege_team09_entities_VoimalikAlluvus" modelAttribute="voimalikAlluvus" path="/voimalikalluvuses" versionField="Version" z="N3Oq8ZGGkLeYn40i+eBuJTvy4w8=">
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar" required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4="/>
-        <field:textarea field="avaja" id="c_itcollege_team09_entities_VoimalikAlluvus_avaja" z="RwRCCNHlXWiXxTKsl5nOnS8p1d4="/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_VoimalikAlluvus_avatud" z="H/FrHgY0G8ksvVfiUggBcEyqclA="/>
-        <field:textarea field="muutja" id="c_itcollege_team09_entities_VoimalikAlluvus_muutja" z="Jj8RzsCSl7xUJl0+YmxB48e5H/Y="/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_VoimalikAlluvus_muudetud" z="mHiKAo/tMJ0SZ8NHY7DBPm5xaWc="/>
-        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_VoimalikAlluvus_sulgeja" z="i8Raardfa8MZD5VWBTV2KG1KjiY="/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VoimalikAlluvus_suletud" z="0aeemK04XVu+Vmw2fHpR52VKzEc="/>
         <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/>
         <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/>
         <field:select field="yksuseliik" id="c_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="4ER50lt5pjeII88X0NTt2J+Sgzc="/>

@@ -7,11 +7,5 @@
         <field:display field="amet" id="s_itcollege_team09_entities_AmetVaeosas_amet" object="${ametvaeosas}" z="eSVbXSRWSQEC78OMBcdGjaM0gro="/>
         <field:display date="true" dateTimePattern="${ametVaeosas_alates_date_format}" field="alates" id="s_itcollege_team09_entities_AmetVaeosas_alates" object="${ametvaeosas}" z="Mo06lODkU1BCsch7qLO2px87i0M="/>
         <field:display date="true" dateTimePattern="${ametVaeosas_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_AmetVaeosas_kuni" object="${ametvaeosas}" z="LRGu/z2d2h/ocCf1kHBvPz2qoWM="/>
-        <field:display field="avaja" id="s_itcollege_team09_entities_AmetVaeosas_avaja" object="${ametvaeosas}" z="lacabOQ+oBnO3BM++U+KotUYYf0="/>
-        <field:display date="true" dateTimePattern="${ametVaeosas_avatud_date_format}" field="avatud" id="s_itcollege_team09_entities_AmetVaeosas_avatud" object="${ametvaeosas}" z="4/IOQdB2Rt8ZuGY0uukMeL3GFxs="/>
-        <field:display field="muutja" id="s_itcollege_team09_entities_AmetVaeosas_muutja" object="${ametvaeosas}" z="S95xtv+9RUaHBkhhXwBKmygMQhg="/>
-        <field:display date="true" dateTimePattern="${ametVaeosas_muudetud_date_format}" field="muudetud" id="s_itcollege_team09_entities_AmetVaeosas_muudetud" object="${ametvaeosas}" z="sfgYDdbgpt5JxQMdSb9Ko/S/c/s="/>
-        <field:display field="sulgeja" id="s_itcollege_team09_entities_AmetVaeosas_sulgeja" object="${ametvaeosas}" z="isGpSodwRr+wtsb3OW7oIWee88A="/>
-        <field:display date="true" dateTimePattern="${ametVaeosas_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_AmetVaeosas_suletud" object="${ametvaeosas}" z="35W65ZSB+/bnrl6ChqL3svpiIiU="/>
     </page:show>
 </div>

@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_itcollege_team09_entities_AdminYksuseLiik" modelAttribute="adminYksuseLiik" path="/adminyksuseliiks" versionField="Version" z="BdEEcGAmX5aXtWbPR6lQ2spUWwQ=">
-        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar" required="true" z="Hm3vMVK2D69YMWGAUUF4JInPPbk="/>
-        <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminYksuseLiik_avaja" z="jN0Hg+aQYnUC66nXLmzpdqRsNK4="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AdminYksuseLiik_avatud" z="FStif47rqBvKrBWqc1jg0GfclMU="/>
-        <field:textarea field="muutja" id="c_itcollege_team09_entities_AdminYksuseLiik_muutja" z="GJYb5c6xK5iqtDa274kdl+cqodk="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminYksuseLiik_muudetud" z="+ZZ+BV/SQGG1Tsko9xYeGVLENMI="/>
-        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminYksuseLiik_sulgeja" z="+LlqqykTPBWRdmWSHayf83glNmw="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" z="MFT9RhS3Hp4o5UQGXyWde3EGZjQ="/>
-        <field:input field="kood" id="c_itcollege_team09_entities_AdminYksuseLiik_kood" max="10" required="true" z="Melal9tkmwCHycmiKO9a2ru6rlg="/>
-        <field:textarea field="nimetus" id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus" required="true" z="C+qShFpyKu0/MIVoyGiyWaR+GAA="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc="/>
-        <field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY="/>
-        <field:simple field="ylemyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_ylemyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="tiKQhfl+XHCgzghfRWfK4SatsHk="/>
-        <field:simple field="alamyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_alamyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="Wzd1fx7hTBsYCzrprvk3uqskQH8="/>
-        <field:simple field="adminyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_adminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Yksus" z="kLH6MJyqcP44PyjQIU0Ry1jycQ0="/>
-    </form:update>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:form="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<form:update id="fu_itcollege_team09_entities_AdminYksuseLiik"
+		modelAttribute="adminYksuseLiik" path="/adminyksuseliiks"
+		versionField="Version" z="BdEEcGAmX5aXtWbPR6lQ2spUWwQ=">
+		<field:textarea field="kommentaar"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar"
+			required="true" z="Hm3vMVK2D69YMWGAUUF4JInPPbk=" />
+		<field:input field="kood"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_kood" max="10"
+			required="true" z="Melal9tkmwCHycmiKO9a2ru6rlg=" />
+		<field:textarea field="nimetus"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus"
+			required="true" z="C+qShFpyKu0/MIVoyGiyWaR+GAA=" />
+		<field:datetime
+			dateTimePattern="${adminYksuseLiik_alates_date_format}"
+			field="alates"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_alates"
+			required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc=" />
+		<field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}"
+			field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni"
+			required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY=" />
+		<field:simple field="ylemyksused" render="false"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_ylemyksused"
+			messageCode="entity_reference_not_managed"
+			messageCodeAttribute="Voimalik Alluvus"
+			z="tiKQhfl+XHCgzghfRWfK4SatsHk=" />
+		<field:simple field="alamyksused" render="false"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_alamyksused"
+			messageCode="entity_reference_not_managed"
+			messageCodeAttribute="Voimalik Alluvus"
+			z="Wzd1fx7hTBsYCzrprvk3uqskQH8=" />
+		<field:simple field="adminyksused" render="false"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_adminyksused"
+			messageCode="entity_reference_not_managed"
+			messageCodeAttribute="Admin Yksus" z="kLH6MJyqcP44PyjQIU0Ry1jycQ0=" />
+	</form:update>
 </div>

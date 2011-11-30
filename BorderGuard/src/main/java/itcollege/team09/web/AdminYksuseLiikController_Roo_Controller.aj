@@ -112,9 +112,6 @@ privileged aspect AdminYksuseLiikController_Roo_Controller {
     }
     
     void AdminYksuseLiikController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("adminYksuseLiik_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("adminYksuseLiik_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("adminYksuseLiik_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksuseLiik_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksuseLiik_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }

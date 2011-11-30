@@ -29,15 +29,15 @@
 			id="c_itcollege_team09_entities_AdminYksus_adminYksuseLiik"
 			itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks"
 			z="Z4t3ZtqljOdPovP1HMBoIDVgBkw=" />
-		<field:simple field="vaeosad"
+		<field:simple field="vaeosad" render="false"
 			id="c_itcollege_team09_entities_AdminYksus_vaeosad"
 			messageCode="entity_reference_not_managed"
 			messageCodeAttribute="Vaeosa" z="+Y3sDQeoNa+IzkIxdGK7OQLf3O8=" />		
-		<field:simple field="alamadminyksused"
+		<field:simple field="alamadminyksused" render="false"
 			id="c_itcollege_team09_entities_AdminYksus_alamadminyksused"
 			messageCode="entity_reference_not_managed"
 			messageCodeAttribute="Admin Alluvus" z="kstueF32QCqDdEo/XEs/es4Lt8k=" />
-		<field:simple field="ylemadminyksused"
+		<field:simple field="ylemadminyksused" render="false"
 			id="c_itcollege_team09_entities_AdminYksus_ylemadminyksused"
 			messageCode="entity_reference_not_managed"
 			messageCodeAttribute="Admin Alluvus" z="4FHXXTk1YOqYh/VmHCF/ovs04dI=" />

@@ -100,9 +100,6 @@ privileged aspect AmetVaeosasController_Roo_Controller {
     }
     
     void AmetVaeosasController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("ametVaeosas_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("ametVaeosas_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("ametVaeosas_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("ametVaeosas_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("ametVaeosas_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }

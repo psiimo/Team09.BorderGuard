@@ -26,27 +26,20 @@ public abstract class Piirivalve {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    	
+    private Long id;    	
 	@Size(max=500)
 	@NotNull
-    private String kommentaar;
-    
+    private String kommentaar;    
     @Size(max=32)
-    protected String avaja;
-    
+    protected String avaja;    
     @DateTimeFormat(style="M-")
-    protected Date avatud;
-        
+    protected Date avatud;        
     @Size(max=32)
-    protected String muutja;
-    
+    protected String muutja;    
     @DateTimeFormat(style="M-")
-    protected Date muudetud;
-        
+    protected Date muudetud;        
     @Size(max=32)
-    protected String sulgeja;
-    
+    protected String sulgeja;    
     @DateTimeFormat(style="M-")
     protected Date suletud;
 
@@ -63,6 +56,8 @@ public abstract class Piirivalve {
 	public void setKommentaar(String kommentaar) {
 		this.kommentaar = kommentaar;
 	}	
+	
+	/*
 	public String getAvaja() {
 		return avaja;
 	}
@@ -99,22 +94,27 @@ public abstract class Piirivalve {
 	public void setSuletud(Date suletud) {
 		this.suletud = suletud;
 	}
+	*/
 	
 	
 	@PrePersist	
-	public void recordCreated() {	      
-		setAvaja(GetUser());
-		setMuutja(GetUser());
-		setSulgeja(GetUser());
-		setMuudetud(new Date(GetDate()));
-		setAvatud(new Date(GetDate()));	
-		setSuletud(new Date(9999999999999L));
+	public void recordCreated() {	
+		String user = GetUser();
+		Long date = GetDate();
+		
+		this.avaja = user;
+		this.muutja = user;
+		this.sulgeja = user;
+		
+		this.avatud = new Date(date);
+		this.muudetud = new Date(date);
+		this.suletud = new Date(9999999999999L);		
 	}
 	
 	@PreUpdate	
 	public void recordModified() {	
-		setMuutja(GetUser());		
-		setMuudetud(new Date(GetDate()));	
+		this.muutja = GetUser();
+		this.muudetud = new Date(GetDate());	
 	}	
 	
 	@PreRemove	

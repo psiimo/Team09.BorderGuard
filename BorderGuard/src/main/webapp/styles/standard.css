@@ -338,6 +338,15 @@ fieldset th {
 	height:24px;
 }
 
+.mysubmit {
+	padding-right: 5px;
+	float: right;
+}
+
+.mycancel {
+	float: right;
+}
+
 .updated {
 	background:#ecf1e5;
 	font-size:11px;

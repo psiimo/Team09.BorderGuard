@@ -28,7 +28,7 @@
 			id="c_itcollege_team09_entities_Vaeosa_adminYksus" itemValue="id"
 			items="${adminyksuses}" path="/adminyksuses"
 			z="K1DObUV3nyT5h6K57usXidIpB9k=" />
-		<field:simple field="ylemvaeosad"
+		<field:simple field="ylemvaeosad" render="false"
 			id="c_itcollege_team09_entities_Vaeosa_ylemvaeosad"
 			messageCode="entity_reference_not_managed"
 			messageCodeAttribute="Vaeosa Alluvus"

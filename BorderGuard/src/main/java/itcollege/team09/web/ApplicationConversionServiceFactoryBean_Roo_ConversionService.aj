@@ -33,50 +33,50 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.AdminAlluvusConverter implements Converter<AdminAlluvus, String> {
         public String convert(AdminAlluvus adminAlluvus) {
-            return new StringBuilder().append(adminAlluvus.getKommentaar()).append(" ").append(adminAlluvus.getAvaja()).append(" ").append(adminAlluvus.getAvatud()).append(" ").append(adminAlluvus.getMuutja()).toString();
+            return new StringBuilder().append(adminAlluvus.getKommentaar()).append(" ").append(adminAlluvus.getAlates()).append(" ").append(adminAlluvus.getKuni()).toString();
         }
         
     }
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.AdminYksusConverter implements Converter<AdminYksus, String> {
         public String convert(AdminYksus adminYksus) {
-            return new StringBuilder().append(adminYksus.getKommentaar()).append(" ").append(adminYksus.getAvaja()).append(" ").append(adminYksus.getAvatud()).append(" ").append(adminYksus.getMuutja()).toString();
+            return new StringBuilder().append(adminYksus.getKommentaar()).append(" ").append(adminYksus.getKood()).append(" ").append(adminYksus.getNimetus()).append(" ").append(adminYksus.getAlates()).toString();
         }
         
     }
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.AdminYksuseLiikConverter implements Converter<AdminYksuseLiik, String> {
         public String convert(AdminYksuseLiik adminYksuseLiik) {
-            return new StringBuilder().append(adminYksuseLiik.getKommentaar()).append(" ").append(adminYksuseLiik.getAvaja()).append(" ").append(adminYksuseLiik.getAvatud()).append(" ").append(adminYksuseLiik.getMuutja()).toString();
+            return new StringBuilder().append(adminYksuseLiik.getKommentaar()).append(" ").append(adminYksuseLiik.getKood()).append(" ").append(adminYksuseLiik.getNimetus()).append(" ").append(adminYksuseLiik.getAlates()).toString();
         }
         
     }
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.AmetVaeosasConverter implements Converter<AmetVaeosas, String> {
         public String convert(AmetVaeosas ametVaeosas) {
-            return new StringBuilder().append(ametVaeosas.getKommentaar()).append(" ").append(ametVaeosas.getAvaja()).append(" ").append(ametVaeosas.getAvatud()).append(" ").append(ametVaeosas.getMuutja()).toString();
+            return new StringBuilder().append(ametVaeosas.getKommentaar()).append(" ").append(ametVaeosas.getAmet()).append(" ").append(ametVaeosas.getAlates()).append(" ").append(ametVaeosas.getKuni()).toString();
         }
         
     }
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.VaeosaConverter implements Converter<Vaeosa, String> {
         public String convert(Vaeosa vaeosa) {
-            return new StringBuilder().append(vaeosa.getKommentaar()).append(" ").append(vaeosa.getAvaja()).append(" ").append(vaeosa.getAvatud()).append(" ").append(vaeosa.getMuutja()).toString();
+            return new StringBuilder().append(vaeosa.getKommentaar()).append(" ").append(vaeosa.getKood()).append(" ").append(vaeosa.getNimetus()).append(" ").append(vaeosa.getAlates()).toString();
         }
         
     }
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.VaeosaAlluvusConverter implements Converter<VaeosaAlluvus, String> {
         public String convert(VaeosaAlluvus vaeosaAlluvus) {
-            return new StringBuilder().append(vaeosaAlluvus.getKommentaar()).append(" ").append(vaeosaAlluvus.getAvaja()).append(" ").append(vaeosaAlluvus.getAvatud()).append(" ").append(vaeosaAlluvus.getMuutja()).toString();
+            return new StringBuilder().append(vaeosaAlluvus.getKommentaar()).append(" ").append(vaeosaAlluvus.getAlates()).append(" ").append(vaeosaAlluvus.getKuni()).toString();
         }
         
     }
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.VoimalikAlluvusConverter implements Converter<VoimalikAlluvus, String> {
         public String convert(VoimalikAlluvus voimalikAlluvus) {
-            return new StringBuilder().append(voimalikAlluvus.getKommentaar()).append(" ").append(voimalikAlluvus.getAvaja()).append(" ").append(voimalikAlluvus.getAvatud()).append(" ").append(voimalikAlluvus.getMuutja()).toString();
-        }
+        	return new StringBuilder().append(voimalikAlluvus.getKommentaar()).append(" ").append(voimalikAlluvus.getAlates()).append(" ").append(voimalikAlluvus.getKuni()).toString();
+         }
         
     }
     

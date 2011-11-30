@@ -1,36 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:c="http://java.sun.com/jsp/jstl/core"
-	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
-	xmlns:form="urn:jsptagdir:/WEB-INF/tags/form"
-	xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:spring="http://www.springframework.org/tags" version="2.0">
-	<jsp:directive.page contentType="text/html;charset=UTF-8" />
-	<jsp:output omit-xml-declaration="yes" />
-	
-	<form:create id="fc_itcollege_team09_entities_VoimalikAlluvus"
-		modelAttribute="voimalikAlluvus" path="/voimalikalluvuses"
-		render="${empty dependencies}" z="Xhi2M5lquJNZUwWUF5wA2EcwH3E=">
-		<field:select field="yksuseliik"
-			id="c_itcollege_team09_entities_VoimalikAlluvus_yksuseliik"
-			itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks"
-			z="4ER50lt5pjeII88X0NTt2J+Sgzc=" />
-		<field:select field="alamyksus"
-			id="c_itcollege_team09_entities_VoimalikAlluvus_alamyksus"
-			itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks"
-			z="Uh9ScRo51VkJxqPFFSunNow0kd4=" />
-		<field:datetime
-			dateTimePattern="${voimalikAlluvus_alates_date_format}"
-			field="alates"
-			id="c_itcollege_team09_entities_VoimalikAlluvus_alates"
-			required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc=" />
-		<field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}"
-			field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni"
-			required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA=" />
-		<field:textarea field="kommentaar"
-			id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar"
-			required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4=" />
-	</form:create>
-	<form:dependency dependencies="${dependencies}"
-		id="d_itcollege_team09_entities_VoimalikAlluvus"
-		render="${not empty dependencies}" z="/JW5nZXAwZunfoHgmuNVaMFv51Y=" />
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_itcollege_team09_entities_VoimalikAlluvus" modelAttribute="voimalikAlluvus" path="/voimalikalluvuses" render="${empty dependencies}" z="Xhi2M5lquJNZUwWUF5wA2EcwH3E=">
+        <field:select field="yksuseliik" id="c_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/>
+        <field:select field="alamyksus" id="c_itcollege_team09_entities_VoimalikAlluvus_alamyksus" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/>
+        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar" required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_VoimalikAlluvus" render="${not empty dependencies}" z="/JW5nZXAwZunfoHgmuNVaMFv51Y="/>
 </div>
