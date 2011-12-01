@@ -75,8 +75,8 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.VoimalikAlluvusConverter implements Converter<VoimalikAlluvus, String> {
         public String convert(VoimalikAlluvus voimalikAlluvus) {
-        	return new StringBuilder().append(voimalikAlluvus.getKommentaar()).append(" ").append(voimalikAlluvus.getAlates()).append(" ").append(voimalikAlluvus.getKuni()).toString();
-         }
+            return new StringBuilder().append(voimalikAlluvus.getKommentaar()).append(" ").append(voimalikAlluvus.getAlates()).append(" ").append(voimalikAlluvus.getKuni()).toString();
+        }
         
     }
     

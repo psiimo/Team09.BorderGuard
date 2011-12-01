@@ -8,6 +8,9 @@
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar" required="true" z="Hm3vMVK2D69YMWGAUUF4JInPPbk="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc="/>
         <field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY="/>
-        </form:create>
+        <field:simple field="ylemyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_ylemyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="tiKQhfl+XHCgzghfRWfK4SatsHk="/>
+        <field:simple field="alamyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_alamyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" z="Wzd1fx7hTBsYCzrprvk3uqskQH8="/>
+        <field:simple field="adminyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_adminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Yksus" z="kLH6MJyqcP44PyjQIU0Ry1jycQ0="/>
+    </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_AdminYksuseLiik" render="${not empty dependencies}" z="TQN/B9XFUk+U31MD7wR8IzpiHuU="/>
 </div>
