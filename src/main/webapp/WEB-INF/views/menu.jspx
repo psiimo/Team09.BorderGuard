@@ -27,5 +27,9 @@
             <menu:item id="i_voimalikalluvus_new" messageCode="global_menu_new" url="/voimalikalluvuses?form" z="C5Qz4NTJKwUKUZNmNw6aC6EW9mI="/>
             <menu:item id="i_voimalikalluvus_list" messageCode="global_menu_list" url="/voimalikalluvuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="QZ4v1MmnglCCZE+d9/NA4c7txZo="/>
         </menu:category>
+        <menu:category id="c_ametvaeosas" z="zV4H1Lhx8/4nhj3+FGhEy7AAHI8=">
+            <menu:item id="i_ametvaeosas_new" messageCode="global_menu_new" url="/ametvaeosases?form" z="pKucHiInhVd06yDo/164tLmexgc="/>
+            <menu:item id="i_ametvaeosas_list" messageCode="global_menu_list" url="/ametvaeosases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="UAFhPFCQpa/vMnv6t+4Ip83OHik="/>
+        </menu:category>
     </menu:menu>
 </div>

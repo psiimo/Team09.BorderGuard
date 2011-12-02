@@ -2,10 +2,10 @@ package itcollege.team09.entities;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
@@ -17,11 +17,13 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.transaction.annotation.Transactional;
 
 
-@Entity
+@MappedSuperclass
 @RooToString
-@RooEntity
+@Transactional
+@RooEntity(mappedSuperclass = true)
 public abstract class Piirivalve {
 
 	@Id
