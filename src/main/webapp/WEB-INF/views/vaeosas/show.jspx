@@ -6,13 +6,12 @@
 	<jsp:output omit-xml-declaration="yes" />
 	<page:show id="ps_itcollege_team09_entities_Vaeosa" object="${vaeosa}"
 		path="/vaeosas" z="6E/lGwcaQVn9bkBRF5H4Fb7+09o=">
-		
-		<field:display field="kood"
-			id="s_itcollege_team09_entities_Vaeosa_kood" object="${vaeosa}"
-			z="FNGvD7v8XmGIbBRpXm9To+RZ09M=" />
 		<field:display field="nimetus"
 			id="s_itcollege_team09_entities_Vaeosa_nimetus" object="${vaeosa}"
-			z="3Xdr9VePyGpeqsMlZeq8+qEtwg0=" />
+			z="user-managed" />
+		<field:display field="kood"
+			id="s_itcollege_team09_entities_Vaeosa_kood" object="${vaeosa}"
+			z="FNGvD7v8XmGIbBRpXm9To+RZ09M=" />		
 		<field:display field="kommentaar"
 			id="s_itcollege_team09_entities_Vaeosa_kommentaar" object="${vaeosa}"
 			z="TKHAlhVnBJ/Eg41H7F2+Rf7lPJg=" />

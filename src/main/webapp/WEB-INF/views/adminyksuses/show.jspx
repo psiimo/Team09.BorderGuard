@@ -7,15 +7,15 @@
 	<page:show id="ps_itcollege_team09_entities_AdminYksus"
 		object="${adminyksus}" path="/adminyksuses"
 		z="260h5WH2GkXUUL5NE0+YVzjO1Nw=">
+		<field:display field="nimetus"
+			id="s_itcollege_team09_entities_AdminYksus_nimetus"
+			object="${adminyksus}" z="user-managed" />
 		<field:display field="kommentaar"
 			id="s_itcollege_team09_entities_AdminYksus_kommentaar"
 			object="${adminyksus}" z="8a0kuJBTxLqKopzm9cHG77armUs=" />
 		<field:display field="kood"
 			id="s_itcollege_team09_entities_AdminYksus_kood"
-			object="${adminyksus}" z="Y2WePbiNvbCiGjDTqaNIxo3k8xg=" />
-		<field:display field="nimetus"
-			id="s_itcollege_team09_entities_AdminYksus_nimetus"
-			object="${adminyksus}" z="gaNf0SA173wB9GwRtsYHKaDZEjI=" />
+			object="${adminyksus}" z="Y2WePbiNvbCiGjDTqaNIxo3k8xg=" />		
 		<field:display date="true"
 			dateTimePattern="${adminYksus_alates_date_format}" field="alates"
 			id="s_itcollege_team09_entities_AdminYksus_alates"

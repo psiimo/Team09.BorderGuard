@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_itcollege_team09_entities_AdminAlluvus" items="${adminalluvuses}" z="YIcF/hTpUKnijkJLX/JZAUR2uSw=">
-        <table:table data="${adminalluvuses}" id="l_itcollege_team09_entities_AdminAlluvus" path="/adminalluvuses" z="wDDuvAe54jKYSivSnzpKlmJxJIk=">
-            <table:column id="c_itcollege_team09_entities_AdminAlluvus_kommentaar" property="kommentaar" z="0WDpbAA8AryBOBq70WL3/PYF31M="/>
-            <table:column id="c_itcollege_team09_entities_AdminAlluvus_adminyksus" property="adminyksus" z="64Pb1uyQ6PejqYWyRxFSWLn+WUo="/>
-            <table:column id="c_itcollege_team09_entities_AdminAlluvus_alamadminyksus" property="alamadminyksus" z="2QzrXLTHvqzlIFWlih1cv0W8AeY="/>
-            <table:column date="true" dateTimePattern="${adminAlluvus_alates_date_format}" id="c_itcollege_team09_entities_AdminAlluvus_alates" property="alates" z="LiB8qQRDSlSOuA8ydtW77jUSwuA="/>
-            <table:column date="true" dateTimePattern="${adminAlluvus_kuni_date_format}" id="c_itcollege_team09_entities_AdminAlluvus_kuni" property="kuni" z="l3nNfoD7eQZQZCsJDIL1fKPegvU="/>
-        </table:table>
-    </page:list>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<page:list id="pl_itcollege_team09_entities_AdminAlluvus"
+		items="${adminalluvuses}" z="YIcF/hTpUKnijkJLX/JZAUR2uSw=">
+		<table:table data="${adminalluvuses}"
+			id="l_itcollege_team09_entities_AdminAlluvus" path="/adminalluvuses"
+			z="wDDuvAe54jKYSivSnzpKlmJxJIk=">
+			<table:column
+				id="c_itcollege_team09_entities_AdminAlluvus_adminyksus"
+				property="adminyksus" z="64Pb1uyQ6PejqYWyRxFSWLn+WUo=" />
+			<table:column
+				id="c_itcollege_team09_entities_AdminAlluvus_alamadminyksus"
+				property="alamadminyksus" z="2QzrXLTHvqzlIFWlih1cv0W8AeY=" />
+			<table:column
+				id="c_itcollege_team09_entities_AdminAlluvus_kommentaar"
+				property="kommentaar" z="0WDpbAA8AryBOBq70WL3/PYF31M=" />			
+			<table:column date="true"
+				dateTimePattern="${adminAlluvus_alates_date_format}"
+				id="c_itcollege_team09_entities_AdminAlluvus_alates"
+				property="alates" z="LiB8qQRDSlSOuA8ydtW77jUSwuA=" />
+			<table:column date="true"
+				dateTimePattern="${adminAlluvus_kuni_date_format}"
+				id="c_itcollege_team09_entities_AdminAlluvus_kuni" property="kuni"
+				z="l3nNfoD7eQZQZCsJDIL1fKPegvU=" />
+		</table:table>
+	</page:list>
 </div>

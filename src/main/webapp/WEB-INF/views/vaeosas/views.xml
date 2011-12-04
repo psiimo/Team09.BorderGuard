@@ -13,4 +13,7 @@
 <definition extends="default" name="vaeosas/update">
         <put-attribute name="body" value="/WEB-INF/views/vaeosas/update.jspx"/>
     </definition>
+<definition extends="default" name="vaeosas/popup">
+        <put-attribute name="body" value="/WEB-INF/views/vaeosas/popup.jspx"/>
+    </definition>
 </tiles-definitions>

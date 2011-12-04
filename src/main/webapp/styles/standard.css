@@ -415,7 +415,34 @@ fieldset th {
 }
 
 .customFormCenter {
-	padding-bottom: 15px; 
+	padding-bottom: 20px; 
 	width: 289px;
 	display: block;
+	height: 15px;
+}
+
+.customSubmit {
+	border: 1px solid #BBBBBB;
+	color:#777777;
+	padding:2px 7px;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:bold;
+	height:24px;
+}
+
+#adiv {
+	display: block;
+	font-weight: bold;
+	float: left;
+	margin-top: 5px;
+}
+#bdiv {
+	display: none;
+	float: left;
+	margin-top: 5px;
+}
+.mylabel {
+	 float: left; 
+	 margin-top: 5px;
 }

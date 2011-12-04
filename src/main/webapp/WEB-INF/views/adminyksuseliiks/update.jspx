@@ -75,7 +75,7 @@
 				</c:forEach>
 			</table>
 			<div style="margin-top: 5px;">
-				<button class="button" type="button" onClick="PopupCenter('../adminyksuses?form','Lisa uus',400,400);">
+				<button class="button" type="button" onClick="PopupCenter('../voimalikalluvuses?form','Lisa uus',600,600);">
 				<spring:message code="button_add" /></button>
 			</div>
 		</div>

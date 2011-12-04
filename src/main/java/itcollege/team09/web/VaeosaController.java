@@ -12,7 +12,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RooWebScaffold(path = "vaeosas", formBackingObject = Vaeosa.class)
 @RequestMapping("/vaeosas")
@@ -38,9 +37,10 @@ public class VaeosaController {
         return "vaeosas/update";
     }  
     
-    @RequestMapping(method = RequestMethod.POST)
-    public String beerud(@RequestParam(value = "maie", required = false) Long id, Model uiModel) {
-    	uiModel.addAttribute("itemId", id);       
-        return "adminalluvuses/";
-    } 
+    @RequestMapping(value = "/{id}", params = "popup", method = RequestMethod.GET)
+    public String updatePopup(@PathVariable("id") Long id, Model uiModel) {
+        uiModel.addAttribute("vaeosa", Vaeosa.findVaeosa(id));
+        addDateTimeFormatPatterns(uiModel);
+        return "vaeosas/popup";
+    }     
 }
