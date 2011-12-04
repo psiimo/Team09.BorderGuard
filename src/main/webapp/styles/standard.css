@@ -338,15 +338,6 @@ fieldset th {
 	height:24px;
 }
 
-.mysubmit {
-	padding-right: 5px;
-	float: right;
-}
-
-.mycancel {
-	float: right;
-}
-
 .updated {
 	background:#ecf1e5;
 	font-size:11px;
@@ -379,4 +370,52 @@ fieldset th {
 .flag {
 	height: 11px;
 	width: 16px;
+}
+
+.subjects {	
+	margin-top: 4px; 
+	display: inline-block;
+}
+
+.button {
+	border: 1px solid #BBBBBB;
+	color:#777777;
+	padding:2px 7px;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:bold;
+	height:24px;
+	width: 70px;
+	float: right;
+}
+.buttonSave {
+	border: 1px solid #BBBBBB;
+	color:#777777;
+	padding:2px 7px;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:bold;
+	height:24px;
+	width: 70px;
+	float: right;
+	margin-right: 5px;
+}
+
+.customFormLeft {
+	width: 290px;
+	float: left; 
+	margin-left: -3px;	
+}
+
+.customFormRight {
+	float: right; 
+	width: 250px; 
+	padding-left: 1px; 
+	margin-top: -2px;"
+}
+
+.customFormCenter {
+	padding-bottom: 15px; 
+	width: 289px;
+	display: block;
 }

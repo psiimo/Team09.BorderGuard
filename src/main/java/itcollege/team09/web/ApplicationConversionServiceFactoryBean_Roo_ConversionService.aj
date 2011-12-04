@@ -6,7 +6,6 @@ package itcollege.team09.web;
 import itcollege.team09.entities.AdminAlluvus;
 import itcollege.team09.entities.AdminYksus;
 import itcollege.team09.entities.AdminYksuseLiik;
-import itcollege.team09.entities.AmetVaeosas;
 import itcollege.team09.entities.Vaeosa;
 import itcollege.team09.entities.VaeosaAlluvus;
 import itcollege.team09.entities.VoimalikAlluvus;
@@ -20,7 +19,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(new AdminAlluvusConverter());
         registry.addConverter(new AdminYksusConverter());
         registry.addConverter(new AdminYksuseLiikConverter());
-        registry.addConverter(new AmetVaeosasConverter());
         registry.addConverter(new VaeosaConverter());
         registry.addConverter(new VaeosaAlluvusConverter());
         registry.addConverter(new VoimalikAlluvusConverter());
@@ -48,13 +46,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.AdminYksuseLiikConverter implements Converter<AdminYksuseLiik, String> {
         public String convert(AdminYksuseLiik adminYksuseLiik) {
             return new StringBuilder().append(adminYksuseLiik.getKommentaar()).append(" ").append(adminYksuseLiik.getKood()).append(" ").append(adminYksuseLiik.getNimetus()).append(" ").append(adminYksuseLiik.getAlates()).toString();
-        }
-        
-    }
-    
-    static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.AmetVaeosasConverter implements Converter<AmetVaeosas, String> {
-        public String convert(AmetVaeosas ametVaeosas) {
-            return new StringBuilder().append(ametVaeosas.getKommentaar()).append(" ").append(ametVaeosas.getAmet()).append(" ").append(ametVaeosas.getAlates()).append(" ").append(ametVaeosas.getKuni()).toString();
         }
         
     }

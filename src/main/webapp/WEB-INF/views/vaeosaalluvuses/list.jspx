@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_itcollege_team09_entities_VaeosaAlluvus" items="${vaeosaalluvuses}" z="Ybctx0F1NATkHPW4CnbnWWOkzBE=">
-        <table:table data="${vaeosaalluvuses}" id="l_itcollege_team09_entities_VaeosaAlluvus" path="/vaeosaalluvuses" z="whNJMnl4QmOirYMgNwiUvvNqRpc=">
-            <table:column id="c_itcollege_team09_entities_VaeosaAlluvus_kommentaar" property="kommentaar" z="0hM+EyVamB5ozilD2kdcsAOD0IY="/>
-            <table:column date="true" dateTimePattern="${vaeosaAlluvus_alates_date_format}" id="c_itcollege_team09_entities_VaeosaAlluvus_alates" property="alates" z="QVcCxd0JmPJuYZHsc279nlYRTro="/>
-            <table:column date="true" dateTimePattern="${vaeosaAlluvus_kuni_date_format}" id="c_itcollege_team09_entities_VaeosaAlluvus_kuni" property="kuni" z="tGDutxeRNkgQEgPJoHZS0NPAFjU="/>
-            <table:column id="c_itcollege_team09_entities_VaeosaAlluvus_vaeosa" property="vaeosa" z="wMj41BBt9t67pI+84hRMC/gkn2Q="/>
-            <table:column id="c_itcollege_team09_entities_VaeosaAlluvus_alamvaeosa" property="alamvaeosa" z="6yCGvwO/V/1o25Bo/adLgRxSUNY="/>
-        </table:table>
-    </page:list>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<page:list id="pl_itcollege_team09_entities_VaeosaAlluvus"
+		items="${vaeosaalluvuses}" z="Ybctx0F1NATkHPW4CnbnWWOkzBE=">
+		<table:table data="${vaeosaalluvuses}"
+			id="l_itcollege_team09_entities_VaeosaAlluvus"
+			path="/vaeosaalluvuses" z="whNJMnl4QmOirYMgNwiUvvNqRpc=">	
+			<table:column id="c_itcollege_team09_entities_VaeosaAlluvus_vaeosa"
+				property="vaeosa" z="wMj41BBt9t67pI+84hRMC/gkn2Q=" />
+			<table:column
+				id="c_itcollege_team09_entities_VaeosaAlluvus_alamvaeosa"
+				property="alamvaeosa" z="6yCGvwO/V/1o25Bo/adLgRxSUNY=" />		
+			<table:column date="true"
+				dateTimePattern="${vaeosaAlluvus_alates_date_format}"
+				id="c_itcollege_team09_entities_VaeosaAlluvus_alates"
+				property="alates" z="QVcCxd0JmPJuYZHsc279nlYRTro=" />
+			<table:column date="true"
+				dateTimePattern="${vaeosaAlluvus_kuni_date_format}"
+				id="c_itcollege_team09_entities_VaeosaAlluvus_kuni" property="kuni"
+				z="tGDutxeRNkgQEgPJoHZS0NPAFjU=" />
+			<table:column
+				id="c_itcollege_team09_entities_VaeosaAlluvus_kommentaar"
+				property="kommentaar" z="0hM+EyVamB5ozilD2kdcsAOD0IY=" />			
+		</table:table>
+	</page:list>
 </div>

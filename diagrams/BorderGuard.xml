@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
 		<entity-name>itcollege.team09.entities.AdminYksus</entity-name>
-		<entity-width>171</entity-width>
+		<entity-width>193</entity-width>
 		<entity-height>228</entity-height>
-		<entity-X-Coordinate>24</entity-X-Coordinate>
-		<entity-Y-Coordinate>10</entity-Y-Coordinate>
+		<entity-X-Coordinate>401</entity-X-Coordinate>
+		<entity-Y-Coordinate>193</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -12,21 +12,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.AdminAlluvus</entity-name>
-		<entity-width>166</entity-width>
+		<entity-width>185</entity-width>
 		<entity-height>148</entity-height>
-		<entity-X-Coordinate>400</entity-X-Coordinate>
-		<entity-Y-Coordinate>50</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>itcollege.team09.entities.AmetVaeosas</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>110</entity-height>
-		<entity-X-Coordinate>950</entity-X-Coordinate>
-		<entity-Y-Coordinate>46</entity-Y-Coordinate>
+		<entity-X-Coordinate>405</entity-X-Coordinate>
+		<entity-Y-Coordinate>539</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -34,21 +23,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.AdminYksuseLiik</entity-name>
-		<entity-width>160</entity-width>
+		<entity-width>170</entity-width>
 		<entity-height>208</entity-height>
-		<entity-X-Coordinate>546</entity-X-Coordinate>
-		<entity-Y-Coordinate>230</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>itcollege.team09.entities.Piirivalve</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>228</entity-height>
-		<entity-X-Coordinate>780</entity-X-Coordinate>
-		<entity-Y-Coordinate>46</entity-Y-Coordinate>
+		<entity-X-Coordinate>50</entity-X-Coordinate>
+		<entity-Y-Coordinate>50</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -56,21 +34,10 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.VoimalikAlluvus</entity-name>
-		<entity-width>183</entity-width>
+		<entity-width>151</entity-width>
 		<entity-height>148</entity-height>
-		<entity-X-Coordinate>534</entity-X-Coordinate>
-		<entity-Y-Coordinate>540</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>itcollege.team09.entities.Vaeosa</entity-name>
-		<entity-width>179</entity-width>
-		<entity-height>208</entity-height>
-		<entity-X-Coordinate>20</entity-X-Coordinate>
-		<entity-Y-Coordinate>373</entity-Y-Coordinate>
+		<entity-X-Coordinate>710</entity-X-Coordinate>
+		<entity-Y-Coordinate>17</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -78,10 +45,21 @@
 
 	<entity>
 		<entity-name>itcollege.team09.entities.VaeosaAlluvus</entity-name>
-		<entity-width>146</entity-width>
+		<entity-width>120</entity-width>
 		<entity-height>148</entity-height>
-		<entity-X-Coordinate>350</entity-X-Coordinate>
-		<entity-Y-Coordinate>403</entity-Y-Coordinate>
+		<entity-X-Coordinate>238</entity-X-Coordinate>
+		<entity-Y-Coordinate>670</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>itcollege.team09.entities.Vaeosa</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>208</entity-height>
+		<entity-X-Coordinate>50</entity-X-Coordinate>
+		<entity-Y-Coordinate>358</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

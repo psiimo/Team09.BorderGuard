@@ -3,21 +3,13 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_vaeosa" z="UjcvY5sFG0mXjkNoVhTf6XRReXA=">
-            <menu:item id="i_vaeosa_new" messageCode="global_menu_new" url="/vaeosas?form" z="FAVHgwavmIl9dgzX+VpD/UnJl6o="/>
-            <menu:item id="i_vaeosa_list" messageCode="global_menu_list" url="/vaeosas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xmlNM27KfbjGn72iRw7P1QBf3Ww="/>
-        </menu:category>
         <menu:category id="c_vaeosaalluvus" z="xXbRL0p+DeBAdgNM1ZgZ+XSQXCE=">
             <menu:item id="i_vaeosaalluvus_new" messageCode="global_menu_new" url="/vaeosaalluvuses?form" z="f90cjpOZfbDUyx+sRtXKxf/POPs="/>
             <menu:item id="i_vaeosaalluvus_list" messageCode="global_menu_list" url="/vaeosaalluvuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="S6Zklcfi9bWO9jpRJH0v8Ngh3cE="/>
         </menu:category>
-        <menu:category id="c_adminyksus" z="QZPX/0+VjNwyUVAzY3TfIXRgGcY=">
-            <menu:item id="i_adminyksus_new" messageCode="global_menu_new" url="/adminyksuses?form" z="J0voKunERwoQEV9XD6xiUupyAhQ="/>
-            <menu:item id="i_adminyksus_list" messageCode="global_menu_list" url="/adminyksuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="LYLoSbcLdDhq2VzG9YNxqcrmnIU="/>
-        </menu:category>
-        <menu:category id="c_adminyksuseliik" z="MM/Ggc2eY4FwTIOu53GRCfZ6RXw=">
-            <menu:item id="i_adminyksuseliik_new" messageCode="global_menu_new" url="/adminyksuseliiks?form" z="cRWGs7c6E9leJ5AWMAL8m1m6HYA="/>
-            <menu:item id="i_adminyksuseliik_list" messageCode="global_menu_list" url="/adminyksuseliiks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ftUCgJZzO/CikH33ng4hu355N6s="/>
+        <menu:category id="c_vaeosa" z="UjcvY5sFG0mXjkNoVhTf6XRReXA=">
+            <menu:item id="i_vaeosa_new" messageCode="global_menu_new" url="/vaeosas?form" z="FAVHgwavmIl9dgzX+VpD/UnJl6o="/>
+            <menu:item id="i_vaeosa_list" messageCode="global_menu_list" url="/vaeosas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xmlNM27KfbjGn72iRw7P1QBf3Ww="/>
         </menu:category>
         <menu:category id="c_adminalluvus" z="2Gg2rOq8ESkQ4i6VcSGECPtofyk=">
             <menu:item id="i_adminalluvus_new" messageCode="global_menu_new" url="/adminalluvuses?form" z="29oUMXt2u3CTG4JXPR+d0eAPgRI="/>
@@ -27,9 +19,13 @@
             <menu:item id="i_voimalikalluvus_new" messageCode="global_menu_new" url="/voimalikalluvuses?form" z="C5Qz4NTJKwUKUZNmNw6aC6EW9mI="/>
             <menu:item id="i_voimalikalluvus_list" messageCode="global_menu_list" url="/voimalikalluvuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="QZ4v1MmnglCCZE+d9/NA4c7txZo="/>
         </menu:category>
-        <menu:category id="c_ametvaeosas" z="zV4H1Lhx8/4nhj3+FGhEy7AAHI8=">
-            <menu:item id="i_ametvaeosas_new" messageCode="global_menu_new" url="/ametvaeosases?form" z="pKucHiInhVd06yDo/164tLmexgc="/>
-            <menu:item id="i_ametvaeosas_list" messageCode="global_menu_list" url="/ametvaeosases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="UAFhPFCQpa/vMnv6t+4Ip83OHik="/>
+        <menu:category id="c_adminyksuseliik" z="MM/Ggc2eY4FwTIOu53GRCfZ6RXw=">
+            <menu:item id="i_adminyksuseliik_new" messageCode="global_menu_new" url="/adminyksuseliiks?form" z="cRWGs7c6E9leJ5AWMAL8m1m6HYA="/>
+            <menu:item id="i_adminyksuseliik_list" messageCode="global_menu_list" url="/adminyksuseliiks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ftUCgJZzO/CikH33ng4hu355N6s="/>
+        </menu:category>
+        <menu:category id="c_adminyksus" z="QZPX/0+VjNwyUVAzY3TfIXRgGcY=">
+            <menu:item id="i_adminyksus_new" messageCode="global_menu_new" url="/adminyksuses?form" z="J0voKunERwoQEV9XD6xiUupyAhQ="/>
+            <menu:item id="i_adminyksus_list" messageCode="global_menu_list" url="/adminyksuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="LYLoSbcLdDhq2VzG9YNxqcrmnIU="/>
         </menu:category>
     </menu:menu>
 </div>

@@ -6,27 +6,27 @@
 	xmlns:spring="http://www.springframework.org/tags" version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	
 	<form:create id="fc_itcollege_team09_entities_AdminAlluvus"
 		modelAttribute="adminAlluvus" path="/adminalluvuses"
 		render="${empty dependencies}" z="geLmoHcLW1KB4KgvNRSuQ/joBks=">
-		<field:select field="adminyksus"
+		
+		<field:select field="adminyksus" itemLabel="nimetus"
 			id="c_itcollege_team09_entities_AdminAlluvus_adminyksus"
-			itemValue="id" items="${adminyksuses}" path="/adminyksuses"
-			z="MABcqbwbT9dT6+Oojbq2nXfToPk=" />
-		<field:select field="alamadminyksus"
+			itemValue="id" items="${adminyksuses}"
+			path="/adminyksuses" z="user-managed" />
+		<field:select field="alamadminyksus" itemLabel="nimetus"
 			id="c_itcollege_team09_entities_AdminAlluvus_alamadminyksus"
-			itemValue="id" items="${adminyksuses}" path="/adminyksuses"
-			z="b8hTypkRBpRR5cnSD2CYeZli8UE=" />
+			itemValue="id" items="${adminyksuses}"
+			path="/adminyksuses" z="user-managed" />
 		<field:datetime dateTimePattern="${adminAlluvus_alates_date_format}"
 			field="alates" id="c_itcollege_team09_entities_AdminAlluvus_alates"
-			required="true" z="JF3vAR2vgJd0DfE7ZNRpgh40ono=" />
+			label="Alates" required="true" z="user-managed" />
 		<field:datetime dateTimePattern="${adminAlluvus_kuni_date_format}"
 			field="kuni" id="c_itcollege_team09_entities_AdminAlluvus_kuni"
 			required="true" z="3/tlFymX2NIkokmvylkCX928uoI=" />
 		<field:textarea field="kommentaar"
 			id="c_itcollege_team09_entities_AdminAlluvus_kommentaar"
-			required="true" z="nBNDWDsmV0bOgbR14wcfWDQEWDc=" />
+			label="Kommentaar" required="true" z="user-managed" />
 	</form:create>
 	
 	<form:dependency dependencies="${dependencies}"

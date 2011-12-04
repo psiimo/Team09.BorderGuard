@@ -13,7 +13,4 @@
 <definition extends="default" name="adminyksuses/update">
         <put-attribute name="body" value="/WEB-INF/views/adminyksuses/update.jspx"/>
     </definition>
-<definition extends="default" name="adminyksuses/redactor">
-        <put-attribute name="body" value="/WEB-INF/views/adminyksuses/redactor.jspx"/>
-    </definition>
 </tiles-definitions>

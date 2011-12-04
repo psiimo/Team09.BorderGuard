@@ -3,9 +3,9 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_itcollege_team09_entities_AdminYksuseLiik" object="${adminyksuseliik}" path="/adminyksuseliiks" z="jUTNTxFXDrZ6IFJOvHdSZU5DlIY=">
+        <field:display field="kommentaar" id="s_itcollege_team09_entities_AdminYksuseLiik_kommentaar" object="${adminyksuseliik}" z="8nvQcxAaqwrKJ6nR6pk0/bs8xkA="/>
         <field:display field="kood" id="s_itcollege_team09_entities_AdminYksuseLiik_kood" object="${adminyksuseliik}" z="kCQ496pIy1qme/T7UE7FQ7f5/EM="/>
         <field:display field="nimetus" id="s_itcollege_team09_entities_AdminYksuseLiik_nimetus" object="${adminyksuseliik}" z="RmQ1gwQH8AX3M2ZlJSMpAtWDfWw="/>
-        <field:display field="kommentaar" id="s_itcollege_team09_entities_AdminYksuseLiik_kommentaar" object="${adminyksuseliik}" z="8nvQcxAaqwrKJ6nR6pk0/bs8xkA="/>
         <field:display date="true" dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="s_itcollege_team09_entities_AdminYksuseLiik_alates" object="${adminyksuseliik}" z="CnIEgtLea5Suj1/IcBK0wWOjDDE="/>
         <field:display date="true" dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_AdminYksuseLiik_kuni" object="${adminyksuseliik}" z="9iSpp8CSAQnn9bmb1ufQnYqvQFk="/>
     </page:show>

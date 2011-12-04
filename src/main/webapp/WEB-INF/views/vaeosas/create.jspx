@@ -4,10 +4,10 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_itcollege_team09_entities_Vaeosa" modelAttribute="vaeosa" path="/vaeosas" render="${empty dependencies}" z="kL0Cm1eCHYeCPut4hJIPX5d6WbQ=">
         <field:input field="kood" id="c_itcollege_team09_entities_Vaeosa_kood" max="10" required="true" z="LTxHUdgc8AXou4DeexBpA2bXDb0="/>
-        <field:textarea field="nimetus" id="c_itcollege_team09_entities_Vaeosa_nimetus" required="true" z="d0GDAKW0urE1BRrqEQ9J3DK1oCE="/>
+        <field:input field="nimetus" id="c_itcollege_team09_entities_Vaeosa_nimetus" required="true" z="user-managed"/>
+        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_Vaeosa_kommentaar" required="true" z="RJKc0tcMJvmNkbG+fV7gz1t6YfM="/>
         <field:datetime dateTimePattern="${vaeosa_alates_date_format}" field="alates" id="c_itcollege_team09_entities_Vaeosa_alates" required="true" z="4010QuEDny8XJkaFJorP41UHpY4="/>
         <field:datetime dateTimePattern="${vaeosa_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_Vaeosa_kuni" required="true" z="hNt2QgPDc5m/D0NHxhqlp2LO2io="/>
-        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_Vaeosa_kommentaar" required="true" z="RJKc0tcMJvmNkbG+fV7gz1t6YfM="/>
         <field:select field="adminYksus" id="c_itcollege_team09_entities_Vaeosa_adminYksus" itemLabel="nimetus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="user-managed"/>
         <field:simple field="ylemvaeosad" id="c_itcollege_team09_entities_Vaeosa_ylemvaeosad" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" render="false" z="user-managed"/>
     </form:create>
