@@ -38,7 +38,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class itcollege.team09.web.ApplicationConversionServiceFactoryBean.AdminYksusConverter implements Converter<AdminYksus, String> {
         public String convert(AdminYksus adminYksus) {
-            return new StringBuilder().append(adminYksus.getNimetus()).toString();
+            return new StringBuilder().append(adminYksus.getKommentaar()).append(" ").append(adminYksus.getKood()).append(" ").append(adminYksus.getNimetus()).append(" ").append(adminYksus.getAlates()).toString();
         }
         
     }

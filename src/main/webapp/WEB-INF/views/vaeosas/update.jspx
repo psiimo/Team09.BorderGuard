@@ -53,6 +53,16 @@
 		    <field:select field="adminYksus" id="c_itcollege_team09_entities_Vaeosa_adminYksus" itemLabel="nimetus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" render="false" z="user-managed" />
 		</div>
         <div class="customFormRight">
+		<script type="text/javascript">
+			function submitform() {	
+				if(confirmAction()) {
+					document.command.submit();
+				}
+			}
+			function confirmAction() {
+		        return confirm("Soovid sa kindlasti seda kustutada?");
+		    }
+		</script>
             <table>
                 <tr>
                     <th>Alluvad</th>
@@ -60,21 +70,18 @@
                 <c:forEach items="${vaeosaalluvuses}" var="v">
                     <tr>
                         <td>
-                            <span class="subjects">
-                                <spring:message text="${v.alamvaeosa.nimetus}"/>
-                            </span>
-                            <button class="button" onClick="window.location.reload()" type="button">
-                                <spring:message code="button_delete"/>
-                            </button>
+                        	<span class="subjects"><spring:message text="${v.alamvaeosa.nimetus}"/></span>
+                            <button class="button" onclick="submitform();" type="button">
+                            <spring:message code="button_delete" /></button>
                         </td>
                     </tr>
                 </c:forEach>
             </table>
-            <div style="margin-top: 5px;">
-                <button class="button" onClick="PopupCenter('../vaeosaalluvuses?form','Lisa uus',600,600);" type="button">
-                    <spring:message code="button_add"/>
-                </button>
-            </div>
+
+         <div style="margin-top: 5px;">
+         	<button class="button" onClick="PopupCenter('../vaeosaalluvuses?form','Lisa uus',600,600);" type="button">
+            <spring:message code="button_add"/></button>
+        </div>
         </div>
         <div style="clear: both;"/>
         <div style="height: 26px;">
@@ -85,5 +92,9 @@
                 <spring:message code="button_save"/>
             </button>
         </div>
-    </form:update>    
+    </form:update> 
+
+<form id="command" action="/BorderGuard/vaeosaalluvuses/4" method="post">
+	<input type="hidden" name="_method" value="DELETE" />	
+</form>	
 </div>

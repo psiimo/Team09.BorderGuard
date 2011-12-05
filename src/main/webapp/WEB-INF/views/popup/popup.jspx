@@ -1,12 +1,206 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
-  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-  <jsp:output omit-xml-declaration="yes"/>
-  <spring:message code="label_popup_popup" htmlEscape="false" var="title"/>
-  <util:panel id="title" title="${title}">
-    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>
-      <spring:message arguments="${app_name}" code="welcome_titlepane"/>
-    </h3>
-  </util:panel>
-</div>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML SYSTEM "about:legacy-compat">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="IE=8" http-equiv="X-UA-Compatible" />
+<link href="/BorderGuard/resources/dijit/themes/tundra/tundra.css"
+	type="text/css" rel="stylesheet" />
+<link href="/BorderGuard/resources/styles/standard.css" media="screen"
+	type="text/css" rel="stylesheet" />
+<link href="/BorderGuard/resources/images/favicon.ico"
+	rel="SHORTCUT ICON" />
+<script type="text/javascript">
+	var djConfig = {
+		parseOnLoad : false,
+		isDebug : false,
+		locale : 'et-ee'
+	};
+</script>
+<script type="text/javascript" src="/BorderGuard/resources/dojo/dojo.js"></script>
+<script type="text/javascript"
+	src="/BorderGuard/resources/spring/Spring.js"></script>
+<script type="text/javascript"
+	src="/BorderGuard/resources/spring/Spring-Dojo.js"></script>
+<script type="text/javascript" language="JavaScript">
+	dojo.require("dojo.parser");
+</script>
+<title>Tere tulemast BorderGuard</title>
+</head>
+<body class="tundra spring">
+	<div id="wrapper">
+		<div version="2.0" id="header">
+			<a title="Home" name="Home" href="/BorderGuard/"><img
+				src="/BorderGuard/resources/images/banner-graphic.png" /></a>
+		</div>
+		<div version="2.0" id="menu">
+			<ul id="_menu">
+				<li id="c_vaeosaalluvus"><h2>Vaeosa Alluvus</h2>
+					<ul>
+						<li id="i_vaeosaalluvus_new"><a
+							title="Loo uus Vaeosa Alluvus"
+							href="/BorderGuard/vaeosaalluvuses?form">Loo uus Vaeosa
+								Alluvus</a></li>
+						<li id="i_vaeosaalluvus_list"><a
+							title="Kuva kõik Vaeosa Alluvuses"
+							href="/BorderGuard/vaeosaalluvuses?page=1&amp;size=10">Kuva
+								kõik Vaeosa Alluvuses</a></li>
+					</ul></li>
+				<li id="c_vaeosa"><h2>Vaeosa</h2>
+					<ul>
+						<li id="i_vaeosa_new"><a title="Loo uus Vaeosa"
+							href="/BorderGuard/vaeosas?form">Loo uus Vaeosa</a></li>
+						<li id="i_vaeosa_list"><a title="Kuva kõik Vaeosas"
+							href="/BorderGuard/vaeosas?page=1&amp;size=10">Kuva kõik
+								Vaeosas</a></li>
+					</ul></li>
+				<li id="c_adminalluvus"><h2>Admin Alluvus</h2>
+					<ul>
+						<li id="i_adminalluvus_new"><a title="Loo uus Admin Alluvus"
+							href="/BorderGuard/adminalluvuses?form">Loo uus Admin Alluvus</a></li>
+						<li id="i_adminalluvus_list"><a
+							title="Kuva kõik Admin Alluvuses"
+							href="/BorderGuard/adminalluvuses?page=1&amp;size=10">Kuva
+								kõik Admin Alluvuses</a></li>
+					</ul></li>
+				<li id="c_voimalikalluvus"><h2>Voimalik Alluvus</h2>
+					<ul>
+						<li id="i_voimalikalluvus_new"><a
+							title="Loo uus Voimalik Alluvus"
+							href="/BorderGuard/voimalikalluvuses?form">Loo uus Voimalik
+								Alluvus</a></li>
+						<li id="i_voimalikalluvus_list"><a
+							title="Kuva kõik Voimalik Alluvuses"
+							href="/BorderGuard/voimalikalluvuses?page=1&amp;size=10">Kuva
+								kõik Voimalik Alluvuses</a></li>
+					</ul></li>
+				<li id="c_adminyksuseliik"><h2>Admin Yksuse Liik</h2>
+					<ul>
+						<li id="i_adminyksuseliik_new"><a
+							title="Loo uus Admin Yksuse Liik"
+							href="/BorderGuard/adminyksuseliiks?form">Loo uus Admin
+								Yksuse Liik</a></li>
+						<li id="i_adminyksuseliik_list"><a
+							title="Kuva kõik Admin Yksuse Liiks"
+							href="/BorderGuard/adminyksuseliiks?page=1&amp;size=10">Kuva
+								kõik Admin Yksuse Liiks</a></li>
+					</ul></li>
+				<li id="c_adminyksus"><h2>Admin Yksus</h2>
+					<ul>
+						<li id="i_adminyksus_new"><a title="Loo uus Admin Yksus"
+							href="/BorderGuard/adminyksuses?form">Loo uus Admin Yksus</a></li>
+						<li id="i_adminyksus_list"><a title="Kuva kõik Admin Yksuses"
+							href="/BorderGuard/adminyksuses?page=1&amp;size=10">Kuva kõik
+								Admin Yksuses</a></li>
+					</ul></li>
+			</ul>
+		</div>
+		<div id="main">
+			<div version="2.0">
+				<script type="text/javascript">
+					dojo.require('dijit.TitlePane');
+				</script>
+				<div id="_title_ps_itcollege_team09_entities_VaeosaAlluvus_id">
+					<script type="text/javascript">
+						Spring
+								.addDecoration(new Spring.ElementDecoration(
+										{
+											elementId : '_title_ps_itcollege_team09_entities_VaeosaAlluvus_id',
+											widgetType : 'dijit.TitlePane',
+											widgetAttrs : {
+												title : 'N&auml;ita Vaeosa Alluvus',
+												open : true
+											}
+										}));
+					</script>
+					<div id="_s_itcollege_team09_entities_VaeosaAlluvus_kommentaar_id">
+						<label for="_kommentaar_id">Kommentaar : </label>
+						<div
+							id="_s_itcollege_team09_entities_VaeosaAlluvus_kommentaar_kommentaar_id"
+							class="box">Kommentaar</div>
+					</div>
+					<br />
+					<div id="_s_itcollege_team09_entities_VaeosaAlluvus_alates_id">
+						<label for="_alates_id">Alates : </label>
+						<div
+							id="_s_itcollege_team09_entities_VaeosaAlluvus_alates_alates_id"
+							class="box">8.12.2011</div>
+					</div>
+					<br />
+					<div id="_s_itcollege_team09_entities_VaeosaAlluvus_kuni_id">
+						<label for="_kuni_id">Kuni : </label>
+						<div id="_s_itcollege_team09_entities_VaeosaAlluvus_kuni_kuni_id"
+							class="box">29.12.2011</div>
+					</div>
+					<br />
+					<div id="_s_itcollege_team09_entities_VaeosaAlluvus_vaeosa_id">
+						<label for="_vaeosa_id">Vaeosa : </label>
+						<div
+							id="_s_itcollege_team09_entities_VaeosaAlluvus_vaeosa_vaeosa_id"
+							class="box">Kommentaar AR111 Piirivalve 2011-12-01
+							00:00:00.0</div>
+					</div>
+					<br />
+					<div id="_s_itcollege_team09_entities_VaeosaAlluvus_alamvaeosa_id">
+						<label for="_alamvaeosa_id">Alamvaeosa : </label>
+						<div
+							id="_s_itcollege_team09_entities_VaeosaAlluvus_alamvaeosa_alamvaeosa_id"
+							class="box">Kommentaar AR214 P&otilde;hja piirivalve pk
+							2011-12-01 00:00:00.0</div>
+					</div>
+					<br />
+					<div class="quicklinks">
+						<span>
+						<form id="command"
+								action="/BorderGuard/vaeosaalluvuses/3" method="post">
+								<input type="hidden" name="_method" value="DELETE" /><input
+									onclick="return confirm('Soovid sa kindlasti seda kustutada?');"
+									value="Kustuta Vaeosa Alluvus" type="image"
+									title="Kustuta Vaeosa Alluvus"
+									src="/BorderGuard/resources/images/delete.png" class="image"
+									alt="Kustuta Vaeosa Alluvus" />
+							</form>
+							
+							</span><span><a title="Muuda Vaeosa Alluvus"
+							alt="Muuda Vaeosa Alluvus"
+							href="/BorderGuard/vaeosaalluvuses/3?form"><img
+								title="Muuda Vaeosa Alluvus"
+								src="/BorderGuard/resources/images/update.png" class="image"
+								alt="Muuda Vaeosa Alluvus" /></a></span><span><a
+							title="Loo uus Vaeosa Alluvus" alt="Loo uus Vaeosa Alluvus"
+							href="/BorderGuard/vaeosaalluvuses?form"><img
+								title="Loo uus Vaeosa Alluvus"
+								src="/BorderGuard/resources/images/create.png" class="image"
+								alt="Loo uus Vaeosa Alluvus" /></a></span><span><a
+							title="Kuva kõik Vaeosa Alluvuses"
+							alt="Kuva kõik Vaeosa Alluvuses"
+							href="/BorderGuard/vaeosaalluvuses"><img
+								title="Kuva kõik Vaeosa Alluvuses"
+								src="/BorderGuard/resources/images/list.png" class="image"
+								alt="Kuva kõik Vaeosa Alluvuses" /></a></span>
+					</div>
+				</div>
+			</div>
+			<div version="2.0" id="footer">
+				<span><a href="/BorderGuard/">Home</a></span> | <span><a
+					href="/BorderGuard/resources/j_spring_security_logout">Logout</a></span><span
+					id="language"> | Language: <a
+					title="Switch language to English" href="?lang=en"><img
+						alt="Switch language to English"
+						src="/BorderGuard/resources/images/en.png" class="flag" /></a> <a
+					title="Switch language to Deutsch" href="?lang=de"><img
+						alt="Switch language to Deutsch"
+						src="/BorderGuard/resources/images/de.png" class="flag" /></a> <a
+					title="Switch language to Estonian" href="?lang=et"><img
+						alt="Switch language to Estonian"
+						src="/BorderGuard/resources/images/et.png" class="flag" /></a>
+				</span><span> | Theme: <a title="standard" href="?theme=standard">standard</a>
+					| <a title="alt" href="?theme=alt">alt</a></span><span><a
+					title="Sponsored by SpringSource" href="http://springsource.com"><img
+						src="/BorderGuard/resources/images/springsource-logo.png"
+						alt="Sponsored by SpringSource" align="right" /></a></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
