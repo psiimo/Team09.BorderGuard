@@ -1,6 +1,7 @@
 package itcollege.team09.helpers;
 
 import itcollege.team09.entities.AdminYksus;
+import itcollege.team09.entities.AdminYksuseLiik;
 import itcollege.team09.entities.Vaeosa;
 import itcollege.team09.entities.VaeosaAlluvus;
 
@@ -9,6 +10,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.roo.addon.javabean.RooJavaBean;
@@ -34,11 +36,29 @@ public class Helper {
 	@SuppressWarnings("unchecked")
 	public static List<VaeosaAlluvus> getVaeosaAlluvad(Vaeosa v){
     	Query q = entityManager().createQuery(
-    			"SELECT o FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa");
+    			"SELECT o FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa", VaeosaAlluvus.class);
             q.setParameter("vaeosa", v);		
 		
 		return q.getResultList();
 	}
+	
+	public static List<Vaeosa> getVaeosaAlluvadVaeosad(Vaeosa v){
+		TypedQuery<Vaeosa> q = entityManager().createQuery(
+    			"SELECT o.alamvaeosa FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa", Vaeosa.class);
+            q.setParameter("vaeosa", v);		
+		
+		return q.getResultList();
+	}
+	
+	public static List<AdminYksuseLiik> getAdminYksuseAlluvad(AdminYksuseLiik a){
+		TypedQuery<AdminYksuseLiik> q = entityManager().createQuery(
+    			"SELECT o.alamyksus FROM VoimalikAlluvus o WHERE o.yksuseliik = :adminYksuseLiik", AdminYksuseLiik.class);
+            q.setParameter("adminYksuseLiik", a);		
+		
+		return q.getResultList();
+	}
+	
+	
 	
 /*
 	@SuppressWarnings("unchecked")

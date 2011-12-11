@@ -68,25 +68,6 @@ privileged aspect AdminYksuseLiikController_Roo_Controller {
         return "adminyksuseliiks/list";
     }
     
-    @RequestMapping(method = RequestMethod.PUT)
-    public String AdminYksuseLiikController.update(@Valid AdminYksuseLiik adminYksuseLiik, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("adminYksuseLiik", adminYksuseLiik);
-            addDateTimeFormatPatterns(uiModel);
-            return "adminyksuseliiks/update";
-        }
-        uiModel.asMap().clear();
-        adminYksuseLiik.merge();
-        return "redirect:/adminyksuseliiks/" + encodeUrlPathSegment(adminYksuseLiik.getId().toString(), httpServletRequest);
-    }
-    
-    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
-    public String AdminYksuseLiikController.updateForm(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("adminYksuseLiik", AdminYksuseLiik.findAdminYksuseLiik(id));
-        addDateTimeFormatPatterns(uiModel);
-        return "adminyksuseliiks/update";
-    }
-    
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String AdminYksuseLiikController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         AdminYksuseLiik.findAdminYksuseLiik(id).remove();
