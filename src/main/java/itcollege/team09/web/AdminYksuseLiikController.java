@@ -36,6 +36,7 @@ public class AdminYksuseLiikController {
     public String updateForm(@PathVariable("id") Long id, Model uiModel) {
         uiModel.addAttribute("adminYksuseLiik", AdminYksuseLiik.findAdminYksuseLiik(id));
         uiModel.addAttribute("voimalikudAlluvused", Helper.getAdminYksuseLiigiAlluvad(AdminYksuseLiik.findAdminYksuseLiik(id)));
+        uiModel.addAttribute("voimalikudYlemad", Helper.getAdminYksuseLiigiYlemad(AdminYksuseLiik.findAdminYksuseLiik(id)));
         addDateTimeFormatPatterns(uiModel);
         return "adminyksuseliiks/update";
     }

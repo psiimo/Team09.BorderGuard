@@ -9,18 +9,15 @@
 	<jsp:output omit-xml-declaration="yes" />
 	<form:update id="fu_itcollege_team09_entities_AdminYksus" modelAttribute="adminYksus" path="/adminyksuses" versionField="Version" z="user-managed">	
         <script>
-			function PopupCenter(pageURL, title,w,h) {
-				var left = (screen.width/2)-(w/2);
-				var top = (screen.height/2)-(h/2);
-				var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-  
-				var timer = setInterval(function() {    
-				    if(targetWin.closed) {   
-				        clearInterval(timer);   
-				        window.location.reload();   
-				    }   
-				}, 1000); 
-			} 
+			function submitform(id) {	
+				if(confirmAction()) {		
+					document.getElementById('delete_form').action = "/BorderGuard/vaeosaalluvuses/"+id;
+					document.getElementById('delete_form').submit();
+				}
+			}
+			function confirmAction() {
+		        return confirm("Soovid sa kindlasti seda kustutada?");
+		    }
 	    	function hideshow(l,r){
 	        	if (!document.getElementById)
 	        		return
@@ -80,14 +77,14 @@
 					<tr>
 						<td>
 							<span class="subjects"><spring:message text="${a.nimetus}" /></span>	
-							<button class="button" type="button" onClick="window.location.reload()">	
+							<button class="button" type="button" onclick="submitform(${v.id});">	
 							<spring:message code="button_delete" /></button>						
 						</td>
 					</tr>
 				</c:forEach>
 			</table>
 			<div style="margin-top: 5px;">
-				<button class="button" type="button" onClick="PopupCenter('../adminalluvuses?form','Lisa uus',600,600);">
+				<button class="button" type="button" onClick="window.location='../adminalluvuses?form'">
 				<spring:message code="button_add" /></button>
 			</div>
 		</div>

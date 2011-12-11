@@ -8,23 +8,11 @@
 	<jsp:directive.page import="itcollege.team09.entities.VaeosaAlluvus" />
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
+	
 	<form:update id="fu_itcollege_team09_entities_Vaeosa"
 		modelAttribute="vaeosa" path="/vaeosas" versionField="Version"
 		z="user-managed">
-		<script>
-			function PopupCenter(pageURL, title,w,h) {
-				var left = (screen.width/2)-(w/2);
-				var top = (screen.height/2)-(h/2);
-				var targetWin = window.open(pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-  
-				var timer = setInterval(
-						function() {
-							if(targetWin.closed) {  
-								clearInterval(timer); 
-								window.location.reload();
-							}
-						}, 1000); 
-			} 
+		<script>			
 	    	function hideshow(l,r) {
 	        	if (!document.getElementById)
 	        		return
@@ -66,11 +54,11 @@
 					<spring:message code="button_update" />
 				</button>
 			</div>
-
+				
 			<field:select field="ylemvaeosad"
 				id="c_itcollege_team09_entities_vaeosa_ylemvaeosad"
-				itemLabel="vaeosa.nimetus" itemValue="id" items="${vaeosaalluvuses}"
-				label="Allub" path="/vaeosaalluvuses" />
+				itemLabel="vaeosa.nimetus" itemValue="id" items="${ylemvaeosad}"
+				label="Allub" path="/vaeosaalluvuses" z="user-managed" />							
 			<field:datetime dateTimePattern="${vaeosa_alates_date_format}"
 				field="alates" id="c_itcollege_team09_entities_Vaeosa_alates"
 				required="true" z="4010QuEDny8XJkaFJorP41UHpY4=" />
@@ -106,7 +94,7 @@
 				
 			</table>
 			<div style="margin-top: 5px;">
-				<button class="button" onclick="PopupCenter('../vaeosaalluvuses?form','Lisa uus',600,600);" type="button">
+				<button class="button" onClick="window.location='../vaeosaalluvuses?form'" type="button">
 					<spring:message code="button_add" />
 				</button>
 			</div>
@@ -115,11 +103,11 @@
         <div style="height: 26px;">			
             <button class="button" type="button" onClick="history.go(-1)"><spring:message code="button_cancel" /></button>	
 			<button class="buttonSave" id="proceed"><spring:message code="button_save" /></button>	
-        </div> 
+        </div>   
 	</form:update>
-	<form id="delete_form" action="/BorderGuard/vaeosaalluvuses/7" method="post">
+	<form id="delete_form" action="" method="post">
 		<input type="hidden" name="_method" value="DELETE" />
-	</form>
+	</form>	
 </div>
 
 

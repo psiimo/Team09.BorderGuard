@@ -4,6 +4,7 @@ import itcollege.team09.entities.AdminYksus;
 import itcollege.team09.entities.AdminYksuseLiik;
 import itcollege.team09.entities.Vaeosa;
 import itcollege.team09.entities.VaeosaAlluvus;
+import itcollege.team09.entities.VoimalikAlluvus;
 
 import java.util.List;
 
@@ -29,45 +30,6 @@ public class Helper {
 	
 	public Helper() {}
 	
-	public static List<AdminYksus> getAdminnid(){
-		return entityManager().createQuery("SELECT o FROM AdminYksus o", AdminYksus.class).getResultList();
-	}
-	
-	@SuppressWarnings("unchecked")
-	public static List<VaeosaAlluvus> getVaeosaAlluvad(Vaeosa v){
-    	Query q = entityManager().createQuery(
-    			"SELECT o FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa", VaeosaAlluvus.class);
-            q.setParameter("vaeosa", v);		
-		
-		return q.getResultList();
-	}
-	
-	public static List<Vaeosa> getVaeosaAlluvadVaeosad(Vaeosa v){
-		TypedQuery<Vaeosa> q = entityManager().createQuery(
-    			"SELECT o.alamvaeosa FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa", Vaeosa.class);
-            q.setParameter("vaeosa", v);		
-		
-		return q.getResultList();
-	}
-	
-	public static List<AdminYksuseLiik> getAdminYksuseLiigiAlluvad(AdminYksuseLiik a){
-		TypedQuery<AdminYksuseLiik> q = entityManager().createQuery(
-    			"SELECT o.alamyksus FROM VoimalikAlluvus o WHERE o.yksuseliik = :adminYksuseLiik", AdminYksuseLiik.class);
-            q.setParameter("adminYksuseLiik", a);		
-		
-		return q.getResultList();
-	}
-	
-	public static List<AdminYksus> getAdminYksuseAlluvad(AdminYksus a){
-		TypedQuery<AdminYksus> q = entityManager().createQuery(
-    			"SELECT o.alamadminyksus FROM AdminAlluvus o WHERE o.adminyksus = :adminYksus", AdminYksus.class);
-            q.setParameter("adminYksus", a);		
-		
-		return q.getResultList();
-	}
-	
-	
-	
 /*
 	@SuppressWarnings("unchecked")
 	public static List<Bear> PuurisOlevadKarud(Long id) {
@@ -78,4 +40,53 @@ public class Helper {
         return q.getResultList();
     }
  */
+	
+	  /**
+     * Vaeosa
+     */
+	public static List<Vaeosa> getAlluvadVaeosad(Vaeosa v){
+		TypedQuery<Vaeosa> q = entityManager().createQuery(
+    			"SELECT o.alamvaeosa FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa", Vaeosa.class);
+            q.setParameter("vaeosa", v);		
+		
+		return q.getResultList();
+	}
+	
+	public static List<VaeosaAlluvus> getYlemVaeosad(Vaeosa v){
+		TypedQuery<VaeosaAlluvus> q = entityManager().createQuery(
+    			"SELECT o FROM VaeosaAlluvus o WHERE o.alamvaeosa = :vaeosa", VaeosaAlluvus.class);
+            q.setParameter("vaeosa", v);		
+		
+		return q.getResultList();
+	}
+		
+	/**
+	 * AdminYksuse liik
+	 */
+	public static List<AdminYksuseLiik> getAdminYksuseLiigiAlluvad(AdminYksuseLiik a){
+		TypedQuery<AdminYksuseLiik> q = entityManager().createQuery(
+    			"SELECT o.alamyksus FROM VoimalikAlluvus o WHERE o.yksuseliik = :adminYksuseLiik", AdminYksuseLiik.class);
+            q.setParameter("adminYksuseLiik", a);		
+		
+		return q.getResultList();
+	}
+	
+	public static List<VoimalikAlluvus> getAdminYksuseLiigiYlemad(AdminYksuseLiik a){
+		TypedQuery<VoimalikAlluvus> q = entityManager().createQuery(
+    			"SELECT o FROM VoimalikAlluvus o WHERE o.alamyksus = :adminYksuseLiik", VoimalikAlluvus.class);
+            q.setParameter("adminYksuseLiik", a);		
+		
+		return q.getResultList();
+	}
+	
+	/**
+	 * Adminyksus
+	 */
+	public static List<AdminYksus> getAdminYksuseAlluvad(AdminYksus a){
+		TypedQuery<AdminYksus> q = entityManager().createQuery(
+    			"SELECT o.alamadminyksus FROM AdminAlluvus o WHERE o.adminyksus = :adminYksus", AdminYksus.class);
+            q.setParameter("adminYksus", a);		
+		
+		return q.getResultList();
+	}
 }

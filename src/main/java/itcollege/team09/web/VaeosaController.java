@@ -35,10 +35,13 @@ public class VaeosaController {
     @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
     public String updateForm(@PathVariable("id") Long id, Model uiModel) {
         uiModel.addAttribute("vaeosa", Vaeosa.findVaeosa(id));
-        uiModel.addAttribute("alamvaeosad", Helper.getVaeosaAlluvadVaeosad(Vaeosa.findVaeosa(id)));
+        uiModel.addAttribute("alamvaeosad", Helper.getAlluvadVaeosad(Vaeosa.findVaeosa(id)));
+        uiModel.addAttribute("ylemvaeosad", Helper.getYlemVaeosad(Vaeosa.findVaeosa(id)));
         addDateTimeFormatPatterns(uiModel);
         return "vaeosas/update";
     }  
+    
+    
     
     @RequestMapping(value = "/{id}", params = "popup", method = RequestMethod.GET)
     public String updatePopup(@PathVariable("id") Long id, Model uiModel) {
