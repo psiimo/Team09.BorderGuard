@@ -64,10 +64,10 @@
 		<div class="customFormRight">
 			<table>
 				<tr><th>Alluvad</th></tr>
-				<c:forEach items="${alluvadAdminYksused}" var="a">
+				<c:forEach items="${voimalikudAlluvused}" var="v">
 					<tr>
 						<td>
-							<span class="subjects"><spring:message text="${a.nimetus}" /></span>	
+							<span class="subjects"><spring:message text="${v.nimetus}" /></span>	
 							<button class="button" type="button" onClick="window.location.reload()">	
 							<spring:message code="button_delete" /></button>						
 						</td>

@@ -50,10 +50,18 @@ public class Helper {
 		return q.getResultList();
 	}
 	
-	public static List<AdminYksuseLiik> getAdminYksuseAlluvad(AdminYksuseLiik a){
+	public static List<AdminYksuseLiik> getAdminYksuseLiigiAlluvad(AdminYksuseLiik a){
 		TypedQuery<AdminYksuseLiik> q = entityManager().createQuery(
     			"SELECT o.alamyksus FROM VoimalikAlluvus o WHERE o.yksuseliik = :adminYksuseLiik", AdminYksuseLiik.class);
             q.setParameter("adminYksuseLiik", a);		
+		
+		return q.getResultList();
+	}
+	
+	public static List<AdminYksus> getAdminYksuseAlluvad(AdminYksus a){
+		TypedQuery<AdminYksus> q = entityManager().createQuery(
+    			"SELECT o.alamadminyksus FROM AdminAlluvus o WHERE o.adminyksus = :adminYksus", AdminYksus.class);
+            q.setParameter("adminYksus", a);		
 		
 		return q.getResultList();
 	}
