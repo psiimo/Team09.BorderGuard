@@ -26,18 +26,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect AdminAlluvusController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST)
-    public String AdminAlluvusController.create(@Valid AdminAlluvus adminAlluvus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("adminAlluvus", adminAlluvus);
-            addDateTimeFormatPatterns(uiModel);
-            return "adminalluvuses/create";
-        }
-        uiModel.asMap().clear();
-        adminAlluvus.persist();
-        return "redirect:/adminalluvuses/" + encodeUrlPathSegment(adminAlluvus.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String AdminAlluvusController.createForm(Model uiModel) {
         uiModel.addAttribute("adminAlluvus", new AdminAlluvus());
