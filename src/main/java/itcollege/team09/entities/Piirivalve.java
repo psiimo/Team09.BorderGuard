@@ -1,5 +1,6 @@
 package itcollege.team09.entities;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.GeneratedValue;
@@ -59,7 +60,20 @@ public abstract class Piirivalve {
 		this.kommentaar = kommentaar;
 	}	
 	
-	
+	public static final Calendar surrogate;
+
+	static {
+		surrogate = Calendar.getInstance();
+
+		surrogate.set(Calendar.YEAR, 9999);
+		surrogate.set(Calendar.MONTH, Calendar.DECEMBER);
+		surrogate.set(Calendar.DATE, 31);
+
+		surrogate.set(Calendar.HOUR_OF_DAY, 0);
+		surrogate.set(Calendar.MINUTE, 0);
+		surrogate.set(Calendar.SECOND, 0);
+		surrogate.set(Calendar.MILLISECOND, 0);
+	}
 	
 	@PrePersist	
 	public void recordCreated() {	
@@ -68,13 +82,17 @@ public abstract class Piirivalve {
 		
 		this.avaja = user;
 		this.muutja = user;
-		this.sulgeja = user;
 		
 		this.avatud = new Date(date);
 		this.muudetud = new Date(date);
-		this.suletud = new Date(9999999999999L);		
+		
+		if (suletud == null) {
+			suletud = surrogate.getTime();
+		} else {
+			sulgeja = GetUser();
+		}
 	}
-	
+
 	@PreUpdate	
 	public void recordModified() {	
 		this.muutja = GetUser();
@@ -82,10 +100,60 @@ public abstract class Piirivalve {
 	}	
 	
 	@PreRemove	
-	public void preventRemove() {	
-		this.sulgeja = GetUser();
-		this.suletud = new Date(GetDate());
-		//throw new SecurityException("Removing of bears is prohibited!");	
+	public void preventRemove() {
+		if(suletud != null)
+			throw new SecurityException("Seda objekti ei saa enam muuta!");
+	}
+	
+	public void close() {
+		Authentication auth = SecurityContextHolder.getContext()
+				.getAuthentication();
+
+		suletud = new Date();
+		sulgeja = auth.getName();
+	}
+
+	@Transactional
+	public void remove() {
+		close();
+
+		if (this.entityManager == null)
+			this.entityManager = entityManager();
+
+		entityManager.persist(this);
+	}
+
+	@Transactional
+	public Piirivalve merge() {
+		if (this.entityManager == null)
+			this.entityManager = entityManager();
+
+		if (id != null && !entityManager.contains(this)) {
+			Piirivalve oldEntity = entityManager.find(getClass(), id);
+			oldEntity.close();
+
+			if (avatud == null) {
+				avatud = oldEntity.avatud;
+				avaja  = oldEntity.avaja;
+			}
+			
+			suletud = null;
+			sulgeja = null;
+
+			clearId();
+			persist();
+			
+			return this;
+		}
+
+		Piirivalve merged = entityManager.merge(this);
+		entityManager.flush();
+		return merged;
+	}
+	
+	public void clearId()
+	{
+		this.id = null;
 	}
 	
 	private String GetUser() {
