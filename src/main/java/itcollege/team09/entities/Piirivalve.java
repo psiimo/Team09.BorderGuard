@@ -88,7 +88,7 @@ public abstract class Piirivalve {
 		this.muudetud = new Date(date);
 		this.suletud = surrogate.getTime();
 	}
-	
+
 	@PreUpdate	
 	public void recordModified() {	
 		this.muutja = GetUser();
@@ -96,10 +96,12 @@ public abstract class Piirivalve {
 	}	
 	
 	@PreRemove	
-	public void preventRemove() {	
+	public void preventRemove() {
+		if(suletud != null)
+			throw new SecurityException("Seda objekti ei saa enam muuta!");
+
 		this.sulgeja = GetUser();
-		this.suletud = new Date(GetDate());
-		//throw new SecurityException("Removing of bears is prohibited!");	
+		this.suletud = new Date(GetDate());	
 	}
 	
 	private String GetUser() {
