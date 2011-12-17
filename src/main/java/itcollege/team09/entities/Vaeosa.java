@@ -2,6 +2,7 @@ package itcollege.team09.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -96,4 +97,16 @@ public class Vaeosa extends Piirivalve implements Serializable  {
 	public void setVaeosaAlluvus_2(Collection<VaeosaAlluvus> param) {
 	    this.alamvaeosad = param;
 	}
+	
+	public static long countVaeosas() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM Vaeosa o WHERE o.sulgeja IS NULL", Long.class).getSingleResult();
+    }
+    
+    public static List<Vaeosa> findAllVaeosas() {
+        return entityManager().createQuery("SELECT o FROM Vaeosa o WHERE o.sulgeja IS NULL", Vaeosa.class).getResultList();
+    }
+    
+    public static List<Vaeosa> findVaeosaEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM Vaeosa o WHERE o.sulgeja IS NULL", Vaeosa.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
 }

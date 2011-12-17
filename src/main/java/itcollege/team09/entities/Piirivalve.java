@@ -70,7 +70,6 @@ public abstract class Piirivalve {
 		
 		this.avaja = user;
 		this.muutja = user;
-		this.sulgeja = user;
 		
 		this.avatud = new Date(date);
 		this.muudetud = new Date(date);

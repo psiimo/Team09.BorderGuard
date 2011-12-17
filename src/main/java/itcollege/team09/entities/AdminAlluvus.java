@@ -2,6 +2,7 @@ package itcollege.team09.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 
@@ -61,4 +62,16 @@ public class AdminAlluvus extends Piirivalve implements Serializable {
 	public void setKuni(Date kuni) {
 		this.kuni = kuni;
 	}
+	
+	public static long countAdminAlluvuses() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM AdminAlluvus o WHERE o.sulgeja IS NULL", Long.class).getSingleResult();
+    }
+    
+    public static List<AdminAlluvus> findAllAdminAlluvuses() {
+        return entityManager().createQuery("SELECT o FROM AdminAlluvus o WHERE o.sulgeja IS NULL", AdminAlluvus.class).getResultList();
+    }
+    
+    public static List<AdminAlluvus> findAdminAlluvusEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM AdminAlluvus o WHERE o.sulgeja IS NULL", AdminAlluvus.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
 }

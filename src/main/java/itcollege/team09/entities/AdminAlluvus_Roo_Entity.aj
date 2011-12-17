@@ -5,25 +5,12 @@ package itcollege.team09.entities;
 
 import itcollege.team09.entities.AdminAlluvus;
 import java.lang.Long;
-import java.util.List;
 
 privileged aspect AdminAlluvus_Roo_Entity {
-    
-    public static long AdminAlluvus.countAdminAlluvuses() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM AdminAlluvus o", Long.class).getSingleResult();
-    }
-    
-    public static List<AdminAlluvus> AdminAlluvus.findAllAdminAlluvuses() {
-        return entityManager().createQuery("SELECT o FROM AdminAlluvus o", AdminAlluvus.class).getResultList();
-    }
     
     public static AdminAlluvus AdminAlluvus.findAdminAlluvus(Long id) {
         if (id == null) return null;
         return entityManager().find(AdminAlluvus.class, id);
-    }
-    
-    public static List<AdminAlluvus> AdminAlluvus.findAdminAlluvusEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM AdminAlluvus o", AdminAlluvus.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }
