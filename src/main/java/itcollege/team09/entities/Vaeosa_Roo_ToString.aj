@@ -17,6 +17,7 @@ privileged aspect Vaeosa_Roo_ToString {
         sb.append("Kood: ").append(getKood()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
+        sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
         sb.append("Ylemvaeosad: ").append(getYlemvaeosad() == null ? "null" : getYlemvaeosad().size());
         return sb.toString();

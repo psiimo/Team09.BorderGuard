@@ -106,5 +106,9 @@ public abstract class Piirivalve {
 	private Long GetDate() {
 		Date now = new Date();
 		return now.getTime();
-	}	
+	}
+	
+	public Date getSuletud() {
+		return suletud;
+	}
 }

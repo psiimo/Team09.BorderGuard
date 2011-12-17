@@ -14,6 +14,7 @@ privileged aspect VaeosaAlluvus_Roo_ToString {
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
+        sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Vaeosa: ").append(getVaeosa()).append(", ");
         sb.append("Version: ").append(getVersion());
         return sb.toString();
