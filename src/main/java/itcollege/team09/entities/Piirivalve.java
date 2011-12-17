@@ -1,5 +1,7 @@
 package itcollege.team09.entities;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.GeneratedValue;
@@ -64,37 +66,44 @@ public abstract class Piirivalve {
 	@PrePersist	
 	public void recordCreated() {	
 		String user = GetUser();
-		Long date = GetDate();
 		
 		this.avaja = user;
 		this.muutja = user;
 		this.sulgeja = user;
 		
-		this.avatud = new Date(date);
-		this.muudetud = new Date(date);
-		this.suletud = new Date(9999999999999L);		
+		this.avatud = new Date();
+		this.muudetud = new Date();
+		try {
+			this.suletud = new SimpleDateFormat("yyyy-MM-dd").parse("9999-12-31");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@PreUpdate	
 	public void recordModified() {	
 		this.muutja = GetUser();
-		this.muudetud = new Date(GetDate());	
+		this.muudetud = new Date();	
 	}	
 	
 	@PreRemove	
 	public void preventRemove() {	
-		this.sulgeja = GetUser();
-		this.suletud = new Date(GetDate());
-		//throw new SecurityException("Removing of bears is prohibited!");	
+		throw new SecurityException("Removing of data is prohibited!");	
 	}
+	
+    @Transactional
+    public void remove() {
+		this.sulgeja = GetUser();
+		this.suletud = new Date();
+    }
 	
 	private String GetUser() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		return auth.getName();
 	}	
+
 	
-	private Long GetDate() {
-		Date now = new Date();
-		return now.getTime();
-	}	
+	public Date getSuletud() {
+		return suletud;
+	}
 }

@@ -6,6 +6,8 @@ import itcollege.team09.entities.Vaeosa;
 import itcollege.team09.entities.VaeosaAlluvus;
 import itcollege.team09.entities.VoimalikAlluvus;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -88,5 +90,23 @@ public class Helper {
             q.setParameter("adminYksus", a);		
 		
 		return q.getResultList();
+	}
+	
+	public static boolean IsSurrogateDate(Date date){
+		SimpleDateFormat simpleDateformatYear = new SimpleDateFormat("yyyy");
+		SimpleDateFormat simpleDateformatMonth = new SimpleDateFormat("MM");
+		SimpleDateFormat simpleDateformatDay = new SimpleDateFormat("d");
+		
+		String year = simpleDateformatYear.format(date);
+		String month = simpleDateformatMonth.format(date);
+		String day = simpleDateformatDay.format(date);
+		
+		// System.out.println("Testing IsSurrogateDate YEAR:" + year + " Month:" + month + " Day:" +day);
+		if(year.equals("9999") && month.equals("12") && day.equals("31")){		
+			return true;
+		}else{
+			return false;
+		}
+		
 	}
 }
