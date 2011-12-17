@@ -82,11 +82,15 @@ public abstract class Piirivalve {
 		
 		this.avaja = user;
 		this.muutja = user;
-		this.sulgeja = user;
 		
 		this.avatud = new Date(date);
 		this.muudetud = new Date(date);
-		this.suletud = surrogate.getTime();
+		
+		if (suletud == null) {
+			suletud = surrogate.getTime();
+		} else {
+			sulgeja = GetUser();
+		}
 	}
 
 	@PreUpdate	
@@ -99,9 +103,57 @@ public abstract class Piirivalve {
 	public void preventRemove() {
 		if(suletud != null)
 			throw new SecurityException("Seda objekti ei saa enam muuta!");
+	}
+	
+	public void close() {
+		Authentication auth = SecurityContextHolder.getContext()
+				.getAuthentication();
 
-		this.sulgeja = GetUser();
-		this.suletud = new Date(GetDate());	
+		suletud = new Date();
+		sulgeja = auth.getName();
+	}
+
+	@Transactional
+	public void remove() {
+		close();
+
+		if (this.entityManager == null)
+			this.entityManager = entityManager();
+
+		entityManager.persist(this);
+	}
+
+	@Transactional
+	public Piirivalve merge() {
+		if (this.entityManager == null)
+			this.entityManager = entityManager();
+
+		if (id != null && !entityManager.contains(this)) {
+			Piirivalve oldEntity = entityManager.find(getClass(), id);
+			oldEntity.close();
+
+			if (avatud == null) {
+				avatud = oldEntity.avatud;
+				avaja  = oldEntity.avaja;
+			}
+			
+			suletud = null;
+			sulgeja = null;
+
+			clearId();
+			persist();
+			
+			return this;
+		}
+
+		Piirivalve merged = entityManager.merge(this);
+		entityManager.flush();
+		return merged;
+	}
+	
+	public void clearId()
+	{
+		this.id = null;
 	}
 	
 	private String GetUser() {
