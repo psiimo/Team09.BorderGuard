@@ -1,5 +1,6 @@
 package itcollege.team09.entities;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.GeneratedValue;
@@ -59,7 +60,20 @@ public abstract class Piirivalve {
 		this.kommentaar = kommentaar;
 	}	
 	
-	
+	public static final Calendar surrogate;
+
+	static {
+		surrogate = Calendar.getInstance();
+
+		surrogate.set(Calendar.YEAR, 9999);
+		surrogate.set(Calendar.MONTH, Calendar.DECEMBER);
+		surrogate.set(Calendar.DATE, 31);
+
+		surrogate.set(Calendar.HOUR_OF_DAY, 0);
+		surrogate.set(Calendar.MINUTE, 0);
+		surrogate.set(Calendar.SECOND, 0);
+		surrogate.set(Calendar.MILLISECOND, 0);
+	}
 	
 	@PrePersist	
 	public void recordCreated() {	
@@ -72,7 +86,7 @@ public abstract class Piirivalve {
 		
 		this.avatud = new Date(date);
 		this.muudetud = new Date(date);
-		this.suletud = new Date(9999999999999L);		
+		this.suletud = surrogate.getTime();
 	}
 	
 	@PreUpdate	
