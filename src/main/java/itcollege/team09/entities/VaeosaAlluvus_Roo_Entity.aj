@@ -5,25 +5,12 @@ package itcollege.team09.entities;
 
 import itcollege.team09.entities.VaeosaAlluvus;
 import java.lang.Long;
-import java.util.List;
 
 privileged aspect VaeosaAlluvus_Roo_Entity {
-    
-    public static long VaeosaAlluvus.countVaeosaAlluvuses() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM VaeosaAlluvus o", Long.class).getSingleResult();
-    }
-    
-    public static List<VaeosaAlluvus> VaeosaAlluvus.findAllVaeosaAlluvuses() {
-        return entityManager().createQuery("SELECT o FROM VaeosaAlluvus o", VaeosaAlluvus.class).getResultList();
-    }
     
     public static VaeosaAlluvus VaeosaAlluvus.findVaeosaAlluvus(Long id) {
         if (id == null) return null;
         return entityManager().find(VaeosaAlluvus.class, id);
-    }
-    
-    public static List<VaeosaAlluvus> VaeosaAlluvus.findVaeosaAlluvusEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM VaeosaAlluvus o", VaeosaAlluvus.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }

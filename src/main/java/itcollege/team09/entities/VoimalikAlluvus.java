@@ -2,6 +2,7 @@ package itcollege.team09.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
@@ -62,4 +63,16 @@ public class VoimalikAlluvus extends Piirivalve implements Serializable {
 	public void setAlamyksus(AdminYksuseLiik param) {
 	    this.alamyksus = param;
 	}
+	
+	public static long countVoimalikAlluvuses() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM VoimalikAlluvus o WHERE o.sulgeja IS NULL", Long.class).getSingleResult();
+    }
+    
+    public static List<VoimalikAlluvus> findAllVoimalikAlluvuses() {
+        return entityManager().createQuery("SELECT o FROM VoimalikAlluvus o WHERE o.sulgeja IS NULL", VoimalikAlluvus.class).getResultList();
+    }
+    
+    public static List<VoimalikAlluvus> findVoimalikAlluvusEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM VoimalikAlluvus o WHERE o.sulgeja IS NULL", VoimalikAlluvus.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
 }

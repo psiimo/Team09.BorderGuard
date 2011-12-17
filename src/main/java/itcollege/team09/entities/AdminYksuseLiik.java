@@ -2,6 +2,7 @@ package itcollege.team09.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -94,4 +95,16 @@ public class AdminYksuseLiik extends Piirivalve implements Serializable  {
 	public void setAdminyksused(Collection<AdminYksus> param) {
 	    this.adminyksused = param;
 	}
+	
+	public static long countAdminYksuseLiiks() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM AdminYksuseLiik o WHERE o.sulgeja IS NULL", Long.class).getSingleResult();
+    }
+    
+    public static List<AdminYksuseLiik> findAllAdminYksuseLiiks() {
+        return entityManager().createQuery("SELECT o FROM AdminYksuseLiik o WHERE o.sulgeja IS NULL", AdminYksuseLiik.class).getResultList();
+    }
+   
+    public static List<AdminYksuseLiik> findAdminYksuseLiikEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM AdminYksuseLiik o WHERE o.sulgeja IS NULL", AdminYksuseLiik.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
 }

@@ -46,7 +46,7 @@ public class Helper {
      */
 	public static List<Vaeosa> getAlluvadVaeosad(Vaeosa v){
 		TypedQuery<Vaeosa> q = entityManager().createQuery(
-    			"SELECT o.alamvaeosa FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa", Vaeosa.class);
+    			"SELECT o.alamvaeosa FROM VaeosaAlluvus o WHERE o.vaeosa = :vaeosa AND o.sulgeja IS NULL", Vaeosa.class);
             q.setParameter("vaeosa", v);		
 		
 		return q.getResultList();
@@ -54,7 +54,7 @@ public class Helper {
 	
 	public static List<VaeosaAlluvus> getYlemVaeosad(Vaeosa v){
 		TypedQuery<VaeosaAlluvus> q = entityManager().createQuery(
-    			"SELECT o FROM VaeosaAlluvus o WHERE o.alamvaeosa = :vaeosa", VaeosaAlluvus.class);
+    			"SELECT o FROM VaeosaAlluvus o WHERE o.alamvaeosa = :vaeosa AND o.sulgeja IS NULL", VaeosaAlluvus.class);
             q.setParameter("vaeosa", v);		
 		
 		return q.getResultList();
@@ -65,7 +65,7 @@ public class Helper {
 	 */
 	public static List<AdminYksuseLiik> getAdminYksuseLiigiAlluvad(AdminYksuseLiik a){
 		TypedQuery<AdminYksuseLiik> q = entityManager().createQuery(
-    			"SELECT o.alamyksus FROM VoimalikAlluvus o WHERE o.yksuseliik = :adminYksuseLiik", AdminYksuseLiik.class);
+    			"SELECT o.alamyksus FROM VoimalikAlluvus o WHERE o.yksuseliik = :adminYksuseLiik AND o.sulgeja IS NULL", AdminYksuseLiik.class);
             q.setParameter("adminYksuseLiik", a);		
 		
 		return q.getResultList();
@@ -73,7 +73,7 @@ public class Helper {
 	
 	public static List<VoimalikAlluvus> getAdminYksuseLiigiYlemad(AdminYksuseLiik a){
 		TypedQuery<VoimalikAlluvus> q = entityManager().createQuery(
-    			"SELECT o FROM VoimalikAlluvus o WHERE o.alamyksus = :adminYksuseLiik", VoimalikAlluvus.class);
+    			"SELECT o FROM VoimalikAlluvus o WHERE o.alamyksus = :adminYksuseLiik AND o.sulgeja IS NULL", VoimalikAlluvus.class);
             q.setParameter("adminYksuseLiik", a);		
 		
 		return q.getResultList();
@@ -84,7 +84,7 @@ public class Helper {
 	 */
 	public static List<AdminYksus> getAdminYksuseAlluvad(AdminYksus a){
 		TypedQuery<AdminYksus> q = entityManager().createQuery(
-    			"SELECT o.alamadminyksus FROM AdminAlluvus o WHERE o.adminyksus = :adminYksus", AdminYksus.class);
+    			"SELECT o.alamadminyksus FROM AdminAlluvus o WHERE o.adminyksus = :adminYksus AND o.sulgeja IS NULL", AdminYksus.class);
             q.setParameter("adminYksus", a);		
 		
 		return q.getResultList();

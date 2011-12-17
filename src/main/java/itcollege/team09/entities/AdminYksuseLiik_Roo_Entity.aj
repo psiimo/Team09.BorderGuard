@@ -5,25 +5,12 @@ package itcollege.team09.entities;
 
 import itcollege.team09.entities.AdminYksuseLiik;
 import java.lang.Long;
-import java.util.List;
 
 privileged aspect AdminYksuseLiik_Roo_Entity {
-    
-    public static long AdminYksuseLiik.countAdminYksuseLiiks() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM AdminYksuseLiik o", Long.class).getSingleResult();
-    }
-    
-    public static List<AdminYksuseLiik> AdminYksuseLiik.findAllAdminYksuseLiiks() {
-        return entityManager().createQuery("SELECT o FROM AdminYksuseLiik o", AdminYksuseLiik.class).getResultList();
-    }
     
     public static AdminYksuseLiik AdminYksuseLiik.findAdminYksuseLiik(Long id) {
         if (id == null) return null;
         return entityManager().find(AdminYksuseLiik.class, id);
-    }
-    
-    public static List<AdminYksuseLiik> AdminYksuseLiik.findAdminYksuseLiikEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM AdminYksuseLiik o", AdminYksuseLiik.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
 }
