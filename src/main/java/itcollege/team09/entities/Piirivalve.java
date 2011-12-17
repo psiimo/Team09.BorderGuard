@@ -66,14 +66,13 @@ public abstract class Piirivalve {
 	@PrePersist	
 	public void recordCreated() {	
 		String user = GetUser();
-		Long date = GetDate();
 		
 		this.avaja = user;
 		this.muutja = user;
 		this.sulgeja = user;
 		
-		this.avatud = new Date(date);
-		this.muudetud = new Date(date);
+		this.avatud = new Date();
+		this.muudetud = new Date();
 		try {
 			this.suletud = new SimpleDateFormat("yyyy-MM-dd").parse("9999-12-31");
 		} catch (ParseException e) {
@@ -84,7 +83,7 @@ public abstract class Piirivalve {
 	@PreUpdate	
 	public void recordModified() {	
 		this.muutja = GetUser();
-		this.muudetud = new Date(GetDate());	
+		this.muudetud = new Date();	
 	}	
 	
 	@PreRemove	
@@ -95,18 +94,14 @@ public abstract class Piirivalve {
     @Transactional
     public void remove() {
 		this.sulgeja = GetUser();
-		this.suletud = new Date(GetDate());
+		this.suletud = new Date();
     }
 	
 	private String GetUser() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		return auth.getName();
 	}	
-	
-	private Long GetDate() {
-		Date now = new Date();
-		return now.getTime();
-	}
+
 	
 	public Date getSuletud() {
 		return suletud;
