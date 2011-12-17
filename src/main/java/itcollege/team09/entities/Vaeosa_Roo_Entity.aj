@@ -13,10 +13,6 @@ privileged aspect Vaeosa_Roo_Entity {
         return entityManager().createQuery("SELECT COUNT(o) FROM Vaeosa o", Long.class).getSingleResult();
     }
     
-    public static List<Vaeosa> Vaeosa.findAllVaeosas() {
-        return entityManager().createQuery("SELECT o FROM Vaeosa o", Vaeosa.class).getResultList();
-    }
-    
     public static Vaeosa Vaeosa.findVaeosa(Long id) {
         if (id == null) return null;
         return entityManager().find(Vaeosa.class, id);

@@ -17,6 +17,7 @@ privileged aspect AdminYksus_Roo_ToString {
         sb.append("Kood: ").append(getKood()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
+        sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Vaeosad: ").append(getVaeosad() == null ? "null" : getVaeosad().size()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
         sb.append("Ylemadminyksused: ").append(getYlemadminyksused() == null ? "null" : getYlemadminyksused().size());
