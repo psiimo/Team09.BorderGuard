@@ -1,6 +1,8 @@
 package itcollege.team09.entities;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -72,21 +74,21 @@ public abstract class Piirivalve {
 		
 		this.avatud = new Date(date);
 		this.muudetud = new Date(date);
-		this.suletud = new Date(9999999999999L);		
+		Calendar closedTime = new GregorianCalendar(9999,Calendar.DECEMBER,31, 0,0);
+	    this.suletud = closedTime.getTime();
 	}
 	
 	@PreUpdate	
 	public void recordModified() {	
 		this.muutja = GetUser();
 		this.muudetud = new Date(GetDate());	
-	}	
+	}
 	
-	@PreRemove	
-	public void preventRemove() {	
+	@Transactional
+    public void remove() {
 		this.sulgeja = GetUser();
 		this.suletud = new Date(GetDate());
-		//throw new SecurityException("Removing of bears is prohibited!");	
-	}
+    }
 	
 	private String GetUser() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
