@@ -17,6 +17,7 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @MappedSuperclass
@@ -81,7 +82,11 @@ public abstract class Piirivalve {
 	public void preventRemove() {	
 		throw new SecurityException("Removing of data is prohibited!");	
 	}
-	
+    @Transactional
+    public void remove() {
+		this.sulgeja = GetUser();
+		this.suletud = new Date();
+    }
 
 	
 	private String GetUser() {
