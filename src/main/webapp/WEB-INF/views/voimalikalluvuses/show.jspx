@@ -8,5 +8,6 @@
         <field:display date="true" dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_VoimalikAlluvus_kuni" object="${voimalikalluvus}" z="4RqAVSJo4ZRlNvyNAeGfw4nzdE4="/>
         <field:display field="yksuseliik" id="s_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" object="${voimalikalluvus}" z="X9TQfVZAgs7+z3NLX9JIFb84X2M="/>
         <field:display field="alamyksus" id="s_itcollege_team09_entities_VoimalikAlluvus_alamyksus" object="${voimalikalluvus}" z="kA09ASRyxiXM9Mmkd5tUOtA+UWs="/>
+        <field:display date="true" dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_VoimalikAlluvus_suletud" object="${voimalikalluvus}" z="QcYNfNlJiAWrEYm5waURVsDkq4k="/>
     </page:show>
 </div>

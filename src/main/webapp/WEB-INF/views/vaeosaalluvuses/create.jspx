@@ -8,6 +8,7 @@
         <field:datetime dateTimePattern="${vaeosaAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VaeosaAlluvus_alates" required="true" z="A/RLUzCamUjEP+0jQiOHRPgFf60="/>
         <field:datetime dateTimePattern="${vaeosaAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VaeosaAlluvus_kuni" required="true" z="OzGQi5wNEYgPTiyFt0lnEdvekSQ="/>
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VaeosaAlluvus_kommentaar" required="true" z="QijZ/iLXePbkxrAF3mff2x0awY0="/>
+        <field:datetime dateTimePattern="${vaeosaAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VaeosaAlluvus_suletud" z="xHvxiVFZUHGHLfWNVrJfuQe0Y0o="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_VaeosaAlluvus" render="${not empty dependencies}" z="6xOhd/44ToBBJ3shY5BvFuf/gWk="/>
 </div>

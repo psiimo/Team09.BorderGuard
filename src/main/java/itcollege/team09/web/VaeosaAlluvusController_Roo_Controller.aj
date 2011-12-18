@@ -106,6 +106,7 @@ privileged aspect VaeosaAlluvusController_Roo_Controller {
     }
     
     void VaeosaAlluvusController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("vaeosaAlluvus_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("vaeosaAlluvus_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("vaeosaAlluvus_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }

@@ -26,25 +26,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect VoimalikAlluvusController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST)
-    public String VoimalikAlluvusController.create(@Valid VoimalikAlluvus voimalikAlluvus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("voimalikAlluvus", voimalikAlluvus);
-            addDateTimeFormatPatterns(uiModel);
-            return "voimalikalluvuses/create";
-        }
-        uiModel.asMap().clear();
-        voimalikAlluvus.persist();
-        return "redirect:/voimalikalluvuses/" + encodeUrlPathSegment(voimalikAlluvus.getId().toString(), httpServletRequest);
-    }
-    
-    @RequestMapping(params = "form", method = RequestMethod.GET)
-    public String VoimalikAlluvusController.createForm(Model uiModel) {
-        uiModel.addAttribute("voimalikAlluvus", new VoimalikAlluvus());
-        addDateTimeFormatPatterns(uiModel);
-        return "voimalikalluvuses/create";
-    }
-    
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String VoimalikAlluvusController.show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);
@@ -106,6 +87,7 @@ privileged aspect VoimalikAlluvusController_Roo_Controller {
     }
     
     void VoimalikAlluvusController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("voimalikAlluvus_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("voimalikAlluvus_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("voimalikAlluvus_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }

@@ -8,5 +8,6 @@
         <field:display field="nimetus" id="s_itcollege_team09_entities_AdminYksuseLiik_nimetus" object="${adminyksuseliik}" z="RmQ1gwQH8AX3M2ZlJSMpAtWDfWw="/>
         <field:display date="true" dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="s_itcollege_team09_entities_AdminYksuseLiik_alates" object="${adminyksuseliik}" z="CnIEgtLea5Suj1/IcBK0wWOjDDE="/>
         <field:display date="true" dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_AdminYksuseLiik_kuni" object="${adminyksuseliik}" z="9iSpp8CSAQnn9bmb1ufQnYqvQFk="/>
+        <field:display date="true" dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_AdminYksuseLiik_suletud" object="${adminyksuseliik}" z="AcWAFkQbmD5gd3LBlcW+EOxgmsk="/>
     </page:show>
 </div>

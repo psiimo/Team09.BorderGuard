@@ -11,6 +11,7 @@
         <field:simple field="ylemyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_ylemyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" render="false" z="user-managed"/>
         <field:simple field="alamyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_alamyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" render="false" z="user-managed"/>
         <field:simple field="adminyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_adminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Yksus" render="false" z="user-managed"/>
+        <field:datetime dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" z="MFT9RhS3Hp4o5UQGXyWde3EGZjQ="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_AdminYksuseLiik" render="${not empty dependencies}" z="TQN/B9XFUk+U31MD7wR8IzpiHuU="/>
 </div>

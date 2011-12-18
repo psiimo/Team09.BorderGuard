@@ -10,6 +10,7 @@
         <field:textarea field="kommentaar" id="c_itcollege_team09_entities_Vaeosa_kommentaar" required="true" z="RJKc0tcMJvmNkbG+fV7gz1t6YfM="/>
         <field:select field="adminYksus" id="c_itcollege_team09_entities_Vaeosa_adminYksus" itemLabel="nimetus" itemValue="id" items="${adminyksuses}" path="/adminyksuses" z="user-managed"/>
         <field:simple field="ylemvaeosad" id="c_itcollege_team09_entities_Vaeosa_ylemvaeosad" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa Alluvus" render="false" z="user-managed"/>
+        <field:datetime dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_Vaeosa_suletud" z="P/w+lPO7QhaCshN1/LzJ5K5hgeA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_Vaeosa" render="${not empty dependencies}" z="zBNZG8kbl2JDKiWrJZtEBuo3olg="/>
 </div>

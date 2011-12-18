@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
-	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
-	<jsp:directive.page contentType="text/html;charset=UTF-8" />
-	<jsp:output omit-xml-declaration="yes" />
-	<page:list id="pl_itcollege_team09_entities_Vaeosa" items="${vaeosas}"
-		z="NLnRaYPz9Fm4XahqrcBqKy8khXQ=">
-		<table:table data="${vaeosas}" id="l_itcollege_team09_entities_Vaeosa"
-			path="/vaeosas" z="bK2nrj110oKTYjJdAixUC0vjr3I=">
-			<table:column id="c_itcollege_team09_entities_Vaeosa_nimetus"
-				property="nimetus" z="user-managed" />
-			<table:column id="c_itcollege_team09_entities_Vaeosa_kommentaar"
-				property="kommentaar" z="GC3ZrYE5cJ62+hrk5n2edOD7PyM=" />
-			<table:column id="c_itcollege_team09_entities_Vaeosa_kood"
-				property="kood" z="L6T3kgbLR+lzNwrvpeNlwG9mhto=" />			
-			<table:column date="true"
-				dateTimePattern="${vaeosa_alates_date_format}"
-				id="c_itcollege_team09_entities_Vaeosa_alates" property="alates"
-				z="aQUyEpJxkZXMoF2ZjqzRqJH81Vg=" />
-			<table:column date="true"
-				dateTimePattern="${vaeosa_kuni_date_format}"
-				id="c_itcollege_team09_entities_Vaeosa_kuni" property="kuni"
-				z="agX50SlyAaxDvgbBT6erCml+Ey0=" />
-			<table:column id="c_itcollege_team09_entities_Vaeosa_adminYksus"
-				property="adminYksus" z="xYXE4Wny2dk+W9AfnZlm1hC4P4A=" />
-		</table:table>
-	</page:list>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_itcollege_team09_entities_Vaeosa" items="${vaeosas}" z="NLnRaYPz9Fm4XahqrcBqKy8khXQ=">
+        <table:table data="${vaeosas}" id="l_itcollege_team09_entities_Vaeosa" path="/vaeosas" z="bK2nrj110oKTYjJdAixUC0vjr3I=">
+            <table:column id="c_itcollege_team09_entities_Vaeosa_nimetus" property="nimetus" z="user-managed"/>
+            <table:column id="c_itcollege_team09_entities_Vaeosa_kommentaar" property="kommentaar" z="GC3ZrYE5cJ62+hrk5n2edOD7PyM="/>
+            <table:column id="c_itcollege_team09_entities_Vaeosa_kood" property="kood" z="L6T3kgbLR+lzNwrvpeNlwG9mhto="/>
+            <table:column date="true" dateTimePattern="${vaeosa_alates_date_format}" id="c_itcollege_team09_entities_Vaeosa_alates" property="alates" z="aQUyEpJxkZXMoF2ZjqzRqJH81Vg="/>
+            <table:column date="true" dateTimePattern="${vaeosa_kuni_date_format}" id="c_itcollege_team09_entities_Vaeosa_kuni" property="kuni" z="agX50SlyAaxDvgbBT6erCml+Ey0="/>
+            <table:column date="true" dateTimePattern="${vaeosa_suletud_date_format}" id="c_itcollege_team09_entities_Vaeosa_suletud" property="suletud" z="R9njm53dGVvpzmoHjfInDMjqBCY="/>
+        </table:table>
+    </page:list>
 </div>

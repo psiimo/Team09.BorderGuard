@@ -30,24 +30,24 @@
 
 				<form:createLiik id="fc_itcollege_team09_entities_AdminYksuseLiik"
 					modelAttribute="tagasiLiik" path="/adminyksuseliiks"
-					render="${empty dependencies}" z="D+W8anT89lpLZmyNMTBWSKkT1jA=">
+					render="${empty dependencies}" z="user-managed">
 					<field:input field="kood"
 						id="c_itcollege_team09_entities_AdminYksuseLiik_kood" max="10"
-						required="true" z="K0NTDrpSSAuzXwxUteU/fLkz6bM=" />
+						required="true" z="user-managed" />
 					<field:input field="nimetus"
 						id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus"
-						required="true" z="LkMyISBKCacxuQLlw55RWttfSq4=" />
+						required="true" z="user-managed" />
 
 
 
 					<field:textarea field="kommentaar"
 						id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar"
-						z="Xa2bTIbRGi+k8YXM1RVGOVnvlYg=" />
+						z="user-managed" />
 
 					<field:select label="Allub" field="ylemyksused"
 						id="c_itcollege_team09_entities_AdminYksuseLiik_ylemyksused"
 						items="${riigi_admin_yksuse_liiks_piiks}" itemLabel="nimetus"
-						itemValue="id" path="/riigi_admin_yksuse_liiks" />
+						itemValue="id" path="/adminyksuseliiks" />
 
 
 
@@ -55,11 +55,12 @@
 						dateTimePattern="${adminYksuseLiik_alates_date_format}"
 						field="alates"
 						id="c_itcollege_team09_entities_AdminYksuseLiik_alates"
-						required="true" z="2EDRw/3tB460zLfWV1WQT1tdbcI=" />
+						required="true" z="user-managed" />
 					<field:datetime
-						dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni"
+						dateTimePattern="${adminYksuseLiik_kuni_date_format}" 
+						field="kuni"
 						id="c_itcollege_team09_entities_AdminYksuseLiik_kuni"
-						required="true" z="CDxFM3o6bbcXwapsOb6z3zU4JuE=" />
+						required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY=" />
 
 
 
@@ -154,7 +155,7 @@
 						<div class="submit"
 							style="margin-top: 122px; margin-left: -125px;">
 							<!-- deployd resourcers > webapp > styles-->
-							<form action="http://localhost:8080/Piirivalve">
+							<form action="http://localhost:8080/BorderGuard">
 								<div id="${fn:escapeXml(id)}_submit">
 									<spring:message code="button_cancel" var="cancel_button"
 										htmlEscape="false" />
@@ -300,7 +301,7 @@
 <!-- LOOBU -->
 	    <div class="submit" style="margin-top: 92px; margin-left: -125px;">
 						<!-- deployd resourcers > webapp > styles-->
-						<form action="http://localhost:8080/Piirivalve">
+						<form action="http://localhost:8080/BorderGuard">
 							<div class="submit" id="${fn:escapeXml(id)}_submit">
 								<spring:message code="button_cancel" var="cancel_button"
 									htmlEscape="false" />

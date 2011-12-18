@@ -99,6 +99,7 @@ privileged aspect AdminYksusController_Roo_Controller {
     }
     
     void AdminYksusController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("adminYksus_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksus_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksus_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
