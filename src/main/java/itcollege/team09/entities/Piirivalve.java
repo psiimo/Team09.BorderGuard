@@ -87,6 +87,7 @@ public abstract class Piirivalve {
     public void remove() {
 		this.sulgeja = GetUser();
 		this.suletud = new Date(GetDate());
+		this.persist();
     }
 	
 	private String GetUser() {
