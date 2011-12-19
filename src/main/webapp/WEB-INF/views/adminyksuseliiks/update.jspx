@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/customForm" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_itcollege_team09_entities_AdminYksuseLiik" modelAttribute="adminYksuseLiik" path="/adminyksuseliiks" versionField="Version" z="user-managed">
-        <script>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:form="urn:jsptagdir:/WEB-INF/tags/customForm"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<form:update id="fu_itcollege_team09_entities_AdminYksuseLiik"
+		modelAttribute="adminYksuseLiik" path="/adminyksuseliiks"
+		versionField="Version" z="user-managed">
+		<script>
 			function submitform(id) {	
 				if(confirmAction()) {		
 					document.getElementById('delete_form').action = "/BorderGuard/vaeosaalluvuses/"+id;
@@ -14,50 +20,100 @@
 		        return confirm("Soovid sa kindlasti seda kustutada?");
 		    }
 		</script>
-        <div class="customFormLeft">
-            <field:input field="kood" id="c_itcollege_team09_entities_AdminYksuseLiik_kood" max="10" required="true" z="Melal9tkmwCHycmiKO9a2ru6rlg="/>
-            <field:input field="nimetus" id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus" required="true" z="user-managed"/>
-            <field:textarea field="kommentaar" id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar" required="true" z="Hm3vMVK2D69YMWGAUUF4JInPPbk="/>
-            <field:select field="ylemyksused" id="c_itcollege_team09_entities_vaeosa_ylemvaeosad" itemLabel="yksuseliik.nimetus" itemValue="id" items="${voimalikudYlemad}" label="Allub" path="/voimalikalluvuses" z="user-managed"/>
-            <field:datetime dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc="/>
-            <field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY="/>
-            <field:simple field="ylemyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_ylemyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" render="false" z="user-managed"/>
-            <field:simple field="alamyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_alamyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Voimalik Alluvus" render="false" z="user-managed"/>
-            <field:simple field="adminyksused" id="c_itcollege_team09_entities_AdminYksuseLiik_adminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Yksus" render="false" z="user-managed"/>
-        </div>
-        <div class="customFormRight">
-            <table>
-                <tr>
-                    <th>Alluvad</th>
-                </tr>
-                <c:forEach items="${voimalikudAlluvused}" var="v">
-                    <tr>
-                        <td>
-                            <span class="subjects">
-                                <spring:message text="${v.nimetus}"/>
-                            </span>
-                            <button class="button" onclick="submitform(${v.id});" type="button">
-                                <spring:message code="button_delete"/>
-                            </button>
-                        </td>
-                    </tr>
-                </c:forEach>
-            </table>
-            <div style="margin-top: 5px;">
-                <button class="button" onClick="window.location='../voimalikalluvuses?form'" type="button">
-                    <spring:message code="button_add"/>
-                </button>
-            </div>
-        </div>
-        <div style="clear: both;"/>
-        <div style="height: 26px;">
-            <button class="button" onClick="history.go(-1)" type="button">
-                <spring:message code="button_cancel"/>
-            </button>
-            <button class="buttonSave" id="proceed">
-                <spring:message code="button_save"/>
-            </button>
-        </div>
-        <field:datetime dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" z="MFT9RhS3Hp4o5UQGXyWde3EGZjQ="/>
-    </form:update>
+		<div class="customFormLeft">
+			<field:input field="kood"
+				id="c_itcollege_team09_entities_AdminYksuseLiik_kood" max="10"
+				required="true" z="Melal9tkmwCHycmiKO9a2ru6rlg=" />
+			<field:input field="nimetus"
+				id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus"
+				required="true" z="user-managed" />
+			<field:textarea field="kommentaar"
+				id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar"
+				required="true" z="Hm3vMVK2D69YMWGAUUF4JInPPbk=" />
+			<field:select field="ylemyksused"
+				id="c_itcollege_team09_entities_vaeosa_ylemvaeosad"
+				itemLabel="yksuseliik.nimetus" itemValue="id"
+				items="${voimalikudYlemad}" label="Allub" path="/voimalikalluvuses"
+				z="user-managed" />
+			<field:datetime
+				dateTimePattern="${adminYksuseLiik_alates_date_format}"
+				field="alates"
+				id="c_itcollege_team09_entities_AdminYksuseLiik_alates"
+				required="true" z="pxzbM/kimxJuZjdZJGS5bJJFWrc=" />
+			<field:datetime dateTimePattern="${adminYksuseLiik_kuni_date_format}"
+				field="kuni" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni"
+				required="true" z="9LAQFbgk7/2/LOYUAC/ZmSZDrqY=" />
+			<field:simple field="ylemyksused"
+				id="c_itcollege_team09_entities_AdminYksuseLiik_ylemyksused"
+				messageCode="entity_reference_not_managed"
+				messageCodeAttribute="Voimalik Alluvus" render="false"
+				z="user-managed" />
+			<field:simple field="alamyksused"
+				id="c_itcollege_team09_entities_AdminYksuseLiik_alamyksused"
+				messageCode="entity_reference_not_managed"
+				messageCodeAttribute="Voimalik Alluvus" render="false"
+				z="user-managed" />
+			<field:simple field="adminyksused"
+				id="c_itcollege_team09_entities_AdminYksuseLiik_adminyksused"
+				messageCode="entity_reference_not_managed"
+				messageCodeAttribute="Admin Yksus" render="false" z="user-managed" />
+		</div>
+		<div class="customFormRight">
+			<table>
+				<tr>
+					<th>Alluvad</th>
+				</tr>
+				<c:forEach items="${voimalikudAlluvused}" var="v">
+					<tr>
+						<td><span class="subjects"> <spring:message
+									text="${v.nimetus}" />
+						</span>
+							<button class="button" onclick="submitform(${v.id});"
+								type="button">
+								<spring:message code="button_delete" />
+							</button></td>
+					</tr>
+				</c:forEach>
+			</table>
+			<div style="margin-top: 5px;">
+				<button class="button"
+					onClick="window.location='../voimalikalluvuses?form'" type="button">
+					<spring:message code="button_add" />
+				</button>
+			</div>
+		</div>
+		<div style="clear: both;" />
+		<div style="height: 26px;">
+			<button class="button" onClick="history.go(-1)" type="button">
+				<spring:message code="button_cancel" />
+			</button>
+			<button class="buttonSave" id="proceed">
+				<spring:message code="button_save" />
+			</button>
+		</div>
+		<field:datetime
+			dateTimePattern="${adminYksuseLiik_suletud_date_format}"
+			field="suletud"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_suletud"
+			z="MFT9RhS3Hp4o5UQGXyWde3EGZjQ=" />
+		<field:textarea field="avaja"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_avaja"
+			z="jN0Hg+aQYnUC66nXLmzpdqRsNK4=" />
+		<field:datetime
+			dateTimePattern="${adminYksuseLiik_avatud_date_format}"
+			field="avatud"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_avatud"
+			z="FStif47rqBvKrBWqc1jg0GfclMU=" />
+		<field:textarea field="muutja"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_muutja"
+			z="GJYb5c6xK5iqtDa274kdl+cqodk=" />
+		<field:datetime
+			dateTimePattern="${adminYksuseLiik_muudetud_date_format}"
+			field="muudetud"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_muudetud"
+			z="+ZZ+BV/SQGG1Tsko9xYeGVLENMI=" />
+		<field:textarea field="sulgeja"
+			id="c_itcollege_team09_entities_AdminYksuseLiik_sulgeja"
+			z="+LlqqykTPBWRdmWSHayf83glNmw=" />
+	</form:update>
 </div>

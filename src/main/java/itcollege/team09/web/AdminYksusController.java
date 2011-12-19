@@ -5,7 +5,6 @@ import javax.validation.Valid;
 
 import itcollege.team09.entities.AdminYksus;
 import itcollege.team09.entities.AdminYksuseLiik;
-import itcollege.team09.helpers.Helper;
 
 import org.springframework.roo.addon.web.mvc.controller.RooWebScaffold;
 import org.springframework.stereotype.Controller;

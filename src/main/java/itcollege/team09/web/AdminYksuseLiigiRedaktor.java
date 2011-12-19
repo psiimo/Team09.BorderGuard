@@ -55,38 +55,26 @@ public class AdminYksuseLiigiRedaktor {
     		//seda ion vaja <c:out..>va:a:rtuseks, et kuvada olemasolevaid alluvusi
     		AdminYksuseLiik valitudLiik = AdminYksuseLiik.findAdminYksuseLiik(liigiID);
     		uiModel.addAttribute("valitudLiik", valitudLiik);
-    		//uiModel.addAttribute("voimalikudAlluvad", annaV6imalikualluvuseList(valitudLiik));
+    		uiModel.addAttribute("voimalikudAlluvad", annaV6imalikualluvuseList(valitudLiik));
     		
     	}
-        uiModel.addAttribute("riigi_admin_yksuse_liik", new AdminYksuseLiik());
+        uiModel.addAttribute("adminYksuseLiik", new AdminYksuseLiik());
         addDateTimeFormatPatterns(uiModel);
         return "adminyksuseliigiredaktor/index";
     }
     
  
     void addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("riigi_admin_yksuse_liik_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("riigi_admin_yksuse_liik_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("riigi_admin_yksuse_liik_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("riigi_admin_yksuse_liik_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("riigi_admin_yksuse_liik_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-    }
-    
-    String encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
-        String enc = httpServletRequest.getCharacterEncoding();
-        if (enc == null) {
-            enc = WebUtils.DEFAULT_CHARACTER_ENCODING;
-        }
-        try {
-            pathSegment = UriUtils.encodePathSegment(pathSegment, enc);
-        }
-        catch (UnsupportedEncodingException uee) {}
-        return pathSegment;
+        uiModel.addAttribute("adminYksuseLiik_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksuseLiik_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksuseLiik_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksuseLiik_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksuseLiik_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
 
     //seda kasutatakse Allub: va:lja dropboxi jaoks
     @ModelAttribute("riigi_admin_yksuse_liiks_piiks")
-    public Collection<AdminYksuseLiik> populateRiigi_admin_yksuse_liiks() {
+    public Collection<AdminYksuseLiik> populateAdminYksuseLiiks() {
         return AdminYksuseLiik.findAllAdminYksuseLiiks();
     }
     

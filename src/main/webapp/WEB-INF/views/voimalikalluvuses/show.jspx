@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_itcollege_team09_entities_VoimalikAlluvus" object="${voimalikalluvus}" path="/voimalikalluvuses" z="qzSCAmwbBc7Tnfabyd4hH2fztXQ=">
-        <field:display field="kommentaar" id="s_itcollege_team09_entities_VoimalikAlluvus_kommentaar" object="${voimalikalluvus}" z="/AlkBQYuTRWw0/MbgyVlUr5UZls="/>
-        <field:display date="true" dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="s_itcollege_team09_entities_VoimalikAlluvus_alates" object="${voimalikalluvus}" z="I7jTQeg2MLfbMqa/SQjJxnRcaFY="/>
-        <field:display date="true" dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_VoimalikAlluvus_kuni" object="${voimalikalluvus}" z="4RqAVSJo4ZRlNvyNAeGfw4nzdE4="/>
-        <field:display field="yksuseliik" id="s_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" object="${voimalikalluvus}" z="X9TQfVZAgs7+z3NLX9JIFb84X2M="/>
-        <field:display field="alamyksus" id="s_itcollege_team09_entities_VoimalikAlluvus_alamyksus" object="${voimalikalluvus}" z="kA09ASRyxiXM9Mmkd5tUOtA+UWs="/>
-        <field:display date="true" dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_VoimalikAlluvus_suletud" object="${voimalikalluvus}" z="QcYNfNlJiAWrEYm5waURVsDkq4k="/>
-    </page:show>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<page:show id="ps_itcollege_team09_entities_VoimalikAlluvus"
+		object="${voimalikalluvus}" path="/voimalikalluvuses"
+		z="qzSCAmwbBc7Tnfabyd4hH2fztXQ=">
+		<field:display field="kommentaar"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_kommentaar"
+			object="${voimalikalluvus}" z="/AlkBQYuTRWw0/MbgyVlUr5UZls=" />
+		<field:display date="true"
+			dateTimePattern="${voimalikAlluvus_alates_date_format}"
+			field="alates"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_alates"
+			object="${voimalikalluvus}" z="I7jTQeg2MLfbMqa/SQjJxnRcaFY=" />
+		<field:display date="true"
+			dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_kuni"
+			object="${voimalikalluvus}" z="4RqAVSJo4ZRlNvyNAeGfw4nzdE4=" />
+		<field:display field="yksuseliik"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_yksuseliik"
+			object="${voimalikalluvus}" z="X9TQfVZAgs7+z3NLX9JIFb84X2M=" />
+		<field:display field="alamyksus"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_alamyksus"
+			object="${voimalikalluvus}" z="kA09ASRyxiXM9Mmkd5tUOtA+UWs=" />
+		<field:display date="true"
+			dateTimePattern="${voimalikAlluvus_suletud_date_format}"
+			field="suletud"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_suletud"
+			object="${voimalikalluvus}" z="QcYNfNlJiAWrEYm5waURVsDkq4k=" />
+		<field:display field="avaja"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_avaja"
+			object="${voimalikalluvus}" z="bDgkkkcz7jzHoR4i2qU5hHZow7Y=" />
+		<field:display date="true"
+			dateTimePattern="${voimalikAlluvus_avatud_date_format}"
+			field="avatud"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_avatud"
+			object="${voimalikalluvus}" z="R+T31oWuKPd4qkxf/SDDokk6BiQ=" />
+		<field:display field="muutja"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_muutja"
+			object="${voimalikalluvus}" z="GfRUpW/Rn9iMyV493KciHbFuYO4=" />
+		<field:display date="true"
+			dateTimePattern="${voimalikAlluvus_muudetud_date_format}"
+			field="muudetud"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_muudetud"
+			object="${voimalikalluvus}" z="enmL9IiyeSUeZgqdX8A5EttrnVM=" />
+		<field:display field="sulgeja"
+			id="s_itcollege_team09_entities_VoimalikAlluvus_sulgeja"
+			object="${voimalikalluvus}" z="O1ir3JHtyIIA9wYyrUTsfhs2Yik=" />
+	</page:show>
 </div>

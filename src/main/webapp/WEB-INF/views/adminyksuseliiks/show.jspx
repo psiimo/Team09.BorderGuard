@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_itcollege_team09_entities_AdminYksuseLiik" object="${adminyksuseliik}" path="/adminyksuseliiks" z="jUTNTxFXDrZ6IFJOvHdSZU5DlIY=">
-        <field:display field="kommentaar" id="s_itcollege_team09_entities_AdminYksuseLiik_kommentaar" object="${adminyksuseliik}" z="8nvQcxAaqwrKJ6nR6pk0/bs8xkA="/>
-        <field:display field="kood" id="s_itcollege_team09_entities_AdminYksuseLiik_kood" object="${adminyksuseliik}" z="kCQ496pIy1qme/T7UE7FQ7f5/EM="/>
-        <field:display field="nimetus" id="s_itcollege_team09_entities_AdminYksuseLiik_nimetus" object="${adminyksuseliik}" z="RmQ1gwQH8AX3M2ZlJSMpAtWDfWw="/>
-        <field:display date="true" dateTimePattern="${adminYksuseLiik_alates_date_format}" field="alates" id="s_itcollege_team09_entities_AdminYksuseLiik_alates" object="${adminyksuseliik}" z="CnIEgtLea5Suj1/IcBK0wWOjDDE="/>
-        <field:display date="true" dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_AdminYksuseLiik_kuni" object="${adminyksuseliik}" z="9iSpp8CSAQnn9bmb1ufQnYqvQFk="/>
-        <field:display date="true" dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_AdminYksuseLiik_suletud" object="${adminyksuseliik}" z="AcWAFkQbmD5gd3LBlcW+EOxgmsk="/>
-    </page:show>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<page:show id="ps_itcollege_team09_entities_AdminYksuseLiik"
+		object="${adminyksuseliik}" path="/adminyksuseliiks"
+		z="jUTNTxFXDrZ6IFJOvHdSZU5DlIY=">
+		<field:display field="kommentaar"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_kommentaar"
+			object="${adminyksuseliik}" z="8nvQcxAaqwrKJ6nR6pk0/bs8xkA=" />
+		<field:display field="kood"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_kood"
+			object="${adminyksuseliik}" z="kCQ496pIy1qme/T7UE7FQ7f5/EM=" />
+		<field:display field="nimetus"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_nimetus"
+			object="${adminyksuseliik}" z="RmQ1gwQH8AX3M2ZlJSMpAtWDfWw=" />
+		<field:display date="true"
+			dateTimePattern="${adminYksuseLiik_alates_date_format}"
+			field="alates"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_alates"
+			object="${adminyksuseliik}" z="CnIEgtLea5Suj1/IcBK0wWOjDDE=" />
+		<field:display date="true"
+			dateTimePattern="${adminYksuseLiik_kuni_date_format}" field="kuni"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_kuni"
+			object="${adminyksuseliik}" z="9iSpp8CSAQnn9bmb1ufQnYqvQFk=" />
+		<field:display date="true"
+			dateTimePattern="${adminYksuseLiik_suletud_date_format}"
+			field="suletud"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_suletud"
+			object="${adminyksuseliik}" z="AcWAFkQbmD5gd3LBlcW+EOxgmsk=" />
+		<field:display field="avaja"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_avaja"
+			object="${adminyksuseliik}" z="Peo32s3bW4W9FHspyFrCHGc8JvU=" />
+		<field:display date="true"
+			dateTimePattern="${adminYksuseLiik_avatud_date_format}"
+			field="avatud"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_avatud"
+			object="${adminyksuseliik}" z="j/7/f5PA272dc0kqINTvV9LJoYg=" />
+		<field:display field="muutja"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_muutja"
+			object="${adminyksuseliik}" z="cKFWEohxhOc3K1bnWPDqZyVZdMs=" />
+		<field:display date="true"
+			dateTimePattern="${adminYksuseLiik_muudetud_date_format}"
+			field="muudetud"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_muudetud"
+			object="${adminyksuseliik}" z="ghF8ES2u5+XlKoB2tXd+8T+xYns=" />
+		<field:display field="sulgeja"
+			id="s_itcollege_team09_entities_AdminYksuseLiik_sulgeja"
+			object="${adminyksuseliik}" z="Kd65Oa6NNSGhX7PUUT1dch6qB78=" />
+	</page:show>
 </div>

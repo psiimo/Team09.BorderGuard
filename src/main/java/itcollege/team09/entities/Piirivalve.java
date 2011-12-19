@@ -10,6 +10,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,7 +30,7 @@ public abstract class Piirivalve {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;    	
 	@Size(max=500)
-	//@NotNull
+	@NotNull
     private String kommentaar;    
     @Size(max=32)
     protected String avaja;    
@@ -77,16 +78,17 @@ public abstract class Piirivalve {
 		setMuutja(GetUser());
 		setMuudetud(new Date());
 	}	
-	
+/*	
 	@PreRemove	
 	public void preventRemove() {	
 		throw new SecurityException("Removing of data is prohibited!");	
 	}
-    @Transactional
+*/	
+/*    @Transactional
     public void remove() {
 		this.sulgeja = GetUser();
 		this.suletud = new Date();
-    }
+    }*/
 
 	
 	private String GetUser() {

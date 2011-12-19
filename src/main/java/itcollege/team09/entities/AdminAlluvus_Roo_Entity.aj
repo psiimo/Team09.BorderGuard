@@ -13,6 +13,10 @@ privileged aspect AdminAlluvus_Roo_Entity {
         return entityManager().createQuery("SELECT COUNT(o) FROM AdminAlluvus o", Long.class).getSingleResult();
     }
     
+    public static List<AdminAlluvus> AdminAlluvus.findAllAdminAlluvuses() {
+        return entityManager().createQuery("SELECT o FROM AdminAlluvus o", AdminAlluvus.class).getResultList();
+    }
+    
     public static AdminAlluvus AdminAlluvus.findAdminAlluvus(Long id) {
         if (id == null) return null;
         return entityManager().find(AdminAlluvus.class, id);

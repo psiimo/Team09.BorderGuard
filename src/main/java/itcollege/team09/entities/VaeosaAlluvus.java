@@ -63,17 +63,5 @@ public class VaeosaAlluvus extends Piirivalve implements Serializable  {
 	public void setAlamvaeosa(Vaeosa param) {
 	    this.alamvaeosa = param;
 	}
-	
-    
-    public static List<VaeosaAlluvus> findAllVaeosaAlluvuses() {
-    	List<VaeosaAlluvus> items = entityManager().createQuery("SELECT o FROM VaeosaAlluvus o", VaeosaAlluvus.class).getResultList();
-    	for (int i = items.size() - 1; i >= 0; i--) 
-    	{ 
-    		VaeosaAlluvus item = (VaeosaAlluvus) items.get(i);
-    	    if (!itcollege.team09.helpers.Helper.IsSurrogateDate(item.getSuletud())){ 
-    	    	items.remove(i); 
-    	    }    	
-    	} 
-    	return items;
-    }
+
 }

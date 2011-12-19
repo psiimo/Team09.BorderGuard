@@ -6,52 +6,44 @@
 	xmlns:spring="http://www.springframework.org/tags" version="2.0">
 	<jsp:output omit-xml-declaration="yes" />
 
-	<jsp:directive.attribute name="id" 
-	type="java.lang.String"
+	<jsp:directive.attribute name="id" type="java.lang.String"
 		required="true" rtexprvalue="true"
 		description="The identifier for this tag (do not change!)" />
-		
-	<jsp:directive.attribute name="modelAttribute" 
-	type="java.lang.String"
+
+	<jsp:directive.attribute name="modelAttribute" type="java.lang.String"
 		required="true" rtexprvalue="true"
 		description="The name of the model attribute for form binding" />
-		
-	<jsp:directive.attribute name="path" 
-	type="java.lang.String"
+
+	<jsp:directive.attribute name="path" type="java.lang.String"
 		required="true" rtexprvalue="true"
 		description="Specify the relative URL path (wit leading /)" />
-		
+
 	<jsp:directive.attribute name="compositePkField"
 		type="java.lang.String" required="false" rtexprvalue="true"
 		description="The field name of the composite primary key 
 		             (only used if a composite PK is present in the 
 		              form backing object)" />
-	
-	<jsp:directive.attribute name="multipart" 
-	type="java.lang.Boolean"
+
+	<jsp:directive.attribute name="multipart" type="java.lang.Boolean"
 		required="false" rtexprvalue="true"
 		description="Indicate if this is a multipart form (default: false)" />
-		
-	<jsp:directive.attribute name="label" 
-	type="java.lang.String"
+
+	<jsp:directive.attribute name="label" type="java.lang.String"
 		required="false" rtexprvalue="true"
 		description="The label used for this object, will default 
 		             to a message bundle if not supplied" />
-	
-	<jsp:directive.attribute name="render" 
-	type="java.lang.Boolean"
+
+	<jsp:directive.attribute name="render" type="java.lang.Boolean"
 		required="false" rtexprvalue="true"
 		description="Indicate if the contents of this tag and 
 		             all enclosed tags should be rendered (default 'true')" />
-	
-	<jsp:directive.attribute name="openPane" 
-	type="java.lang.Boolean"
+
+	<jsp:directive.attribute name="openPane" type="java.lang.Boolean"
 		required="false" rtexprvalue="true"
 		description="Control if the title pane is opened or closed 
 		                                by default (default: true)" />
-	
-	<jsp:directive.attribute name="z" 
-	type="java.lang.String"
+
+	<jsp:directive.attribute name="z" type="java.lang.String"
 		required="false"
 		description="Used for checking if element has been modified 
 		              (to recalculate simply provide empty string value)" />
@@ -69,9 +61,9 @@
 		<spring:message arguments="${label}" code="entity_create"
 			var="title_msg" htmlEscape="false" />
 		<util:panel id="${id}" title="${title_msg}" openPane="${openPane}">
-		<spring:url value="${path}" var="form_url" />
-		
-			
+			<spring:url value="${path}" var="form_url" />
+
+
 			<form:form action="${fn:escapeXml(form_url)}" method="POST"
 				modelAttribute="${modelAttribute}" enctype="${enctype}"
 				onsubmit="encodePk()">
@@ -79,7 +71,7 @@
 				<c:if test="${not empty compositePkField}">
 					<form:hidden id="_${fn:escapeXml(compositePkField)}_id"
 						path="${fn:escapeXml(compositePkField)}" />
-		<script type="text/javascript">
+					<script type="text/javascript">
           <![CDATA[
             dojo.require("dojox.encoding.base64");
             function encodePk() {
@@ -99,7 +91,7 @@
           </script>
 				</c:if>
 				<jsp:doBody />
-				
+
 			</form:form>
 		</util:panel>
 	</c:if>

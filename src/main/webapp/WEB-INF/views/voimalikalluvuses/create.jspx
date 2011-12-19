@@ -13,7 +13,7 @@
 		<c:when test="${!empty valitudLiik}">
 			<form:create id="fc_itcollege_team09_entities_VoimalikAlluvus"
 				modelAttribute="voimalik_alluvus" path="/voimalikalluvuses"
-				render="${empty dependencies}" z="Xhi2M5lquJNZUwWUF5wA2EcwH3E=">
+				render="${empty dependencies}" z="user-managed">
 				<div style="float: left;">
 					<h3>vali administratiivyksuse liigile</h3>
 					<H2>
@@ -56,7 +56,6 @@
 					<field:textarea field="kommentaar"
 						id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar"
 						required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4=" />
-
 					<!-- <field:select field="yksuseliik" id="c_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/> -->
 					<!-- <field:select field="alamyksus" id="c_itcollege_team09_entities_VoimalikAlluvus_alamyksus" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/> -->
 					<!-- <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/> -->
@@ -85,10 +84,16 @@
 					</c:choose>
 				</div>
 				<div style="clear: both;" />
+				<field:datetime
+					dateTimePattern="${voimalikAlluvus_alates_date_format}"
+					field="alates"
+					id="c_itcollege_team09_entities_VoimalikAlluvus_alates"
+					required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc=" />
+				<field:datetime
+					dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni"
+					id="c_itcollege_team09_entities_VoimalikAlluvus_kuni"
+					required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA=" />
 			</form:create>
-			<form:dependency dependencies="${dependencies}"
-				id="d_ee_piirivalve_entities_Voimalik_alluvus"
-				render="${not empty dependencies}" z="xE20fIvcJwIgpemobLi556p9H9c=" />
 		</c:when>
 		<c:otherwise>
 			<h3>
@@ -103,8 +108,7 @@
 		<!-- styleSheet=resources/styles/alt.css -->
 		<!-- tegin selle vormi jaoks uue form-tagi createLiik, kust on nupp a:ra koristatud ja siia toodud, 
                              et seda saak paigutada kuhuvaja -->
-		<form
-			action="/BorderGuard/adminyksuseliigiredaktor/index">
+		<form action="/BorderGuard/adminyksuseliigiredaktor/index">
 			<div class="lisaAlluvaid" id="${fn:escapeXml(id)}_submit">
 				<spring:message code="button_cancel" htmlEscape="false"
 					var="save_button" />
@@ -114,4 +118,7 @@
 		</form>
 	</div>
 	<div style="clear: both;" />
+	<form:dependency dependencies="${dependencies}"
+		id="d_itcollege_team09_entities_VoimalikAlluvus"
+		render="${not empty dependencies}" z="/JW5nZXAwZunfoHgmuNVaMFv51Y=" />
 </div>

@@ -56,9 +56,9 @@ public class VoimalikAlluvusController {
         Long vaIDEE = voimalik_alluvus.getYksuseliik().getId();
         //seda attributi kasutada saab 
         //klassi AdminYksuseLiigiRedaktor meetodi createForm parameetrina!!!
-        uiModel.addAttribute("liigiID", vaIDEE.toString());                                       
+        uiModel.addAttribute("liigiID", vaIDEE);                                       
         //liigiID ilmub aadressireale 
-        return "redirect:/adminyksuseliigiredaktor/index";//?liigiID=" + encodeUrlPathSegment(voimalik_alluvus.getRiigi_admin_yksuse_liik().getId().toString(), httpServletRequest);
+        return "redirect:/adminyksuseliigiredaktor/index?liigiID=" + encodeUrlPathSegment(voimalik_alluvus.getYksuseliik().getId().toString(), httpServletRequest);
         	
     }
     
