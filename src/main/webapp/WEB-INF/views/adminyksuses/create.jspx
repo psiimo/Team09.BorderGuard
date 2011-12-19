@@ -13,6 +13,11 @@
         <field:simple field="ylemadminyksused" id="c_itcollege_team09_entities_AdminYksus_ylemadminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" render="false" z="user-managed"/>
         <field:simple field="alamadminyksused" id="c_itcollege_team09_entities_AdminYksus_alamadminyksused" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" render="false" z="user-managed"/>
         <field:datetime dateTimePattern="${adminYksus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksus_suletud" z="AC/CCSG9EIAlUDOSBeJSSA/+wqM="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminYksus_avaja" z="+8bR9PXk/MbveOZNdSaVKiz5Fj0="/>
+        <field:datetime dateTimePattern="${adminYksus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AdminYksus_avatud" z="4umZQ1LjMzEumIe5UxCNMo5y+Fs="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_AdminYksus_muutja" z="fH5JM0LT6qfeI245OIsReVDPU70="/>
+        <field:datetime dateTimePattern="${adminYksus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminYksus_muudetud" z="UFOOoy3YY56HTnqsp3sHvmNoKH0="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminYksus_sulgeja" z="fHgXxzHXh01iwqUY60pbm+fMkkk="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_AdminYksus" render="${not empty dependencies}" z="uj7BWfuwuHLi2X+HohgkljlNzJk="/>
 </div>

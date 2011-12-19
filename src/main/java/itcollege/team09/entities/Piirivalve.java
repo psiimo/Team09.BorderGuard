@@ -1,7 +1,6 @@
 package itcollege.team09.entities;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.GeneratedValue;
@@ -24,7 +23,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @MappedSuperclass
 @RooToString
-@Transactional
 @RooEntity(mappedSuperclass = true)
 public abstract class Piirivalve {
 
@@ -32,7 +30,7 @@ public abstract class Piirivalve {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;    	
 	@Size(max=500)
-	//@NotNull
+	@NotNull
     private String kommentaar;    
     @Size(max=32)
     protected String avaja;    
@@ -48,9 +46,7 @@ public abstract class Piirivalve {
     protected Date suletud;
 
         
-	public void setSuletud(Date suletud) {
-		this.suletud = suletud;
-	}
+
 	public Long getId() {
 		return id;
 	}
@@ -69,44 +65,82 @@ public abstract class Piirivalve {
 	@PrePersist	
 	public void recordCreated() {	
 		String user = GetUser();
-		
-		this.avaja = user;
-		this.muutja = user;
-		this.sulgeja = user;
-		
-		this.avatud = new Date();
-		this.muudetud = new Date();
-		try {
-			this.suletud = new SimpleDateFormat("yyyy-MM-dd").parse("9999-12-31");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		setAvaja(user);
+		setMuutja(user);
+		setAvatud(new Date());
+		setMuudetud(new Date());
+		setSuletud(maxDate());
 	}
 	
 	@PreUpdate	
 	public void recordModified() {	
-		this.muutja = GetUser();
-		this.muudetud = new Date();	
+		setSulgeja(GetUser());
+		setMuutja(GetUser());
+		setMuudetud(new Date());
 	}	
 	
 	@PreRemove	
 	public void preventRemove() {	
 		throw new SecurityException("Removing of data is prohibited!");	
 	}
-	
-    @Transactional
+/*    @Transactional
     public void remove() {
 		this.sulgeja = GetUser();
 		this.suletud = new Date();
-    }
+    }*/
+
 	
 	private String GetUser() {
+		String username;
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		return auth.getName();
+		username = auth.getName();
+		return username;
 	}	
-
+	
+	Date maxDate(){
+     	
+     	Calendar rightNow = Calendar.getInstance();
+     	rightNow.set(Calendar.YEAR, 9999);
+     	rightNow.set(Calendar.MONTH, 11);
+     	rightNow.set(Calendar.DAY_OF_MONTH, 31);
+     
+     	return rightNow.getTime();
+    }
 	
 	public Date getSuletud() {
 		return suletud;
+	}
+	public void setSuletud(Date suletud) {
+		this.suletud = suletud;
+	}
+	public String getAvaja() {
+		return avaja;
+	}
+	public void setAvaja(String avaja) {
+		this.avaja = avaja;
+	}
+	public Date getAvatud() {
+		return avatud;
+	}
+	public void setAvatud(Date avatud) {
+		this.avatud = avatud;
+	}
+	public String getMuutja() {
+		return muutja;
+	}
+	public void setMuutja(String muutja) {
+		this.muutja = muutja;
+	}
+	public Date getMuudetud() {
+		return muudetud;
+	}
+	public void setMuudetud(Date muudetud) {
+		this.muudetud = muudetud;
+	}
+	public String getSulgeja() {
+		return sulgeja;
+	}
+	public void setSulgeja(String sulgeja) {
+		this.sulgeja = sulgeja;
 	}
 }

@@ -106,15 +106,5 @@ public class AdminYksus extends Piirivalve implements Serializable {
 	    this.adminYksuseLiik = param;
 	}
 	
-    public static List<AdminYksus> findAllAdminYksuses() {
-    	List<AdminYksus> items = entityManager().createQuery("SELECT o FROM AdminYksus o", AdminYksus.class).getResultList();
-    	for (int i = items.size() - 1; i >= 0; i--) 
-    	{ 
-    		AdminYksus item = (AdminYksus) items.get(i);
-    	    if (!itcollege.team09.helpers.Helper.IsSurrogateDate(item.getSuletud())){ 
-    	    	items.remove(i); 
-    	    }    	
-    	} 
-    	return items;
-    }
+
 }

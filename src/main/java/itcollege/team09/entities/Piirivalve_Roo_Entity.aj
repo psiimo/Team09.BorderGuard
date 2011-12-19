@@ -37,6 +37,17 @@ privileged aspect Piirivalve_Roo_Entity {
     }
     
     @Transactional
+    public void Piirivalve.remove() {
+        if (this.entityManager == null) this.entityManager = entityManager();
+        if (this.entityManager.contains(this)) {
+            this.entityManager.remove(this);
+        } else {
+            Piirivalve attached = Piirivalve.findPiirivalve(this.id);
+            this.entityManager.remove(attached);
+        }
+    }
+    
+    @Transactional
     public void Piirivalve.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();

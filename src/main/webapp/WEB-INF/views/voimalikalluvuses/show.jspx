@@ -9,5 +9,10 @@
         <field:display field="yksuseliik" id="s_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" object="${voimalikalluvus}" z="X9TQfVZAgs7+z3NLX9JIFb84X2M="/>
         <field:display field="alamyksus" id="s_itcollege_team09_entities_VoimalikAlluvus_alamyksus" object="${voimalikalluvus}" z="kA09ASRyxiXM9Mmkd5tUOtA+UWs="/>
         <field:display date="true" dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_VoimalikAlluvus_suletud" object="${voimalikalluvus}" z="QcYNfNlJiAWrEYm5waURVsDkq4k="/>
+        <field:display field="avaja" id="s_itcollege_team09_entities_VoimalikAlluvus_avaja" object="${voimalikalluvus}" z="bDgkkkcz7jzHoR4i2qU5hHZow7Y="/>
+        <field:display date="true" dateTimePattern="${voimalikAlluvus_avatud_date_format}" field="avatud" id="s_itcollege_team09_entities_VoimalikAlluvus_avatud" object="${voimalikalluvus}" z="R+T31oWuKPd4qkxf/SDDokk6BiQ="/>
+        <field:display field="muutja" id="s_itcollege_team09_entities_VoimalikAlluvus_muutja" object="${voimalikalluvus}" z="GfRUpW/Rn9iMyV493KciHbFuYO4="/>
+        <field:display date="true" dateTimePattern="${voimalikAlluvus_muudetud_date_format}" field="muudetud" id="s_itcollege_team09_entities_VoimalikAlluvus_muudetud" object="${voimalikalluvus}" z="enmL9IiyeSUeZgqdX8A5EttrnVM="/>
+        <field:display field="sulgeja" id="s_itcollege_team09_entities_VoimalikAlluvus_sulgeja" object="${voimalikalluvus}" z="O1ir3JHtyIIA9wYyrUTsfhs2Yik="/>
     </page:show>
 </div>

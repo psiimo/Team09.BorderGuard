@@ -13,6 +13,10 @@ privileged aspect VoimalikAlluvus_Roo_Entity {
         return entityManager().createQuery("SELECT COUNT(o) FROM VoimalikAlluvus o", Long.class).getSingleResult();
     }
     
+    public static List<VoimalikAlluvus> VoimalikAlluvus.findAllVoimalikAlluvuses() {
+        return entityManager().createQuery("SELECT o FROM VoimalikAlluvus o", VoimalikAlluvus.class).getResultList();
+    }
+    
     public static VoimalikAlluvus VoimalikAlluvus.findVoimalikAlluvus(Long id) {
         if (id == null) return null;
         return entityManager().find(VoimalikAlluvus.class, id);

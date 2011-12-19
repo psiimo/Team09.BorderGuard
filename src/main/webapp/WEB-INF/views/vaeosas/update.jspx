@@ -78,6 +78,11 @@
             </button>
         </div>
         <field:datetime dateTimePattern="${vaeosa_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_Vaeosa_suletud" z="P/w+lPO7QhaCshN1/LzJ5K5hgeA="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_Vaeosa_avaja" z="K5+yRDu8w/JhwPNRLAKmvc16H98="/>
+        <field:datetime dateTimePattern="${vaeosa_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_Vaeosa_avatud" z="ZaIdN86o/MMo66igjbjM190ig0o="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_Vaeosa_muutja" z="r3hK72DSweV2wryIPwoYOxQ5vxc="/>
+        <field:datetime dateTimePattern="${vaeosa_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_Vaeosa_muudetud" z="WPmhbLT/JX5r3f+DPTQ51AZDA8U="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_Vaeosa_sulgeja" z="qsek7qJwOfAgmR5+FbvbUp1/Siw="/>
     </form:update>
     <form action="" id="delete_form" method="post">
         <input name="_method" type="hidden" value="DELETE"/>

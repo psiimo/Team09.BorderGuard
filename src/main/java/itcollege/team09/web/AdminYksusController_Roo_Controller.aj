@@ -69,6 +69,25 @@ privileged aspect AdminYksusController_Roo_Controller {
         return "adminyksuses/list";
     }
     
+    @RequestMapping(method = RequestMethod.PUT)
+    public String AdminYksusController.update(@Valid AdminYksus adminYksus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            uiModel.addAttribute("adminYksus", adminYksus);
+            addDateTimeFormatPatterns(uiModel);
+            return "adminyksuses/update";
+        }
+        uiModel.asMap().clear();
+        adminYksus.merge();
+        return "redirect:/adminyksuses/" + encodeUrlPathSegment(adminYksus.getId().toString(), httpServletRequest);
+    }
+    
+    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
+    public String AdminYksusController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        uiModel.addAttribute("adminYksus", AdminYksus.findAdminYksus(id));
+        addDateTimeFormatPatterns(uiModel);
+        return "adminyksuses/update";
+    }
+    
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String AdminYksusController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         AdminYksus.findAdminYksus(id).remove();
@@ -100,6 +119,8 @@ privileged aspect AdminYksusController_Roo_Controller {
     
     void AdminYksusController.addDateTimeFormatPatterns(Model uiModel) {
         uiModel.addAttribute("adminYksus_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksus_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksus_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksus_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksus_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }

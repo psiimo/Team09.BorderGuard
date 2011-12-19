@@ -5,11 +5,12 @@
     <page:list id="pl_itcollege_team09_entities_AdminYksuseLiik" items="${adminyksuseliiks}" z="SsONF+PkqL7YcPOv4cPFWZ4fXgk=">
         <table:table data="${adminyksuseliiks}" id="l_itcollege_team09_entities_AdminYksuseLiik" path="/adminyksuseliiks" z="puBuXJlk8Yj7cxmbfVsXdk9maIY=">
             <table:column id="c_itcollege_team09_entities_AdminYksuseLiik_kood" property="kood" z="user-managed"/>
-            <table:column id="c_itcollege_team09_entities_AdminYksuseLiik_nimetus" property="nimetus" z="LqUuT328RisrESAMTt6+aAqKnsE="/>
-            <table:column date="true" dateTimePattern="${adminYksuseLiik_alates_date_format}" id="c_itcollege_team09_entities_AdminYksuseLiik_alates" property="alates" z="LnW8joaYr1ZGmGWYosQ0+mL2H10="/>
-            <table:column date="true" dateTimePattern="${adminYksuseLiik_kuni_date_format}" id="c_itcollege_team09_entities_AdminYksuseLiik_kuni" property="kuni" z="cqT6NF4vZIrXTTEtocTlfUdVpYw="/>
             <table:column id="c_itcollege_team09_entities_AdminYksuseLiik_kommentaar" property="kommentaar" z="BvaoWFNApCUhlYD/bEf/WDCncAY="/>
             <table:column date="true" dateTimePattern="${adminYksuseLiik_suletud_date_format}" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" property="suletud" z="EGA89sWrjCcasLnOHzCgEtUl4oA="/>
+            <table:column id="c_itcollege_team09_entities_AdminYksuseLiik_avaja" property="avaja" z="JR9Ho80wRmB5Jli+e+pkRELfnfc="/>
+            <table:column date="true" dateTimePattern="${adminYksuseLiik_avatud_date_format}" id="c_itcollege_team09_entities_AdminYksuseLiik_avatud" property="avatud" z="z+/5PjrzPhkbN1K5t89/XhPpTlQ="/>
+            <table:column id="c_itcollege_team09_entities_AdminYksuseLiik_muutja" property="muutja" z="17DhaO0IZDxaKhYf8HE7tA7nkyA="/>
+            <table:column date="true" dateTimePattern="${adminYksuseLiik_muudetud_date_format}" id="c_itcollege_team09_entities_AdminYksuseLiik_muudetud" property="muudetud" z="YjJpdZq/tR8jMIZzfK1yd3AMlmk="/>
         </table:table>
     </page:list>
 </div>

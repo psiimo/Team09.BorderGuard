@@ -9,5 +9,10 @@
         <field:display date="true" dateTimePattern="${adminAlluvus_alates_date_format}" field="alates" id="s_itcollege_team09_entities_AdminAlluvus_alates" object="${adminalluvus}" z="dquidf9xpXxOztGTQUoOXgEkx4A="/>
         <field:display date="true" dateTimePattern="${adminAlluvus_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_AdminAlluvus_kuni" object="${adminalluvus}" z="/xjL1Jr4RD2B2LqdcLCuaQ9REls="/>
         <field:display date="true" dateTimePattern="${adminAlluvus_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_AdminAlluvus_suletud" object="${adminalluvus}" z="nmO8o5JNa5OFpK2ONWQFhLx/5TQ="/>
+        <field:display field="avaja" id="s_itcollege_team09_entities_AdminAlluvus_avaja" object="${adminalluvus}" z="TcCOlBmUe9bU6AIN2ZQwK1Xy2AY="/>
+        <field:display date="true" dateTimePattern="${adminAlluvus_avatud_date_format}" field="avatud" id="s_itcollege_team09_entities_AdminAlluvus_avatud" object="${adminalluvus}" z="dQ7pNzVcg8rS8bYip+L6+2RH8/M="/>
+        <field:display field="muutja" id="s_itcollege_team09_entities_AdminAlluvus_muutja" object="${adminalluvus}" z="laOMHr5lUG0imbS+Tym6UeO3Lv0="/>
+        <field:display date="true" dateTimePattern="${adminAlluvus_muudetud_date_format}" field="muudetud" id="s_itcollege_team09_entities_AdminAlluvus_muudetud" object="${adminalluvus}" z="l1gqjg4+8hK4whMbKbyr1txRv10="/>
+        <field:display field="sulgeja" id="s_itcollege_team09_entities_AdminAlluvus_sulgeja" object="${adminalluvus}" z="Y6t9ixAPV5z4Frjp0AV62yrRM4w="/>
     </page:show>
 </div>

@@ -59,5 +59,10 @@
             </button>
         </div>
         <field:datetime dateTimePattern="${adminYksuseLiik_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_AdminYksuseLiik_suletud" z="MFT9RhS3Hp4o5UQGXyWde3EGZjQ="/>
+        <field:textarea field="avaja" id="c_itcollege_team09_entities_AdminYksuseLiik_avaja" z="jN0Hg+aQYnUC66nXLmzpdqRsNK4="/>
+        <field:datetime dateTimePattern="${adminYksuseLiik_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_AdminYksuseLiik_avatud" z="FStif47rqBvKrBWqc1jg0GfclMU="/>
+        <field:textarea field="muutja" id="c_itcollege_team09_entities_AdminYksuseLiik_muutja" z="GJYb5c6xK5iqtDa274kdl+cqodk="/>
+        <field:datetime dateTimePattern="${adminYksuseLiik_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_AdminYksuseLiik_muudetud" z="+ZZ+BV/SQGG1Tsko9xYeGVLENMI="/>
+        <field:textarea field="sulgeja" id="c_itcollege_team09_entities_AdminYksuseLiik_sulgeja" z="+LlqqykTPBWRdmWSHayf83glNmw="/>
     </form:update>
 </div>
