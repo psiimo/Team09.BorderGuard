@@ -35,4 +35,23 @@ public class AdminAlluvusController {
         return "redirect:/adminalluvuses/" + encodeUrlPathSegment(adminAlluvus.getId().toString(), httpServletRequest);
     }
     
+    @RequestMapping(method = RequestMethod.PUT)
+    public String update(@Valid AdminAlluvus adminAlluvus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    	
+    	if(adminAlluvus.getAlates().after(adminAlluvus.getKuni())) {
+            uiModel.addAttribute("adminAlluvus", adminAlluvus);
+            addDateTimeFormatPatterns(uiModel);
+            bindingResult.addError(new FieldError("adminAlluvus", "kuni", "Begin date must not be later than end date"));
+            return "adminalluvuses/update";
+    	}
+    	if (bindingResult.hasErrors()) {
+            uiModel.addAttribute("adminAlluvus", adminAlluvus);
+            addDateTimeFormatPatterns(uiModel);
+            return "adminalluvuses/update";
+        }
+        uiModel.asMap().clear();
+        adminAlluvus.merge();
+        return "redirect:/adminalluvuses/" + encodeUrlPathSegment(adminAlluvus.getId().toString(), httpServletRequest);
+    }
+    
 }

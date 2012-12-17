@@ -92,9 +92,14 @@ public class Helper {
 	}
 	
 	public static boolean IsSurrogateDate(Date date){
+		
+		if (date == null) {
+			return false;
+		}
 		SimpleDateFormat simpleDateformatYear = new SimpleDateFormat("yyyy");
 		SimpleDateFormat simpleDateformatMonth = new SimpleDateFormat("MM");
 		SimpleDateFormat simpleDateformatDay = new SimpleDateFormat("d");
+		
 		
 		String year = simpleDateformatYear.format(date);
 		String month = simpleDateformatMonth.format(date);

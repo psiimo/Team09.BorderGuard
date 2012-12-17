@@ -11,11 +11,9 @@ import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -53,18 +51,6 @@ privileged aspect AdminAlluvusController_Roo_Controller {
         }
         addDateTimeFormatPatterns(uiModel);
         return "adminalluvuses/list";
-    }
-    
-    @RequestMapping(method = RequestMethod.PUT)
-    public String AdminAlluvusController.update(@Valid AdminAlluvus adminAlluvus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("adminAlluvus", adminAlluvus);
-            addDateTimeFormatPatterns(uiModel);
-            return "adminalluvuses/update";
-        }
-        uiModel.asMap().clear();
-        adminAlluvus.merge();
-        return "redirect:/adminalluvuses/" + encodeUrlPathSegment(adminAlluvus.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
