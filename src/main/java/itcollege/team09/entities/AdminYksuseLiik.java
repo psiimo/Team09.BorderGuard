@@ -5,7 +5,9 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
 import javax.persistence.OneToMany;
+import javax.persistence.PersistenceContext;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -36,7 +38,7 @@ public class AdminYksuseLiik extends Piirivalve implements Serializable  {
     
     @NotNull
     @DateTimeFormat(style="M-")
-    private Date alates;
+    private Date alates = new Date();
     
     @NotNull
     @DateTimeFormat(style="M-")
