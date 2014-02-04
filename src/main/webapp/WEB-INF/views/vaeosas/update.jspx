@@ -3,12 +3,11 @@
 	xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
 	xmlns:form="urn:jsptagdir:/WEB-INF/tags/customForm"
 	xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:spring="http://www.springframework.org/tags"
-	xmlns:sp="http://www.springframework.org/tags/form" version="2.0">
+	xmlns:sp="http://www.springframework.org/tags/form"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
 	<jsp:directive.page import="itcollege.team09.entities.VaeosaAlluvus" />
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	
 	<form:update id="fu_itcollege_team09_entities_Vaeosa"
 		modelAttribute="vaeosa" path="/vaeosas" versionField="Version"
 		z="user-managed">
@@ -42,23 +41,23 @@
 			<field:textarea field="kommentaar"
 				id="c_itcollege_team09_entities_Vaeosa_kommentaar" required="true"
 				z="RJKc0tcMJvmNkbG+fV7gz1t6YfM=" />
-
 			<div class="customFormCenter">
-				<span class="mylabel"><label for="paikneb">Paikneb:</label></span> <span
-					id="adiv">${vaeosa.adminYksus.nimetus}</span> <span id="bdiv"><sp:select
-						path="adminYksus" onclick="getDropBoxValue(this)"
-						itemLabel="nimetus" itemValue="id" items="${adminyksuses}" /></span>
+				<span class="mylabel"> <label for="paikneb">Paikneb:</label>
+				</span> <span id="adiv">${vaeosa.adminYksus.nimetus}</span> <span id="bdiv">
+					<sp:select itemLabel="nimetus" itemValue="id"
+						items="${adminyksuses}" onclick="getDropBoxValue(this)"
+						path="adminYksus" />
+				</span>
 				<button class="button"
 					onclick="hideshow(document.getElementById('adiv'), document.getElementById('bdiv'))"
 					type="button">
 					<spring:message code="button_update" />
 				</button>
 			</div>
-				
 			<field:select field="ylemvaeosad"
 				id="c_itcollege_team09_entities_vaeosa_ylemvaeosad"
 				itemLabel="vaeosa.nimetus" itemValue="id" items="${ylemvaeosad}"
-				label="Allub" path="/vaeosaalluvuses" z="user-managed" />							
+				label="Allub" path="/vaeosaalluvuses" z="user-managed" />
 			<field:datetime dateTimePattern="${vaeosa_alates_date_format}"
 				field="alates" id="c_itcollege_team09_entities_Vaeosa_alates"
 				required="true" z="4010QuEDny8XJkaFJorP41UHpY4=" />
@@ -80,36 +79,52 @@
 				<tr>
 					<th>Alluvad</th>
 				</tr>
-				
 				<c:forEach items="${alamvaeosad}" var="v">
 					<tr>
-						<td>
-							<span class="subjects">${v.nimetus}</span>
-							<button class="button" type="button" onclick="submitform(${v.id});">
+						<td><span class="subjects">${v.nimetus}</span>
+							<button class="button" onclick="submitform(${v.id});"
+								type="button">
 								<spring:message code="button_delete" />
-							</button>
-						</td>
+							</button></td>
 					</tr>
 				</c:forEach>
-				
 			</table>
 			<div style="margin-top: 5px;">
-				<button class="button" onClick="window.location='../vaeosaalluvuses?form'" type="button">
+				<button class="button"
+					onClick="window.location='../vaeosaalluvuses?form'" type="button">
 					<spring:message code="button_add" />
 				</button>
 			</div>
 		</div>
 		<div style="clear: both;" />
-        <div style="height: 26px;">			
-            <button class="button" type="button" onClick="history.go(-1)"><spring:message code="button_cancel" /></button>	
-			<button class="buttonSave" id="proceed"><spring:message code="button_save" /></button>	
-        </div>   
+		<div style="height: 26px;">
+			<button class="button" onClick="history.go(-1)" type="button">
+				<spring:message code="button_cancel" />
+			</button>
+			<button class="buttonSave" id="proceed">
+				<spring:message code="button_save" />
+			</button>
+		</div>
+		<field:datetime dateTimePattern="${vaeosa_suletud_date_format}"
+			field="suletud" id="c_itcollege_team09_entities_Vaeosa_suletud"
+			z="P/w+lPO7QhaCshN1/LzJ5K5hgeA=" />
+		<field:textarea field="avaja"
+			id="c_itcollege_team09_entities_Vaeosa_avaja"
+			z="K5+yRDu8w/JhwPNRLAKmvc16H98=" />
+		<field:datetime dateTimePattern="${vaeosa_avatud_date_format}"
+			field="avatud" id="c_itcollege_team09_entities_Vaeosa_avatud"
+			z="ZaIdN86o/MMo66igjbjM190ig0o=" />
+		<field:textarea field="muutja"
+			id="c_itcollege_team09_entities_Vaeosa_muutja"
+			z="r3hK72DSweV2wryIPwoYOxQ5vxc=" />
+		<field:datetime dateTimePattern="${vaeosa_muudetud_date_format}"
+			field="muudetud" id="c_itcollege_team09_entities_Vaeosa_muudetud"
+			z="WPmhbLT/JX5r3f+DPTQ51AZDA8U=" />
+		<field:textarea field="sulgeja"
+			id="c_itcollege_team09_entities_Vaeosa_sulgeja"
+			z="qsek7qJwOfAgmR5+FbvbUp1/Siw=" />
 	</form:update>
-	<form id="delete_form" action="" method="post">
-		<input type="hidden" name="_method" value="DELETE" />
-	</form>	
+	<form action="" id="delete_form" method="post">
+		<input name="_method" type="hidden" value="DELETE" />
+	</form>
 </div>
-
-
-
-

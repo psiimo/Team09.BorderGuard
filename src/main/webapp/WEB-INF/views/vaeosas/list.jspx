@@ -12,18 +12,22 @@
 				property="nimetus" z="user-managed" />
 			<table:column id="c_itcollege_team09_entities_Vaeosa_kommentaar"
 				property="kommentaar" z="GC3ZrYE5cJ62+hrk5n2edOD7PyM=" />
-			<table:column id="c_itcollege_team09_entities_Vaeosa_kood"
-				property="kood" z="L6T3kgbLR+lzNwrvpeNlwG9mhto=" />			
 			<table:column date="true"
-				dateTimePattern="${vaeosa_alates_date_format}"
-				id="c_itcollege_team09_entities_Vaeosa_alates" property="alates"
-				z="aQUyEpJxkZXMoF2ZjqzRqJH81Vg=" />
+				dateTimePattern="${vaeosa_suletud_date_format}"
+				id="c_itcollege_team09_entities_Vaeosa_suletud" property="suletud"
+				z="R9njm53dGVvpzmoHjfInDMjqBCY=" />
+			<table:column id="c_itcollege_team09_entities_Vaeosa_avaja"
+				property="avaja" z="FZE1l3xLRCszOATTXPaNcgOn/sM=" />
 			<table:column date="true"
-				dateTimePattern="${vaeosa_kuni_date_format}"
-				id="c_itcollege_team09_entities_Vaeosa_kuni" property="kuni"
-				z="agX50SlyAaxDvgbBT6erCml+Ey0=" />
-			<table:column id="c_itcollege_team09_entities_Vaeosa_adminYksus"
-				property="adminYksus" z="xYXE4Wny2dk+W9AfnZlm1hC4P4A=" />
+				dateTimePattern="${vaeosa_avatud_date_format}"
+				id="c_itcollege_team09_entities_Vaeosa_avatud" property="avatud"
+				z="Rfp5Tb0mU0dguorFwDAI8ZTyX/E=" />
+			<table:column id="c_itcollege_team09_entities_Vaeosa_muutja"
+				property="muutja" z="miziuw0lG5fTHfs6C6Z8IcmUGKk=" />
+			<table:column date="true"
+				dateTimePattern="${vaeosa_muudetud_date_format}"
+				id="c_itcollege_team09_entities_Vaeosa_muudetud" property="muudetud"
+				z="fKz6fwYntS8vZpNWUX69Gp6Hrbc=" />
 		</table:table>
 	</page:list>
 </div>

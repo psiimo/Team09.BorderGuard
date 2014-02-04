@@ -151,8 +151,8 @@
 					<br />
 					<div class="quicklinks">
 						<span>
-						<form id="command"
-								action="/BorderGuard/vaeosaalluvuses/3" method="post">
+							<form id="command" action="/BorderGuard/vaeosaalluvuses/3"
+								method="post">
 								<input type="hidden" name="_method" value="DELETE" /><input
 									onclick="return confirm('Soovid sa kindlasti seda kustutada?');"
 									value="Kustuta Vaeosa Alluvus" type="image"
@@ -160,8 +160,8 @@
 									src="/BorderGuard/resources/images/delete.png" class="image"
 									alt="Kustuta Vaeosa Alluvus" />
 							</form>
-							
-							</span><span><a title="Muuda Vaeosa Alluvus"
+
+						</span><span><a title="Muuda Vaeosa Alluvus"
 							alt="Muuda Vaeosa Alluvus"
 							href="/BorderGuard/vaeosaalluvuses/3?form"><img
 								title="Muuda Vaeosa Alluvus"

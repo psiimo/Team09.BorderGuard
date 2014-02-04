@@ -27,18 +27,6 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect AdminYksuseLiikController_Roo_Controller {
     
-    @RequestMapping(method = RequestMethod.POST)
-    public String AdminYksuseLiikController.create(@Valid AdminYksuseLiik adminYksuseLiik, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            uiModel.addAttribute("adminYksuseLiik", adminYksuseLiik);
-            addDateTimeFormatPatterns(uiModel);
-            return "adminyksuseliiks/create";
-        }
-        uiModel.asMap().clear();
-        adminYksuseLiik.persist();
-        return "redirect:/adminyksuseliiks/" + encodeUrlPathSegment(adminYksuseLiik.getId().toString(), httpServletRequest);
-    }
-    
     @RequestMapping(params = "form", method = RequestMethod.GET)
     public String AdminYksuseLiikController.createForm(Model uiModel) {
         uiModel.addAttribute("adminYksuseLiik", new AdminYksuseLiik());
@@ -68,6 +56,25 @@ privileged aspect AdminYksuseLiikController_Roo_Controller {
         return "adminyksuseliiks/list";
     }
     
+    @RequestMapping(method = RequestMethod.PUT)
+    public String AdminYksuseLiikController.update(@Valid AdminYksuseLiik adminYksuseLiik, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            uiModel.addAttribute("adminYksuseLiik", adminYksuseLiik);
+            addDateTimeFormatPatterns(uiModel);
+            return "adminyksuseliiks/update";
+        }
+        uiModel.asMap().clear();
+        adminYksuseLiik.merge();
+        return "redirect:/adminyksuseliiks/" + encodeUrlPathSegment(adminYksuseLiik.getId().toString(), httpServletRequest);
+    }
+    
+    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
+    public String AdminYksuseLiikController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        uiModel.addAttribute("adminYksuseLiik", AdminYksuseLiik.findAdminYksuseLiik(id));
+        addDateTimeFormatPatterns(uiModel);
+        return "adminyksuseliiks/update";
+    }
+    
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String AdminYksuseLiikController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         AdminYksuseLiik.findAdminYksuseLiik(id).remove();
@@ -93,6 +100,9 @@ privileged aspect AdminYksuseLiikController_Roo_Controller {
     }
     
     void AdminYksuseLiikController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("adminYksuseLiik_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksuseLiik_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminYksuseLiik_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksuseLiik_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("adminYksuseLiik_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }

@@ -63,18 +63,5 @@ public class VoimalikAlluvus extends Piirivalve implements Serializable {
 	public void setAlamyksus(AdminYksuseLiik param) {
 	    this.alamyksus = param;
 	}
-	
-    
-    public static List<VoimalikAlluvus> findAllVoimalikAlluvuses() {
-    	List<VoimalikAlluvus> items = entityManager().createQuery("SELECT o FROM VoimalikAlluvus o", VoimalikAlluvus.class).getResultList();
-    	for (int i = items.size() - 1; i >= 0; i--) 
-    	{ 
-    		VoimalikAlluvus item = (VoimalikAlluvus) items.get(i);
-    	    if (!itcollege.team09.helpers.Helper.IsSurrogateDate(item.getSuletud())){ 
-    	    	items.remove(i); 
-    	    }    	
-    	} 
-    	return items;
-    }
-    
+   
 }
