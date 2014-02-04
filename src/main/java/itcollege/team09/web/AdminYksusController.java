@@ -5,7 +5,6 @@ import javax.validation.Valid;
 
 import itcollege.team09.entities.AdminYksus;
 import itcollege.team09.entities.AdminYksuseLiik;
-import itcollege.team09.helpers.Helper;
 
 import org.springframework.roo.addon.web.mvc.controller.RooWebScaffold;
 import org.springframework.stereotype.Controller;
@@ -20,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AdminYksusController {
 	
-    @RequestMapping(method = RequestMethod.PUT)
+/*    @RequestMapping(method = RequestMethod.PUT)
     public String update(@Valid AdminYksus adminYksus, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             uiModel.addAttribute("adminYksus", adminYksus);
@@ -38,5 +37,5 @@ public class AdminYksusController {
         uiModel.addAttribute("alluvadAdminYksused", Helper.getAdminYksuseAlluvad(AdminYksus.findAdminYksus(id)));
         addDateTimeFormatPatterns(uiModel);
         return "adminyksuses/update";
-    }
+    }*/
 }

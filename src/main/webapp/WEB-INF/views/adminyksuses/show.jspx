@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
-	xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
-	<jsp:directive.page contentType="text/html;charset=UTF-8" />
-	<jsp:output omit-xml-declaration="yes" />
-	<page:show id="ps_itcollege_team09_entities_AdminYksus"
-		object="${adminyksus}" path="/adminyksuses"
-		z="260h5WH2GkXUUL5NE0+YVzjO1Nw=">
-		<field:display field="nimetus"
-			id="s_itcollege_team09_entities_AdminYksus_nimetus"
-			object="${adminyksus}" z="user-managed" />
-		<field:display field="kommentaar"
-			id="s_itcollege_team09_entities_AdminYksus_kommentaar"
-			object="${adminyksus}" z="8a0kuJBTxLqKopzm9cHG77armUs=" />
-		<field:display field="kood"
-			id="s_itcollege_team09_entities_AdminYksus_kood"
-			object="${adminyksus}" z="Y2WePbiNvbCiGjDTqaNIxo3k8xg=" />		
-		<field:display date="true"
-			dateTimePattern="${adminYksus_alates_date_format}" field="alates"
-			id="s_itcollege_team09_entities_AdminYksus_alates"
-			object="${adminyksus}" z="NM70XGv6Uu4ChUggQ/gZgdVJmAk=" />
-		<field:display date="true"
-			dateTimePattern="${adminYksus_kuni_date_format}" field="kuni"
-			id="s_itcollege_team09_entities_AdminYksus_kuni"
-			object="${adminyksus}" z="/Ck0hU4H09KzwunYFefsrr/lR9Q=" />
-		<field:display field="adminYksuseLiik"
-			id="s_itcollege_team09_entities_AdminYksus_adminYksuseLiik"
-			object="${adminyksus}" z="user-managed" />
-	</page:show>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_itcollege_team09_entities_AdminYksus" object="${adminyksus}" path="/adminyksuses" z="260h5WH2GkXUUL5NE0+YVzjO1Nw=">
+        <field:display field="nimetus" id="s_itcollege_team09_entities_AdminYksus_nimetus" object="${adminyksus}" z="user-managed"/>
+        <field:display field="kommentaar" id="s_itcollege_team09_entities_AdminYksus_kommentaar" object="${adminyksus}" z="8a0kuJBTxLqKopzm9cHG77armUs="/>
+        <field:display field="kood" id="s_itcollege_team09_entities_AdminYksus_kood" object="${adminyksus}" z="Y2WePbiNvbCiGjDTqaNIxo3k8xg="/>
+        <field:display date="true" dateTimePattern="${adminYksus_alates_date_format}" field="alates" id="s_itcollege_team09_entities_AdminYksus_alates" object="${adminyksus}" z="NM70XGv6Uu4ChUggQ/gZgdVJmAk="/>
+        <field:display date="true" dateTimePattern="${adminYksus_kuni_date_format}" field="kuni" id="s_itcollege_team09_entities_AdminYksus_kuni" object="${adminyksus}" z="/Ck0hU4H09KzwunYFefsrr/lR9Q="/>
+        <field:display field="adminYksuseLiik" id="s_itcollege_team09_entities_AdminYksus_adminYksuseLiik" object="${adminyksus}" z="user-managed"/>
+        <field:display date="true" dateTimePattern="${adminYksus_suletud_date_format}" field="suletud" id="s_itcollege_team09_entities_AdminYksus_suletud" object="${adminyksus}" z="qtsa18wy+IgeLdFiZzJ6Gf6/77o="/>
+        <field:display field="avaja" id="s_itcollege_team09_entities_AdminYksus_avaja" object="${adminyksus}" z="yyy2BCtnlHP90FvqkBBpfs5NFfg="/>
+        <field:display date="true" dateTimePattern="${adminYksus_avatud_date_format}" field="avatud" id="s_itcollege_team09_entities_AdminYksus_avatud" object="${adminyksus}" z="NVFFF37veY3c8Q1vi4zp2hb+fC4="/>
+        <field:display field="muutja" id="s_itcollege_team09_entities_AdminYksus_muutja" object="${adminyksus}" z="EQAJ3WNo0ysUZiOt+FN5ZE5Knik="/>
+        <field:display date="true" dateTimePattern="${adminYksus_muudetud_date_format}" field="muudetud" id="s_itcollege_team09_entities_AdminYksus_muudetud" object="${adminyksus}" z="rcn7TOq0xumPJYWe1eWq8ijlnuc="/>
+        <field:display field="sulgeja" id="s_itcollege_team09_entities_AdminYksus_sulgeja" object="${adminyksus}" z="AlBjDp7uAlPN5ka1LUpzdE9iSYY="/>
+    </page:show>
 </div>

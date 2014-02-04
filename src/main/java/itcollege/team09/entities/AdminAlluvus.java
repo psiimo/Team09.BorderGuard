@@ -63,15 +63,5 @@ public class AdminAlluvus extends Piirivalve implements Serializable {
 		this.kuni = kuni;
 	}
 	
-    public static List<AdminAlluvus> findAllAdminAlluvuses() {
-    	List<AdminAlluvus> items = entityManager().createQuery("SELECT o FROM AdminAlluvus o", AdminAlluvus.class).getResultList();
-    	for (int i = items.size() - 1; i >= 0; i--) 
-    	{ 
-    		AdminAlluvus item = (AdminAlluvus) items.get(i);
-    	    if (!itcollege.team09.helpers.Helper.IsSurrogateDate(item.getSuletud())){ 
-    	    	items.remove(i); 
-    	    }    	
-    	} 
-    	return items;
-    }
+    
 }

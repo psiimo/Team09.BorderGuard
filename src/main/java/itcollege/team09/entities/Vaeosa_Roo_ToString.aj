@@ -12,12 +12,17 @@ privileged aspect Vaeosa_Roo_ToString {
         sb.append("AdminYksus: ").append(getAdminYksus()).append(", ");
         sb.append("Alamvaeosad: ").append(getAlamvaeosad() == null ? "null" : getAlamvaeosad().size()).append(", ");
         sb.append("Alates: ").append(getAlates()).append(", ");
+        sb.append("Avaja: ").append(getAvaja()).append(", ");
+        sb.append("Avatud: ").append(getAvatud()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("Kommentaar: ").append(getKommentaar()).append(", ");
         sb.append("Kood: ").append(getKood()).append(", ");
         sb.append("Kuni: ").append(getKuni()).append(", ");
+        sb.append("Muudetud: ").append(getMuudetud()).append(", ");
+        sb.append("Muutja: ").append(getMuutja()).append(", ");
         sb.append("Nimetus: ").append(getNimetus()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
+        sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("Version: ").append(getVersion()).append(", ");
         sb.append("Ylemvaeosad: ").append(getYlemvaeosad() == null ? "null" : getYlemvaeosad().size());
         return sb.toString();

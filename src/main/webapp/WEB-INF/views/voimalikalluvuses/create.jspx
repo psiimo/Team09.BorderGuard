@@ -1,13 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:springform="http://www.springframework.org/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:create id="fc_itcollege_team09_entities_VoimalikAlluvus" modelAttribute="voimalikAlluvus" path="/voimalikalluvuses" render="${empty dependencies}" z="Xhi2M5lquJNZUwWUF5wA2EcwH3E=">
-        <field:select field="yksuseliik" id="c_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/>
-        <field:select field="alamyksus" id="c_itcollege_team09_entities_VoimalikAlluvus_alamyksus" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/>
-        <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/>
-        <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar" required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4="/>
-    </form:create>
+    <c:choose>
+        <c:when test="${!empty valitudLiik}">
+            <form:create id="fc_itcollege_team09_entities_VoimalikAlluvus" modelAttribute="voimalik_alluvus" path="/voimalikalluvuses" render="${empty dependencies}" z="user-managed">
+                <div style="float: left;">
+                    <h3>vali administratiivyksuse liigile</h3>
+                    <H2>
+                        <c:out value="${valitudLiik.nimetus}"/>
+                        <field:select field="yksuseliik" id="c_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" label=" " path="/adminyksuseliiks" z="user-managed"/>
+                    </H2>
+                    <h3>
+                        <field:select field="alamyksus" id="c_itcollege_team09_entities_VoimalikAlluvus_alamyksus" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" label="alluvad liigid" path="/adminyksuseliiks"/>
+                    </h3>
+                    <field:textarea field="avaja" id="c_itcollege_team09_entities_VoimalikAlluvus_avaja" render="false" required="true" z="user-managed"/>
+                    <field:datetime dateTimePattern="${voimalikAlluvus_avatud_date_format}" field="avatud" id="c_itcollege_team09_entities_VoimalikAlluvus_avatud" render="false" required="true" z="user-managed"/>
+                    <field:textarea field="muutja" id="c_itcollege_team09_entities_VoimalikAlluvus_muutja" render="false" required="true" z="user-managed"/>
+                    <field:datetime dateTimePattern="${voimalikAlluvus_muudetud_date_format}" field="muudetud" id="c_itcollege_team09_entities_VoimalikAlluvus_muudetud" render="false" required="true" z="user-managed"/>
+                    <field:textarea field="sulgeja" id="c_itcollege_team09_entities_VoimalikAlluvus_sulgeja" render="false" z="user-managed"/>
+                    <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VoimalikAlluvus_suletud" render="false" required="true" z="user-managed"/>
+                    <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar" required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4="/>
+                    <!-- <field:select field="yksuseliik" id="c_itcollege_team09_entities_VoimalikAlluvus_yksuseliik" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/> -->
+                    <!-- <field:select field="alamyksus" id="c_itcollege_team09_entities_VoimalikAlluvus_alamyksus" itemLabel="nimetus" itemValue="id" items="${adminyksuseliiks}" path="/adminyksuseliiks" z="user-managed"/> -->
+                    <!-- <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/> -->
+                    <!-- <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/> -->
+                    <!-- <field:textarea field="kommentaar" id="c_itcollege_team09_entities_VoimalikAlluvus_kommentaar" required="true" z="4Pq8EHWtw3Fcv0litjb4jil9uM4="/> -->
+                    <!-- <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_itcollege_team09_entities_VoimalikAlluvus_suletud" z="0aeemK04XVu+Vmw2fHpR52VKzEc="/> -->
+                </div>
+                <!-- na:itab olemasolevaid alluvusi -->
+                <div style="float: left; margin-left: 30px;">
+                    <c:choose>
+                        <c:when test="${!empty voimalikudAlluvad}">
+                            <h3>
+                                <c:out value="olemasolevad alluvad:"/>
+                            </h3>
+                            <c:forEach items="${voimalikudAlluvad}" var="alluvad">
+                                <ul>
+                                    <li>
+                                        <c:out value="${alluvad.alamyksus.nimetus}"/>
+                                    </li>
+                                </ul>
+                            </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <h3>
+                                <c:out value="alluvaid pole veel maaratud"/>
+                            </h3>
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+                <div style="clear: both;"/>
+                <field:datetime dateTimePattern="${voimalikAlluvus_alates_date_format}" field="alates" id="c_itcollege_team09_entities_VoimalikAlluvus_alates" required="true" z="n5vRfsB1XALWXS0heYpsbEGRlUc="/>
+                <field:datetime dateTimePattern="${voimalikAlluvus_kuni_date_format}" field="kuni" id="c_itcollege_team09_entities_VoimalikAlluvus_kuni" required="true" z="d3I+kvA5kXnr+jC9bck18tJluHA="/>
+            </form:create>
+        </c:when>
+        <c:otherwise>
+            <h3>
+                <c:out value="liiki pole valitud"/>
+            </h3>
+        </c:otherwise>
+    </c:choose>
+    <!-- LOOBU -->
+    <div class="submit" style="float: left; margin-left: 90px; margin-bottom: 40px;">
+        <!-- deployd resourcers > webapp > styles-->
+        <!-- styleSheet=resources/styles/alt.css -->
+        <!-- tegin selle vormi jaoks uue form-tagi createLiik, kust on nupp a:ra koristatud ja siia toodud, 
+                             et seda saak paigutada kuhuvaja -->
+        <form action="/BorderGuard/adminyksuseliigiredaktor/index">
+            <div class="lisaAlluvaid" id="${fn:escapeXml(id)}_submit">
+                <spring:message code="button_cancel" htmlEscape="false" var="save_button"/>
+                <input id="proceed" type="submit" value="${fn:escapeXml(save_button)}"/>
+            </div>
+        </form>
+    </div>
+    <div style="clear: both;"/>
     <form:dependency dependencies="${dependencies}" id="d_itcollege_team09_entities_VoimalikAlluvus" render="${not empty dependencies}" z="/JW5nZXAwZunfoHgmuNVaMFv51Y="/>
 </div>

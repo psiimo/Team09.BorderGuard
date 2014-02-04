@@ -68,6 +68,25 @@ privileged aspect VaeosaController_Roo_Controller {
         return "vaeosas/list";
     }
     
+    @RequestMapping(method = RequestMethod.PUT)
+    public String VaeosaController.update(@Valid Vaeosa vaeosa, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            uiModel.addAttribute("vaeosa", vaeosa);
+            addDateTimeFormatPatterns(uiModel);
+            return "vaeosas/update";
+        }
+        uiModel.asMap().clear();
+        vaeosa.merge();
+        return "redirect:/vaeosas/" + encodeUrlPathSegment(vaeosa.getId().toString(), httpServletRequest);
+    }
+    
+    @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
+    public String VaeosaController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        uiModel.addAttribute("vaeosa", Vaeosa.findVaeosa(id));
+        addDateTimeFormatPatterns(uiModel);
+        return "vaeosas/update";
+    }
+    
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String VaeosaController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Vaeosa.findVaeosa(id).remove();
@@ -93,6 +112,9 @@ privileged aspect VaeosaController_Roo_Controller {
     }
     
     void VaeosaController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("vaeosa_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("vaeosa_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("vaeosa_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("vaeosa_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("vaeosa_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
