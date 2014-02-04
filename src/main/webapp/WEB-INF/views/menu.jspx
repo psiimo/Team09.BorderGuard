@@ -29,6 +29,7 @@
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__testdataindex_id" messageCode="global_generic" url="/testdata/index" z="aH4xZ2ulNlW18J2jbWZwp6xiuQw="/>
+            <menu:item id="i_controller__adminyksuseliigiredaktorindex_id" messageCode="global_generic" url="/adminyksuseliigiredaktor/index" z="WVKyxX9PTTpUZ9nrJXy4zZdfUHw="/>
         </menu:category>
     </menu:menu>
 </div>
