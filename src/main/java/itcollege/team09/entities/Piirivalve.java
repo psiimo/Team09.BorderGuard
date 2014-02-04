@@ -32,7 +32,7 @@ public abstract class Piirivalve {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;    	
 	@Size(max=500)
-	@NotNull
+	//@NotNull
     private String kommentaar;    
     @Size(max=32)
     protected String avaja;    
@@ -48,6 +48,9 @@ public abstract class Piirivalve {
     protected Date suletud;
 
         
+	public void setSuletud(Date suletud) {
+		this.suletud = suletud;
+	}
 	public Long getId() {
 		return id;
 	}
